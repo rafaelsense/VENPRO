@@ -1,0 +1,4 @@
+<Root><Events>
+<SignOn Tr_Log="32" Log_SignOn="11" ClaveCajero="1804" Tail_NumTicketSL="3357" Tail_Fecha="2014-10-09" Tail_Hora="23:04:00" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="52403" Tail_NumCajero="3334" Tail_NumPOS="36" StoreNumber="0107" />
+</Events>
+</Root>

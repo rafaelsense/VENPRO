@@ -1,0 +1,118 @@
+   LOG VENPRO 2015-10-06
+_________________________________________________________
+---------------------------------------------------------
+
+2015-10-06 23:26:46 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A1039.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 710
+2015-10-06 23:29:4 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A687.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 710
+2015-10-06 23:34:15 : Observacion.import_archivo. No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\tmp\TRPER20141110A911.XML ]
+2015-10-06 23:36:16 : Observacion.import_archivo. No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\118\tmp\TRPER20141009A1063.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A514.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A515.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A516.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A517.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A518.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A519.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A520.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A521.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A522.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A523.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A524.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A525.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A526.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A527.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A528.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A529.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A530.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A531.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A532.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A533.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A534.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A535.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A536.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A537.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A538.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A539.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A540.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A541.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A542.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A543.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A544.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A545.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A546.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A547.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A548.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A549.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A550.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A551.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A552.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A553.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A554.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A555.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A556.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A557.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A558.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A559.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A560.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A561.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A562.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A563.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A564.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A565.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A566.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A567.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A568.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A569.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A570.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A571.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A572.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A573.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A574.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A575.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A576.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A577.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A578.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A579.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A580.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A581.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A582.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A583.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A584.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A585.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A586.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A587.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A588.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A589.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A590.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A591.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A592.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A593.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A594.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A595.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A596.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A597.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A598.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A599.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A600.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A601.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A602.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A603.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A604.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A605.XML ]
+2015-10-06 23:39:51 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\104\TRPER20141219A606.XML ]
+2015-10-06 23:46:48 : VENPRO Cerrado.

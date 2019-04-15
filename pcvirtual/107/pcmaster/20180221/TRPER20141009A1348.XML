@@ -1,0 +1,7 @@
+<Root><Events>
+</Events>
+<Events>
+<Supervisor Tr_Info="96" Info_Supervisor="13" NumSupervisor="3334" Tail_NumTicketSL="8681" Tail_Fecha="2014-10-09" Tail_Hora="22:39:59" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="60600" Tail_NumCajero="4097" Tail_NumPOS="51" StoreNumber="0107" />
+<ReporteX Tr_Log="32" ReporteX="22" ClaveCajero="2502" Tail_NumTicketSL="8681" Tail_Fecha="2014-10-09" Tail_Hora="22:40:00" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="60601" Tail_NumCajero="4097" Tail_NumPOS="51" StoreNumber="0107" />
+</Events>
+</Root>

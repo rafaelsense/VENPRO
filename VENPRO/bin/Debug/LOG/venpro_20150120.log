@@ -1,0 +1,43 @@
+   LOG VENPRO 2015-01-20
+_________________________________________________________
+---------------------------------------------------------
+
+2015-01-20 23:14:33 : VENPRO iniciado
+2015-01-20 23:14:48 : Inicio eliminacion datos xFecha...
+2015-01-20 23:15:14 : Fin eliminacion datos xFecha.
+2015-01-20 23:15:42 : Inicio eliminacion datos xFecha...
+2015-01-20 23:15:43 : Fin eliminacion datos xFecha.
+2015-01-20 23:18:59 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1001.XML ]
+2015-01-20 23:19:19 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1002.XML ]
+2015-01-20 23:19:19 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1003.XML ]
+2015-01-20 23:19:47 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1004.XML ]
+2015-01-20 23:19:47 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1005.XML ]
+2015-01-20 23:19:47 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1006.XML ]
+2015-01-20 23:19:58 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A1039.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 647
+2015-01-20 23:20:7 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1007.XML ]
+2015-01-20 23:20:11 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1008.XML ]
+2015-01-20 23:20:57 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1009.XML ]
+2015-01-20 23:20:57 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1010.XML ]
+2015-01-20 23:20:57 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1011.XML ]
+2015-01-20 23:21:20 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1012.XML ]
+2015-01-20 23:21:20 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1013.XML ]
+2015-01-20 23:21:35 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1014.XML ]
+2015-01-20 23:21:42 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1015.XML ]
+2015-01-20 23:22:0 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\107\TRPER20141009A1016.XML ]
+2015-01-20 23:22:27 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A687.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 647

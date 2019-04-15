@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ext:UBLExtensions>
+<ext:UBLExtension>
+<ext:ExtensionContent>
+<DatosAdicionales>
+<Documento>
+<Nombre>20508565934-03-B014-00000485</Nombre>
+</Documento>
+<DatoAdicional>
+<Codigo>1</Codigo>
+<Valor>123</Valor>
+</DatoAdicional>
+<DatoAdicional>
+<Codigo>2</Codigo>
+<Valor>14</Valor>
+</DatoAdicional>
+<DatoAdicional>
+<Codigo>5</Codigo>
+<Valor>646</Valor>
+</DatoAdicional>
+<DatoAdicional>
+<Codigo>6</Codigo>
+<Valor>2.76</Valor>
+</DatoAdicional>
+<DatoAdicional>
+<Codigo>7</Codigo>
+<Valor>19.61</Valor>
+</DatoAdicional>
+<DatoAdicional>
+<Codigo>31</Codigo>
+<Valor>Gracias por comprar en Tottus</Valor>
+</DatoAdicional>
+<LineaDetalle>
+<Linea>1</Linea>
+<Codigo>1</Codigo>
+<Valor>07613034350855</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>1</Linea>
+<Codigo>2</Codigo>
+<Valor>SUBLIME</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>1</Linea>
+<Codigo>3</Codigo>
+<Valor>40748686</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>1</Linea>
+<Codigo>4</Codigo>
+<Valor>18.90</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>1</Linea>
+<Codigo>5</Codigo>
+<Valor>18.90</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>1</Linea>
+<Codigo>6</Codigo>
+<Valor>-</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>1</Linea>
+<Codigo>7</Codigo>
+<Valor>0</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>1</Linea>
+<Codigo>8</Codigo>
+<Valor>0.95</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>2</Linea>
+<Codigo>1</Codigo>
+<Valor>07750182000932</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>2</Linea>
+<Codigo>2</Codigo>
+<Valor>INCA KOLA</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>2</Linea>
+<Codigo>3</Codigo>
+<Valor>40121392</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>2</Linea>
+<Codigo>4</Codigo>
+<Valor>1.75</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>2</Linea>
+<Codigo>5</Codigo>
+<Valor>1.75</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>2</Linea>
+<Codigo>6</Codigo>
+<Valor>-</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>2</Linea>
+<Codigo>7</Codigo>
+<Valor>0</Valor>
+</LineaDetalle>
+<LineaDetalle>
+<Linea>2</Linea>
+<Codigo>8</Codigo>
+<Valor>0.09</Valor>
+</LineaDetalle>
+<MedioPago>
+<Numero>1</Numero>
+<Codigo>4</Codigo>
+<Valor>6271800000003056</Valor>
+</MedioPago>
+<MedioPago>
+<Numero>1</Numero>
+<Codigo>5</Codigo>
+<Valor>01</Valor>
+</MedioPago>
+<MedioPago>
+<Numero>1</Numero>
+<Codigo>6</Codigo>
+<Valor>0</Valor>
+</MedioPago>
+<MedioPago>
+<Numero>1</Numero>
+<Codigo>7</Codigo>
+<Valor>19.61</Valor>
+</MedioPago>
+<MedioPago>
+<Numero>1</Numero>
+<Codigo>9</Codigo>
+<Valor>01</Valor>
+</MedioPago>
+<MedioPago>
+<Numero>1</Numero>
+<Codigo>10</Codigo>
+<Valor>000046622556</Valor>
+</MedioPago>
+<MedioPago>
+<Numero>1</Numero>
+<Codigo>12</Codigo>
+<Valor>20130824</Valor>
+</MedioPago>
+</DatosAdicionales>
+</ext:ExtensionContent>
+</ext:UBLExtension>
+<ext:UBLExtension>
+<ext:ExtensionContent>
+<sac:AdditionalInformation>
+<sac:AdditionalMonetaryTotal>
+<cbc:ID>1001</cbc:ID>
+<cbc:PayableAmount currencyID="PEN">16.62</cbc:PayableAmount>
+</sac:AdditionalMonetaryTotal>
+<sac:AdditionalMonetaryTotal>
+<cbc:ID>1002</cbc:ID>
+<cbc:PayableAmount currencyID="PEN">0</cbc:PayableAmount>
+</sac:AdditionalMonetaryTotal>
+<sac:AdditionalMonetaryTotal>
+<cbc:ID>1003</cbc:ID>
+<cbc:PayableAmount currencyID="PEN">0</cbc:PayableAmount>
+</sac:AdditionalMonetaryTotal>
+<sac:AdditionalMonetaryTotal>
+<cbc:ID>2005</cbc:ID>
+<cbc:PayableAmount currencyID="PEN">1.04</cbc:PayableAmount>
+</sac:AdditionalMonetaryTotal>
+</sac:AdditionalInformation>
+</ext:ExtensionContent>
+</ext:UBLExtension>
+<ext:UBLExtension>
+<ext:ExtensionContent>
+<ds:Signature Id="signature20508565934">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>gCGqWlKiDciByTEo6W9Tz+Hkjl0=</ds:DigestValue></ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>titDBeKFrYTsf1g65J5AEi+7KXJPYF2nY7J8jwRG5DtEpyW88yDG9l7TwkFlVCPO
+nGjvWBh14V/2fZGqP9tX2qvtD55FJ9S1z07l4LoHiCgJql+XF34qk0/JirGk7dkt
+9jN+6seLZQs4t6iK7QGBGGypEzX4noGm48tmb6swyJsSeoJgHxQabPBC76IsrDu5
+7hhzQLsGpALgSxaIzAknOMh1QefjAzRp+y4bKo5VVYU+oIMROqULNnq0Z0rxPQ35
+TQWuxhXT4/5bLz+p055PZd642pcR3g7cLTuDNmE9YuA+aEP3c17xgfNZs+TrZ6Ds
+TBBjxlHOuOYsax4YPD1+dw==</ds:SignatureValue><ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>MIIF6DCCBNCgAwIBAgIRALeNjUOEjV9TvZ9BAlJ7qQcwDQYJKoZIhvcNAQEFBQAw
+gZMxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAO
+BgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYD
+VQQDEzBDT01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1h
+aWwgQ0EwHhcNMTMwNDI2MDAwMDAwWhcNMTQwNDI2MjM1OTU5WjCCARgxEDAOBgNV
+BBQTBzUxMzk0MDAxCzAJBgNVBAYTAlBFMQ0wCwYDVQQHEwRMSU1BMSEwHwYDVQQK
+ExhISVBFUk1FUkNBRE9TIFRPVFRVUyBTLkExGTAXBgNVBAsTEFJVQzogMjA1MDg1
+NjU5MzQxDTALBgNVBAsTBExJTUExFzAVBgNVBAsTDmlzc3VlZCBieSBJT0ZEMTEw
+LwYDVQQLDCh2YWxpZGF0ZWQgYnkgQ8OhbWFyYSBkZSBDb21lcmNpbyBkZSBMaW1h
+MSkwJwYDVQQDEyBKdWFuIEZlcm5hbmRvIENvcnJlYSBNYWxhY2hvdXNraTEkMCIG
+CSqGSIb3DQEJARYVamNvcnJlYUB0b3R0dXMuY29tLnBlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEA0TDweWOp3htP7bBxVW5oLKQ4xI0N5D0hBpDOSEoD
+DmjJHv84z7ci9WhfGWZnk1a0VWTIvKgYZmNgFhysXQTNq+///jfrSqqYRtsJBffX
+Svo5IF/oZQtlrAmu4bJ4ELlDOOQXaKcXYnVZHmJRnWxE7MXg8FATERu9WZMG+wua
+8OeJi+XYnZnQq/6qk1iNn8n/5iRMezh5SIQpruJ9PAhg9nSUUbdXOqbyagsYYf7m
+/ok8RflgfftXDyTZSiFSidKYT+RB8r9m9aYsk5K5GnxpekZNcNCITz/8a3pRg0U4
+ZDGKNJbVhJJPhCT6cPWExDrYobVM6RWHjZZbGTpX1tT6lwIDAQABo4IBrTCCAakw
+HwYDVR0jBBgwFoAUehNOAHRbxnhjZCfBL+KgW7x5xXswHQYDVR0OBBYEFC/lSwAD
+duLrv90VBAKB43kgQsRjMA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0G
+A1UdJQQWMBQGCCsGAQUFBwMEBggrBgEFBQcDAjBGBgNVHSAEPzA9MDsGDCsGAQQB
+sjEBAgEDBTArMCkGCCsGAQUFBwIBFh1odHRwczovL3NlY3VyZS5jb21vZG8ubmV0
+L0NQUzBXBgNVHR8EUDBOMEygSqBIhkZodHRwOi8vY3JsLmNvbW9kb2NhLmNvbS9D
+T01PRE9DbGllbnRBdXRoZW50aWNhdGlvbmFuZFNlY3VyZUVtYWlsQ0EuY3JsMIGI
+BggrBgEFBQcBAQR8MHowUgYIKwYBBQUHMAKGRmh0dHA6Ly9jcnQuY29tb2RvY2Eu
+Y29tL0NPTU9ET0NsaWVudEF1dGhlbnRpY2F0aW9uYW5kU2VjdXJlRW1haWxDQS5j
+cnQwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmNvbW9kb2NhLmNvbTANBgkqhkiG
+9w0BAQUFAAOCAQEAD8/WjopwbgA6hettkDD9ASuhHgQgZ9215gUTrkGOKFzFzM9a
+oydBbwJzp8wLA/27en3+bbGPCrKBJX1/ofUulLRvD9vgQs+CDvWjGWgouVx5r/YL
+ilvFzXVit50j0j/34PppbgTEkirPhKXLF8Ra+pHgYkbYrSdhvtwVvounbMPbpHi+
+U3/8PTB3Cp+2RB1rP+8thxOjtB6YrNkGrqUeDh70UE4nMdVx+UuP3v5FYUl7Jzv2
+V8OoGXyUkqfWxMOlsKCYMZyQzziDq56dpzxfwxH8WFfIdHki0OJBc6p5FGwUe2nn
+o4PQPzag3Q/Tjxy7WpteTn9tsg0kboUVuegbXw==</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature>
+</ext:ExtensionContent>
+</ext:UBLExtension>
+</ext:UBLExtensions>
+<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+<cbc:CustomizationID>1.0</cbc:CustomizationID>
+<cbc:ID>B014-485</cbc:ID>
+<cbc:IssueDate>2013-08-24</cbc:IssueDate>
+<cbc:InvoiceTypeCode>03</cbc:InvoiceTypeCode>
+<cbc:DocumentCurrencyCode>PEN</cbc:DocumentCurrencyCode>
+<cac:Signature>
+<cbc:ID>IDSign20508565934</cbc:ID>
+<cac:SignatoryParty>
+<cac:PartyIdentification>
+<cbc:ID>20508565934</cbc:ID>
+</cac:PartyIdentification>
+<cac:PartyName>
+<cbc:Name><![CDATA[HIPERMERCADOS TOTTUS S.A.   ]]></cbc:Name>
+</cac:PartyName>
+</cac:SignatoryParty>
+<cac:DigitalSignatureAttachment>
+<cac:ExternalReference>
+<cbc:URI>#signature20508565934</cbc:URI>
+</cac:ExternalReference>
+</cac:DigitalSignatureAttachment>
+</cac:Signature>
+<cac:AccountingSupplierParty>
+<cbc:CustomerAssignedAccountID>20508565934</cbc:CustomerAssignedAccountID>
+<cbc:AdditionalAccountID>6</cbc:AdditionalAccountID>
+<cac:Party>
+<cac:PartyName>
+<cbc:Name><![CDATA[TOTTUS HIPERMERCADO]]></cbc:Name>
+</cac:PartyName>
+<cac:PostalAddress>
+<cbc:ID>150141</cbc:ID>
+<cbc:StreetName>Av. Angamos Este Nro. 1805 Int.P-10 (Piso 10 Of.5 y Piso 11 Of. 6A) Lima-Lima-Surquillo         </cbc:StreetName>
+<cac:Country>
+<cbc:IdentificationCode>PE</cbc:IdentificationCode>
+</cac:Country>
+</cac:PostalAddress>
+<cac:PartyLegalEntity>
+<cbc:RegistrationName><![CDATA[HIPERMERCADOS TOTTUS S.A.   ]]></cbc:RegistrationName>
+</cac:PartyLegalEntity>
+</cac:Party>
+</cac:AccountingSupplierParty>
+<cac:AccountingCustomerParty>
+<cbc:CustomerAssignedAccountID>-</cbc:CustomerAssignedAccountID>
+<cbc:AdditionalAccountID>-</cbc:AdditionalAccountID>
+<cac:Party>
+<cac:PhysicalLocation>
+<cbc:Description><![CDATA[-]]></cbc:Description>
+</cac:PhysicalLocation>
+<cac:PartyLegalEntity>
+<cbc:RegistrationName><![CDATA[-]]></cbc:RegistrationName>
+</cac:PartyLegalEntity>
+</cac:Party>
+</cac:AccountingCustomerParty>
+<cac:TaxTotal>
+<cbc:TaxAmount currencyID="PEN">2.99</cbc:TaxAmount>
+<cac:TaxSubtotal>
+<cbc:TaxAmount currencyID="PEN">2.99</cbc:TaxAmount>
+<cac:TaxCategory>
+<cac:TaxScheme>
+<cbc:ID>1000</cbc:ID>
+<cbc:Name>IGV</cbc:Name>
+<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+</cac:TaxScheme>
+</cac:TaxCategory>
+</cac:TaxSubtotal>
+</cac:TaxTotal>
+<cac:LegalMonetaryTotal>
+<cbc:AllowanceTotalAmount currencyID="PEN">1.04</cbc:AllowanceTotalAmount>
+<cbc:PayableAmount currencyID="PEN">19.61</cbc:PayableAmount>
+</cac:LegalMonetaryTotal>
+<cac:InvoiceLine>
+<cbc:ID>1</cbc:ID>
+<cbc:InvoicedQuantity unitCode="NIU">1</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="PEN">15.21</cbc:LineExtensionAmount>
+<cac:PricingReference>
+<cac:AlternativeConditionPrice>
+<cbc:PriceAmount currencyID="PEN">18.9</cbc:PriceAmount>
+<cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+</cac:AlternativeConditionPrice>
+</cac:PricingReference>
+<cac:AllowanceCharge>
+<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+<cbc:Amount currencyID="PEN">0.81</cbc:Amount>
+</cac:AllowanceCharge>
+<cac:TaxTotal>
+<cbc:TaxAmount currencyID="PEN">2.74</cbc:TaxAmount>
+<cac:TaxSubtotal>
+<cbc:TaxAmount currencyID="PEN">2.74</cbc:TaxAmount>
+<cbc:Percent>18</cbc:Percent>
+<cac:TaxCategory>
+<cbc:ID>AC</cbc:ID>
+<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+<cac:TaxScheme>
+<cbc:ID>1000</cbc:ID>
+<cbc:Name>IGV</cbc:Name>
+<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+</cac:TaxScheme>
+</cac:TaxCategory>
+</cac:TaxSubtotal>
+</cac:TaxTotal>
+<cac:Item>
+<cbc:Description><![CDATA[SUBLIM ANVX12U       ]]></cbc:Description>
+<cac:SellersItemIdentification>
+<cbc:ID><![CDATA[07613034350855]]></cbc:ID>
+</cac:SellersItemIdentification>
+</cac:Item>
+<cac:Price>
+<cbc:PriceAmount currencyID="PEN">16.02</cbc:PriceAmount>
+</cac:Price>
+</cac:InvoiceLine>
+<cac:InvoiceLine>
+<cbc:ID>2</cbc:ID>
+<cbc:InvoicedQuantity unitCode="NIU">1</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="PEN">1.41</cbc:LineExtensionAmount>
+<cac:PricingReference>
+<cac:AlternativeConditionPrice>
+<cbc:PriceAmount currencyID="PEN">1.75</cbc:PriceAmount>
+<cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+</cac:AlternativeConditionPrice>
+</cac:PricingReference>
+<cac:AllowanceCharge>
+<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+<cbc:Amount currencyID="PEN">0.08</cbc:Amount>
+</cac:AllowanceCharge>
+<cac:TaxTotal>
+<cbc:TaxAmount currencyID="PEN">0.25</cbc:TaxAmount>
+<cac:TaxSubtotal>
+<cbc:TaxAmount currencyID="PEN">0.25</cbc:TaxAmount>
+<cbc:Percent>18</cbc:Percent>
+<cac:TaxCategory>
+<cbc:ID>AC</cbc:ID>
+<cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+<cac:TaxScheme>
+<cbc:ID>1000</cbc:ID>
+<cbc:Name>IGV</cbc:Name>
+<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+</cac:TaxScheme>
+</cac:TaxCategory>
+</cac:TaxSubtotal>
+</cac:TaxTotal>
+<cac:Item>
+<cbc:Description><![CDATA[INCA KOLA X 410M     ]]></cbc:Description>
+<cac:SellersItemIdentification>
+<cbc:ID><![CDATA[07750182000932]]></cbc:ID>
+</cac:SellersItemIdentification>
+</cac:Item>
+<cac:Price>
+<cbc:PriceAmount currencyID="PEN">1.48</cbc:PriceAmount>
+</cac:Price>
+</cac:InvoiceLine>
+</Invoice>

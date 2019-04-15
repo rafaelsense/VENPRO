@@ -1,0 +1,1255 @@
+   LOG VENPRO 2018-02-20
+_________________________________________________________
+---------------------------------------------------------
+
+2018-02-20 18:20:38 : Error.insert_archivoimport_sql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [537], [0], [0], [537], [2014-12-19], [09:19:10], [0], [0], [0], [0], [0], [27996], [4706], [168], [0104], []
+]Archivo:[TRPER20141219A528.XML]
+Fecha: [2018-02-20]
+tienda: [104]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A528.XML' , '2018-02-20' ,104, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . System.Data.SqlClient.SqlException (0x80131904): Infracción de la restricción PRIMARY KEY 'PK_frame'. No se puede insertar una clave duplicada en el objeto 'dbo.frame'. El valor de clave duplicado es (2014-12-19, 27996, 168, 104).
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos_sql.insert_archivoimport_sql(SqlConnection cnSql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos_sql.cs:línea 3138
+ClientConnectionId:dedb9fc4-f544-4dd0-bdaa-c0eaf964504d
+Error Number:2627,State:1,Class:14
+2018-02-20 18:20:38 : Error.insert_archivoimport_sql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [538], [0], [0], [538], [2014-12-19], [09:20:06], [0], [0], [0], [0], [0], [28033], [4706], [168], [0104], []
+]Archivo:[TRPER20141219A529.XML]
+Fecha: [2018-02-20]
+tienda: [104]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A529.XML' , '2018-02-20' ,104, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . System.Data.SqlClient.SqlException (0x80131904): Infracción de la restricción PRIMARY KEY 'PK_frame'. No se puede insertar una clave duplicada en el objeto 'dbo.frame'. El valor de clave duplicado es (2014-12-19, 28033, 168, 104).
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos_sql.insert_archivoimport_sql(SqlConnection cnSql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos_sql.cs:línea 3138
+ClientConnectionId:af5bd51d-9493-4154-bf31-ddf93b7386b8
+Error Number:2627,State:1,Class:14
+2018-02-20 18:20:38 : Error.insert_archivoimport_sql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [539], [0], [0], [539], [2014-12-19], [09:20:35], [0], [0], [0], [0], [0], [28070], [4706], [168], [0104], []
+]Archivo:[TRPER20141219A530.XML]
+Fecha: [2018-02-20]
+tienda: [104]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A530.XML' , '2018-02-20' ,104, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . System.Data.SqlClient.SqlException (0x80131904): Infracción de la restricción PRIMARY KEY 'PK_frame'. No se puede insertar una clave duplicada en el objeto 'dbo.frame'. El valor de clave duplicado es (2014-12-19, 28070, 168, 104).
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos_sql.insert_archivoimport_sql(SqlConnection cnSql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos_sql.cs:línea 3138
+ClientConnectionId:63b51f90-d629-493a-834b-46fb1652c6f6
+Error Number:2627,State:1,Class:14
+2018-02-20 18:20:38 : Error procesarxml_sql(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\104\tmp][E:\VENPRO\VENPRO\bin\Debug\import\104\tmp\TRPER20141219A528.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0104
+
+2018-02-20 18:20:38 : Error procesarxml_sql(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\104\tmp][E:\VENPRO\VENPRO\bin\Debug\import\104\tmp\TRPER20141219A529.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0104
+
+2018-02-20 18:20:38 : Error procesarxml_sql(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\104\tmp][E:\VENPRO\VENPRO\bin\Debug\import\104\tmp\TRPER20141219A530.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0104
+
+2018-02-20 18:20:38 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\104\tmp\TRPER20141219A529.XML] 
+2018-02-20 18:20:38 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\104\tmp\TRPER20141219A530.XML] 
+2018-02-20 18:20:38 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\104\tmp\TRPER20141219A528.XML] 
+2018-02-20 18:20:39 : Error GetFileList(). No se pudo listar archivos - ftp://192.168.52.141//104/pcmaster/20180220. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:20:39 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180220. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:20:39 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.79.60//discod/tlog/Backups/20180220. System.Net.WebException: Error en el servidor remoto: 125 Data connection already open; Transfer starting.
+. ---> System.IO.IOException: Operación no permitida en sockets no conectados.
+   en System.Net.Sockets.NetworkStream.InitNetworkStream(Socket socket, FileAccess Access)
+   en System.Net.Sockets.NetworkStream..ctor(Socket socket, Boolean ownsSocket)
+   en System.Net.FtpControlStream.QueueOrCreateFtpDataStream(Stream& stream)
+   en System.Net.FtpControlStream.PipelineCallback(PipelineEntry entry, ResponseDescription response, Boolean timeout, Stream& stream)
+   en System.Net.CommandStream.PostReadCommandProcessing(Stream& stream)
+   en System.Net.CommandStream.PostSendCommandProcessing(Stream& stream)
+   en System.Net.CommandStream.ContinueCommandPipeline()
+   en System.Net.FtpWebRequest.TimedSubmitRequestHelper(Boolean async)
+   en System.Net.FtpWebRequest.SubmitRequest(Boolean async)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:28:30 : VENPRO iniciado
+2018-02-20 18:30:2 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180220. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:41 : Error GetFileList(). No se pudo listar archivos - ftp://192.168.52.141//104/pcmaster/20180220. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.25.61//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.89.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.219.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.93.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.71.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.116.146//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.107.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.111.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.213.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.221.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.153.80//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.154.75//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.239.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.41.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.181.70//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.23.201//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.27.201//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.55.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.77.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.81.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.121.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.119.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.87.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.51.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.103.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.67.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.123.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.211.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.225.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.215.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.223.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.217.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:30:59 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.47.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:24 : pru.103. True
+2018-02-20 18:31:24 : pru.104. False
+2018-02-20 18:31:31 : pru.105. False
+2018-02-20 18:31:35 : pru.107. False
+2018-02-20 18:31:35 : pru.110. False
+2018-02-20 18:31:41 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.35.201//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:41 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.31.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:41 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.33.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:41 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.29.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:41 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.203.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:41 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.209.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:41 : pru.111. False
+2018-02-20 18:31:53 : pru.112. False
+2018-02-20 18:31:53 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.125.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:53 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.39.58//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:53 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.227.51//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:53 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.43.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:53 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.39.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:31:58 : Error al cargar XML procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\110\tmp\TRPER20180220A003.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.ThrowWithoutLineInfo(String res)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1601
+2018-02-20 18:32:6 : pru.113. False
+2018-02-20 18:32:6 : pru.114. False
+2018-02-20 18:32:6 : pru.115. False
+2018-02-20 18:32:7 : pru.116. False
+2018-02-20 18:32:38 : pru.117. False
+2018-02-20 18:32:38 : pru.118. False
+2018-02-20 18:32:38 : pru.119. False
+2018-02-20 18:32:38 : pru.120. False
+2018-02-20 18:32:39 : pru.121. False
+2018-02-20 18:32:58 : pru.122. False
+2018-02-20 18:33:2 : pru.123. False
+2018-02-20 18:33:2 : Error al cargar XML procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\115\tmp\TRPER20180220A006.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.ThrowWithoutLineInfo(String res)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1601
+2018-02-20 18:33:2 : pru.124. False
+2018-02-20 18:33:2 : Error al cargar XML procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\121\tmp\TRPER20180220A003.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.ThrowWithoutLineInfo(String res)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1601
+2018-02-20 18:33:2 : pru.125. False
+2018-02-20 18:33:2 : pru.142. False
+2018-02-20 18:33:2 : Error al cargar XML procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\124\tmp\TRPER20180220A002.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.ThrowWithoutLineInfo(String res)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1601
+2018-02-20 18:33:2 : pru.155. False
+2018-02-20 18:33:2 : pru.156. False
+2018-02-20 18:33:2 : pru.157. False
+2018-02-20 18:33:2 : pru.158. False
+2018-02-20 18:33:2 : pru.159. False
+2018-02-20 18:33:2 : pru.170. False
+2018-02-20 18:33:4 : pru.171. False
+2018-02-20 18:33:4 : pru.172. False
+2018-02-20 18:33:5 : pru.173. False
+2018-02-20 18:33:5 : pru.175. False
+2018-02-20 18:33:5 : pru.176. False
+2018-02-20 18:33:5 : pru.179. False
+2018-02-20 18:33:5 : pru.310. False
+2018-02-20 18:33:6 : pru.311. False
+2018-02-20 18:33:13 : Error al cargar XML procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20180220A004.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.ThrowWithoutLineInfo(String res)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1601
+2018-02-20 18:33:13 : Error al cargar XML procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\120\tmp\TRPER20180220A004.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.ThrowWithoutLineInfo(String res)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1601
+2018-02-20 18:33:13 : pru.313. False
+2018-02-20 18:33:13 : pru.314. False
+2018-02-20 18:33:13 : pru.315. False
+2018-02-20 18:33:13 : pru.316. False
+2018-02-20 18:33:13 : pru.317. False
+2018-02-20 18:33:14 : pru.318. False
+2018-02-20 18:33:14 : pru.332. False
+2018-02-20 18:33:14 : pru.335. False
+2018-02-20 18:33:15 : Error al cargar XML procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\119\tmp\TRPER20180220A006.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.ThrowWithoutLineInfo(String res)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1601
+2018-02-20 18:33:15 : pru.336. False
+2018-02-20 18:33:15 : pru.337. False
+2018-02-20 18:33:16 : pru.338. False
+2018-02-20 18:33:17 : pru.339. False
+2018-02-20 18:33:17 : pru.350. False
+2018-02-20 18:33:17 : pru.352. False
+2018-02-20 18:33:17 : pru.355. False
+2018-02-20 18:33:17 : pru.356. False
+2018-02-20 18:33:18 : pru.358. False
+2018-02-20 18:34:12 : pru.359. False
+2018-02-20 18:34:12 : pru.371. False
+2018-02-20 18:34:19 : pru.372. False
+2018-02-20 18:34:19 : pru.373. False
+2018-02-20 18:34:20 : pru.374. False
+2018-02-20 18:34:36 : pru.375. False
+2018-02-20 18:34:36 : pru.450. False
+2018-02-20 18:34:36 : pru.451. False
+2018-02-20 18:34:36 : pru.1032. False
+2018-02-20 18:37:7 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180220. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:37:7 : Error GetFileList(). No se pudo listar archivos - ftp://192.168.52.141//104/pcmaster/20180220. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:37:7 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.25.61//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:37:7 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.71.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:37:7 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.93.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:37:7 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.89.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:37:7 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.219.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:35 : Error download(). No se pueden leer los datos de la conexión de transporte: Se ha forzado la interrupción de una conexión existente por el host remoto.
+2018-02-20 18:39:35 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A030.XML][TIENDA: 124-Jockey Plaza]
+2018-02-20 18:39:35 : Error download(). Se excedió el tiempo de espera de la operación
+2018-02-20 18:39:35 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A026.XML][TIENDA: 115-Tottus La Polvora]
+2018-02-20 18:39:37 : Error download(). Se ha terminado la conexión: Error inesperado de recepción.
+2018-02-20 18:39:37 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A030.XML][TIENDA: 116-Tottus Lima Centro]
+2018-02-20 18:39:37 : Error download(). Se ha terminado la conexión: Error inesperado de recepción.
+2018-02-20 18:39:37 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A020.XML][TIENDA: 112-Tottus Quilca]
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.116.146//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.215.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.225.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.211.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.123.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.67.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.103.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.51.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.87.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.119.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.121.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.81.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.77.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.55.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.27.201//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.23.201//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.181.70//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.41.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.239.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.154.75//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.153.80//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.221.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:38 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.213.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:43 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.107.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:43 : Error download(). Se excedió el tiempo de espera de la operación
+2018-02-20 18:39:43 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A027.XML][TIENDA: 121-Tottus Tusilagos]
+2018-02-20 18:39:43 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.111.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:39:43 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.223.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:44:59 : VENPRO iniciado
+2018-02-20 18:46:6 : Error.insert_archivoimport_sql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [1112], [0], [0], [1112], [2014-12-19], [08:40:17], [0], [0], [0], [0], [0], [42252], [6547], [11], [0103], []
+]Archivo:[TRPER20141219A482.XML]
+Fecha: [2018-02-20]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A482.XML' , '2018-02-20' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . System.Data.SqlClient.SqlException (0x80131904): Infracción de la restricción PRIMARY KEY 'PK_frame'. No se puede insertar una clave duplicada en el objeto 'dbo.frame'. El valor de clave duplicado es (2014-12-19, 42252, 11, 103).
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos_sql.insert_archivoimport_sql(SqlConnection cnSql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos_sql.cs:línea 3138
+ClientConnectionId:60763858-a6a7-4a3e-8551-662cac9bf188
+Error Number:2627,State:1,Class:14
+2018-02-20 18:46:6 : Error procesarxml_sql(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A482.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0103
+
+2018-02-20 18:46:6 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A482.XML] 
+2018-02-20 18:47:5 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1002.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 18:47:5 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1002.XML] 
+2018-02-20 18:47:39 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1001.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=43; [Login] initialization=0; authentication=0; [Post-Login] complete=53640;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   en System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   en System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   en System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   en System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   en System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   en System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   en System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   en System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   en System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+ClientConnectionId:de120673-65df-45ea-ae39-c3872f2fd713
+Error Number:-2,State:0,Class:11
+2018-02-20 18:47:39 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1001.XML] 
+2018-02-20 18:47:39 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A497.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=43; [Login] initialization=0; authentication=0; [Post-Login] complete=53640;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+ClientConnectionId:de120673-65df-45ea-ae39-c3872f2fd713
+Error Number:-2,State:0,Class:11
+2018-02-20 18:47:39 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A497.XML] 
+2018-02-20 18:47:39 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\124\tmp][E:\VENPRO\VENPRO\bin\Debug\import\124\tmp\TRPER20180220A012.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=43; [Login] initialization=0; authentication=0; [Post-Login] complete=53640;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+ClientConnectionId:de120673-65df-45ea-ae39-c3872f2fd713
+Error Number:-2,State:0,Class:11
+2018-02-20 18:47:39 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\124\tmp\TRPER20180220A012.XML] 
+2018-02-20 18:47:39 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\124\tmp][E:\VENPRO\VENPRO\bin\Debug\import\124\tmp\TRPER20180220A013.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=43; [Login] initialization=0; authentication=0; [Post-Login] complete=53640;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+ClientConnectionId:de120673-65df-45ea-ae39-c3872f2fd713
+Error Number:-2,State:0,Class:11
+2018-02-20 18:47:39 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\124\tmp\TRPER20180220A013.XML] 
+2018-02-20 18:47:39 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\124\tmp][E:\VENPRO\VENPRO\bin\Debug\import\124\tmp\TRPER20180220A014.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=43; [Login] initialization=0; authentication=0; [Post-Login] complete=53640;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+ClientConnectionId:de120673-65df-45ea-ae39-c3872f2fd713
+Error Number:-2,State:0,Class:11
+2018-02-20 18:47:39 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\124\tmp\TRPER20180220A014.XML] 
+2018-02-20 18:47:50 : Error GetFileList(). No se pudo listar archivos - ftp://192.168.52.141//104/pcmaster/20180220. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:6 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.25.61//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:6 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.89.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:13 : Error download(). Error en el servidor remoto: 227 Entering Passive Mode (172,23,97,60,223,62).
+.
+2018-02-20 18:48:13 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A032.XML][TIENDA: 116-Tottus Lima Centro]
+2018-02-20 18:48:13 : Error download(). Error en el servidor remoto: 227 Entering Passive Mode (172,23,101,60,221,13).
+.
+2018-02-20 18:48:13 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A027.XML][TIENDA: 115-Tottus La Polvora]
+2018-02-20 18:48:18 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\124\tmp][E:\VENPRO\VENPRO\bin\Debug\import\124\tmp\TRPER20180220A016.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 18:48:18 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\124\tmp\TRPER20180220A016.XML] 
+2018-02-20 18:48:18 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1004.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 18:48:18 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1004.XML] 
+2018-02-20 18:48:18 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A499.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 18:48:18 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A499.XML] 
+2018-02-20 18:48:18 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.213.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:18 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.111.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:18 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.107.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:18 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.116.146//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:18 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.71.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:18 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.93.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:18 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.219.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:23 : Error download(). Se excedió el tiempo de espera de la operación
+2018-02-20 18:48:23 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A020.XML][TIENDA: 112-Tottus Quilca]
+2018-02-20 18:48:29 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.153.80//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:29 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.221.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:34 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.41.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:34 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.239.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:34 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.154.75//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:40 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.23.201//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:48:40 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.181.70//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:49:3 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.27.201//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:49:7 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.81.60//discod/tlog/Backups/20180220. System.Net.WebException: Se ha terminado la conexión: Error inesperado de recepción.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:49:7 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.77.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:49:7 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.55.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:49:23 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.95.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:49:23 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.121.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:49:30 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.119.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:49:40 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.51.52//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:49:40 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.87.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 18:50:0 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.115.145//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 578
+2018-02-20 19:3:57 : VENPRO iniciado
+2018-02-20 19:7:49 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A497.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 19:7:49 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A497.XML] 
+2018-02-20 19:7:49 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1002.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 19:7:49 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1002.XML] 
+2018-02-20 19:7:49 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1001.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 19:7:49 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1001.XML] 
+2018-02-20 19:7:49 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1000.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 19:7:49 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1000.XML] 
+2018-02-20 19:7:49 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A499.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 19:7:49 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A499.XML] 
+2018-02-20 19:7:55 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.105.60//discod/tlog/Backups/20180220. System.Net.WebException: Error en el servidor remoto: 125 Data connection already open; Transfer starting.
+. ---> System.IO.IOException: Operación no permitida en sockets no conectados.
+   en System.Net.Sockets.NetworkStream.InitNetworkStream(Socket socket, FileAccess Access)
+   en System.Net.Sockets.NetworkStream..ctor(Socket socket, Boolean ownsSocket)
+   en System.Net.FtpControlStream.QueueOrCreateFtpDataStream(Stream& stream)
+   en System.Net.FtpControlStream.PipelineCallback(PipelineEntry entry, ResponseDescription response, Boolean timeout, Stream& stream)
+   en System.Net.CommandStream.PostReadCommandProcessing(Stream& stream)
+   en System.Net.CommandStream.PostSendCommandProcessing(Stream& stream)
+   en System.Net.CommandStream.ContinueCommandPipeline()
+   en System.Net.FtpWebRequest.TimedSubmitRequestHelper(Boolean async)
+   en System.Net.FtpWebRequest.SubmitRequest(Boolean async)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:7:55 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.109.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:7:55 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.99.60//discod/tlog/Backups/20180220. System.Net.WebException: Error en el servidor remoto: 125 Data connection already open; Transfer starting.
+. ---> System.IO.IOException: Operación no permitida en sockets no conectados.
+   en System.Net.Sockets.NetworkStream.InitNetworkStream(Socket socket, FileAccess Access)
+   en System.Net.Sockets.NetworkStream..ctor(Socket socket, Boolean ownsSocket)
+   en System.Net.FtpControlStream.QueueOrCreateFtpDataStream(Stream& stream)
+   en System.Net.FtpControlStream.PipelineCallback(PipelineEntry entry, ResponseDescription response, Boolean timeout, Stream& stream)
+   en System.Net.CommandStream.PostReadCommandProcessing(Stream& stream)
+   en System.Net.CommandStream.PostSendCommandProcessing(Stream& stream)
+   en System.Net.CommandStream.ContinueCommandPipeline()
+   en System.Net.FtpWebRequest.TimedSubmitRequestHelper(Boolean async)
+   en System.Net.FtpWebRequest.SubmitRequest(Boolean async)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:7:55 : Error GetFileList(). No se pudo listar archivos - ftp://192.168.52.141//104/pcmaster/20180220. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:7:59 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A495.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=119; [Login] initialization=0; authentication=0; [Post-Login] complete=149347;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   en System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   en System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   en System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   en System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   en System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   en System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   en System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   en System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   en System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+ClientConnectionId:738ecc18-f442-458a-9ac0-de4b2cdf3d68
+Error Number:-2,State:0,Class:11
+2018-02-20 19:7:59 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A495.XML] 
+2018-02-20 19:8:4 : Error download(). No se pueden leer los datos de la conexión de transporte: Se ha forzado la interrupción de una conexión existente por el host remoto.
+2018-02-20 19:8:4 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A046.XML][TIENDA: 111-Zorritos]
+2018-02-20 19:8:4 : Error download(). No se pueden leer los datos de la conexión de transporte: Se ha forzado la interrupción de una conexión existente por el host remoto.
+2018-02-20 19:8:4 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A027.XML][TIENDA: 115-Tottus La Polvora]
+2018-02-20 19:8:4 : Error download(). No se pueden leer los datos de la conexión de transporte: Se ha forzado la interrupción de una conexión existente por el host remoto.
+2018-02-20 19:8:4 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A032.XML][TIENDA: 116-Tottus Lima Centro]
+2018-02-20 19:8:4 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.107.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:4 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp][E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20180220A028.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=119; [Login] initialization=0; authentication=0; [Post-Login] complete=149347;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+ClientConnectionId:738ecc18-f442-458a-9ac0-de4b2cdf3d68
+Error Number:-2,State:0,Class:11
+2018-02-20 19:8:4 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20180220A028.XML] 
+2018-02-20 19:8:4 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp][E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20180220A029.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=119; [Login] initialization=0; authentication=0; [Post-Login] complete=149347;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+ClientConnectionId:738ecc18-f442-458a-9ac0-de4b2cdf3d68
+Error Number:-2,State:0,Class:11
+2018-02-20 19:8:4 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20180220A029.XML] 
+2018-02-20 19:8:4 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp][E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20180220A030.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=119; [Login] initialization=0; authentication=0; [Post-Login] complete=149347;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+ClientConnectionId:738ecc18-f442-458a-9ac0-de4b2cdf3d68
+Error Number:-2,State:0,Class:11
+2018-02-20 19:8:4 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20180220A030.XML] 
+2018-02-20 19:8:10 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.79.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:10 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.85.60//discod/tlog/Backups/20180220. System.Net.WebException: Se ha terminado la conexión: Error inesperado de recepción.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:10 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.25.61//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.221.60//discod/tlog/Backups/20180220. System.Net.WebException: Se ha terminado la conexión: Error inesperado de recepción.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.213.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.111.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.116.146//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.114.147//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.71.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.93.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.219.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.89.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error download(). Se ha terminado la conexión: Error inesperado de recepción.
+2018-02-20 19:8:16 : Error descargar_archivo(). No se pudo descargar el archivo[TRPER20180220A043.XML][TIENDA: 110-Tottus Chorrillos]
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.153.80//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.154.75//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.239.60//discod/tlog/Backups/20180220. System.Net.WebException: Se excedió el tiempo de espera de la operación.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:16 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.41.52//discod/tlog/Backups/20180220. System.Net.WebException: Se ha terminado la conexión: Error inesperado de recepción.
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 585
+2018-02-20 19:8:46 : Error.insert_archivoimport_sql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [4161], [0], [0], [4161], [2014-10-09], [16:53:06], [0], [0], [0], [0], [0], [52743], [1092], [1], [0107], []
+]Archivo:[TRPER20141009A1005.XML]
+Fecha: [2018-02-20]
+tienda: [107]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1005.XML' , '2018-02-20' ,107, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . System.Data.SqlClient.SqlException (0x80131904): Infracción de la restricción PRIMARY KEY 'PK_frame'. No se puede insertar una clave duplicada en el objeto 'dbo.frame'. El valor de clave duplicado es (2014-10-09, 52743, 1, 107).
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos_sql.insert_archivoimport_sql(SqlConnection cnSql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos_sql.cs:línea 3138
+ClientConnectionId:0780567d-cc22-4f94-b659-c103f608ee96
+Error Number:2627,State:1,Class:14
+2018-02-20 19:8:46 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1004.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 19:8:46 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1004.XML] 
+2018-02-20 19:8:46 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A503.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1700
+2018-02-20 19:8:46 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A503.XML] 
+2018-02-20 19:8:46 : Error.insert_archivoimport_sql(). Error en la sentencia. [codtabla: {34} - nomtabla: {supervisor}
+ValorFILA: [96], [13], [2279], [2819], [2014-10-09], [16:50:37], [0], [0], [0], [0], [0], [53436], [5430], [2], [0107], []
+]Archivo:[TRPER20141009A1003.XML]
+Fecha: [2018-02-20]
+tienda: [107]
+[INSERT INTO supervisor ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Info, Info_Supervisor, NumSupervisor, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1003.XML' , '2018-02-20' ,107, @Tr_Info, @Info_Supervisor, @NumSupervisor, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . System.Data.SqlClient.SqlException (0x80131904): Infracción de la restricción PRIMARY KEY 'PK_supervisor'. No se puede insertar una clave duplicada en el objeto 'dbo.supervisor'. El valor de clave duplicado es (2014-10-09, 53436, 2, 107).
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos_sql.insert_archivoimport_sql(SqlConnection cnSql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos_sql.cs:línea 3138
+ClientConnectionId:d411c8f4-6adc-4d4f-a84c-8b82ab488e57
+Error Number:2627,State:1,Class:14
+2018-02-20 19:8:46 : Error.insert_archivoimport_sql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [1118], [0], [0], [1118], [2014-12-19], [08:57:38], [0], [0], [0], [0], [0], [42725], [6547], [11], [0103], []
+]Archivo:[TRPER20141219A502.XML]
+Fecha: [2018-02-20]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A502.XML' , '2018-02-20' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . System.Data.SqlClient.SqlException (0x80131904): Infracción de la restricción PRIMARY KEY 'PK_frame'. No se puede insertar una clave duplicada en el objeto 'dbo.frame'. El valor de clave duplicado es (2014-12-19, 42725, 11, 103).
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos_sql.insert_archivoimport_sql(SqlConnection cnSql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos_sql.cs:línea 3138
+ClientConnectionId:e69997a8-9eb3-44be-8294-0f289de546ad
+Error Number:2627,State:1,Class:14
+2018-02-20 19:8:46 : Error procesarxml_sql(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1005.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0107
+
+2018-02-20 19:8:46 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1005.XML] 
+2018-02-20 19:8:46 : Error procesarxml_sql(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1003.XML] [tag1: Root
+tag2: Events
+tag3_tabla: Supervisor
+tag4_columna: StoreNumber
+tag4_columna_valor: 0107
+
+2018-02-20 19:8:46 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1003.XML] 
+2018-02-20 19:8:46 : Error procesarxml_sql(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A502.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0103
+
+2018-02-20 19:8:46 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A502.XML] 

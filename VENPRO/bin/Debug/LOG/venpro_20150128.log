@@ -1,0 +1,149 @@
+   LOG VENPRO 2015-01-28
+_________________________________________________________
+---------------------------------------------------------
+
+2015-01-28 0:0:52 : VENPRO iniciado
+2015-01-28 0:1:3 : Inicio eliminacion datos xFecha...
+2015-01-28 0:1:10 : Fin eliminacion datos xFecha.
+2015-01-28 0:1:34 : Inicio eliminacion datos xFecha...
+2015-01-28 0:1:38 : Fin eliminacion datos xFecha.
+2015-01-28 0:1:58 : pru.103. False
+2015-01-28 0:1:58 : pru.104. False
+2015-01-28 0:1:58 : pru.107. False
+2015-01-28 0:1:58 : pru.118. False
+2015-01-28 0:1:58 : pru.123. False
+2015-01-28 0:1:58 : pru.1041. False
+2015-01-28 0:1:59 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//123/pcmaster/20150128. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 517
+2015-01-28 0:1:59 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//1041/pcmaster/20150128. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 517
+2015-01-28 0:1:59 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//104/pcmaster/20150128. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 517
+2015-01-28 0:1:59 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20150128. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 517
+2015-01-28 0:1:59 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//107/pcmaster/20150128. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 517
+2015-01-28 0:1:59 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//118/pcmaster/20150128. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 517
+2015-01-28 0:3:35 : VENPRO iniciado
+2015-01-28 0:3:43 : pru.103. False
+2015-01-28 0:3:43 : pru.104. False
+2015-01-28 0:3:43 : pru.107. False
+2015-01-28 0:3:43 : pru.118. False
+2015-01-28 0:3:43 : pru.123. False
+2015-01-28 0:3:43 : pru.1041. False
+2015-01-28 0:5:30 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A1039.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 680
+2015-01-28 0:7:29 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A687.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 680
+2015-01-28 0:20:7 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A1039.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 680
+2015-01-28 0:22:24 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A687.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 680
+2015-01-28 0:41:23 : VENPRO iniciado
+2015-01-28 0:41:26 : pru.103. False
+2015-01-28 0:41:26 : pru.104. False
+2015-01-28 0:41:26 : pru.107. False
+2015-01-28 0:41:26 : pru.118. False
+2015-01-28 0:41:26 : pru.123. False
+2015-01-28 0:41:26 : pru.1041. False
+2015-01-28 0:41:36 : pru.103. False
+2015-01-28 0:41:36 : pru.104. False
+2015-01-28 0:41:41 : pru.107. False
+2015-01-28 0:41:41 : pru.118. False
+2015-01-28 0:41:41 : pru.123. False
+2015-01-28 0:41:42 : pru.1041. False
+2015-01-28 0:41:48 : pru.103. True
+2015-01-28 0:41:48 : pru.104. False
+2015-01-28 0:41:48 : pru.107. True
+2015-01-28 0:41:48 : pru.118. True
+2015-01-28 0:41:48 : pru.123. False
+2015-01-28 0:41:48 : pru.1041. False
+2015-01-28 0:41:51 : pru.103. True
+2015-01-28 0:41:51 : pru.104. False
+2015-01-28 0:41:51 : pru.107. True
+2015-01-28 0:41:51 : pru.118. True
+2015-01-28 0:41:51 : pru.123. False
+2015-01-28 0:41:51 : pru.1041. False

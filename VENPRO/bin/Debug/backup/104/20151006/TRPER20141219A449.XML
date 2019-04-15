@@ -1,0 +1,10 @@
+<Root><Events>
+<SignOn Tr_Log="32" Log_SignOn="11" ClaveCajero="2702" Tail_NumTicketSL="3005" Tail_Fecha="2014-12-19" Tail_Hora="08:00:25" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="2434" Tail_NumCajero="68" Tail_NumPOS="202" StoreNumber="0104" />
+</Events>
+<Events>
+<SignOn Tr_Log="32" Log_SignOn="11" ClaveCajero="2130" Tail_NumTicketSL="308" Tail_Fecha="2014-12-19" Tail_Hora="08:00:15" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="47353" Tail_NumCajero="3521" Tail_NumPOS="211" StoreNumber="0104" />
+</Events>
+<Events>
+<SignOn Tr_Log="32" Log_SignOn="11" ClaveCajero="3296" Tail_NumTicketSL="9804" Tail_Fecha="2014-12-19" Tail_Hora="08:00:06" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="51454" Tail_NumCajero="3798" Tail_NumPOS="237" StoreNumber="0104" />
+</Events>
+</Root>

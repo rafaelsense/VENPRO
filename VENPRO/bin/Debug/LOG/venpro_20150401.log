@@ -1,0 +1,127 @@
+   LOG VENPRO 2015-04-01
+_________________________________________________________
+---------------------------------------------------------
+
+2015-04-01 8:57:53 : pru.103. False
+2015-04-01 8:57:53 : pru.104. False
+2015-04-01 8:57:53 : pru.107. False
+2015-04-01 8:57:53 : pru.118. False
+2015-04-01 8:58:5 : pru.123. False
+2015-04-01 8:58:5 : pru.1041. False
+2015-04-01 8:58:7 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//104/pcmaster/20150401. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 526
+2015-04-01 8:58:7 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//107/pcmaster/20150401. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 526
+2015-04-01 8:58:7 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//118/pcmaster/20150401. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 526
+2015-04-01 8:58:7 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//123/pcmaster/20150401. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 526
+2015-04-01 8:58:7 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [6212], [0], [0], [6212], [2014-12-19], [12:19:36], [0], [0], [0], [0], [0], [49246], [5979], [5], [0103], []
+]Archivo:[TRPER20141219A698.XML]
+Fecha: [2015-04-01]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A698.XML' , '2015-04-01' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-12-19-49246-5-103' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-04-01 8:58:7 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A698.XML] 
+2015-04-01 8:58:7 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A698.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\103\old\TRPER20141219A698.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A698.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A698.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1643
+2015-04-01 8:58:7 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-04-01' and codtienda_venpro=107 and archivo_venpro='TRPER20141009A877.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-04-01 8:58:7 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-04-01 8:58:7 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A877.XML]
+2015-04-01 8:58:7 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//1041/pcmaster/20150401. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.Net.FtpWebRequest.RequestCallback(Object obj)
+   en System.Net.CommandStream.Dispose(Boolean disposing)
+   en System.IO.Stream.Close()
+   en System.IO.Stream.Dispose()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 526
+2015-04-01 8:58:22 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [2803], [0], [0], [2803], [2014-10-09], [15:56:37], [0], [0], [0], [0], [0], [52370], [5430], [2], [0107], []
+]Archivo:[TRPER20141009A949.XML]
+Fecha: [2015-04-01]
+tienda: [107]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A949.XML' , '2015-04-01' ,107, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-52370-2-107' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-04-01 8:58:22 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A949.XML] 
+2015-04-01 8:58:23 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A949.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\107\old\TRPER20141009A949.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A949.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A949.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1643
+2015-04-01 8:58:23 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-04-01' and codtienda_venpro=107 and archivo_venpro='TRPER20141009A950.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-04-01 8:58:23 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-04-01 8:58:23 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A950.XML]

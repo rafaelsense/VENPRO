@@ -1,0 +1,27 @@
+﻿   LOG VENPRO 2015-01-11
+_________________________________________________________
+---------------------------------------------------------
+2015-01-11 15:23:42 : VENPRO iniciado
+2015-01-11 16:23:25 : VENPRO iniciado
+2015-01-11 16:23:44 : Inicio eliminacion datos xFecha...
+2015-01-11 16:23:48 : Fin eliminacion datos xFecha.
+2015-01-11 16:29:55 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A1039.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 647
+2015-01-11 16:30:51 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A687.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 647
+2015-01-11 16:52:18 : Error btnprocesar_Click(). System.IndexOutOfRangeException: Índice fuera de los límites de la matriz.
+   en VENPRO.Form1.btnprocesar_Click(Object sender, EventArgs e) en E:\VENPRO\VENPRO\Form1.cs:línea 2215

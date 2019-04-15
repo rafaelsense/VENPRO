@@ -1,0 +1,7 @@
+<Root><Events>
+<Q-Length Info="96" Info_Q-Length="55" Q-Length="1" Tail_NumTicketSL="1275" Tail_Fecha="2014-10-09" Tail_Hora="08:21:42" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="41162" Tail_NumCajero="7135" Tail_NumPOS="10" StoreNumber="0107" />
+</Events>
+<Events>
+<Q-Length Info="96" Info_Q-Length="55" Q-Length="1" Tail_NumTicketSL="4497" Tail_Fecha="2014-10-09" Tail_Hora="08:21:22" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="40722" Tail_NumCajero="9272" Tail_NumPOS="14" StoreNumber="0107" />
+</Events>
+</Root>

@@ -1,0 +1,531 @@
+   LOG VENPRO 2015-03-09
+_________________________________________________________
+---------------------------------------------------------
+
+2015-03-09 22:24:35 : VENPRO iniciado
+2015-03-09 22:25:52 : VENPRO iniciado
+2015-03-09 22:26:52 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {33} - nomtabla: {signon}
+ValorFILA: [32], [11], [2231], [3540], [2014-12-19], [07:29:26], [0], [0], [0], [0], [0], [5082], [1063], [29], [0103], []
+]Archivo:[TRPER20141219A409.XML]
+Fecha: [2015-03-09]
+tienda: [103]
+[INSERT INTO signon ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Log, Log_SignOn, ClaveCajero, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A409.XML' , '2015-03-09' ,103, @Tr_Log, @Log_SignOn, @ClaveCajero, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-12-19-5082-29-103' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:52 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A409.XML] 
+2015-03-09 22:26:52 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A409.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\103\old\TRPER20141219A409.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A409.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A409.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:52 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=103 and archivo_venpro='TRPER20141219A443.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:53 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:53 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [4162], [0], [0], [4162], [2014-10-09], [16:54:37], [0], [0], [0], [0], [0], [52840], [1092], [1], [0107], []
+]Archivo:[TRPER20141009A1007.XML]
+Fecha: [2015-03-09]
+tienda: [107]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1007.XML' , '2015-03-09' ,107, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-52840-1-107' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:53 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1007.XML] 
+2015-03-09 22:26:53 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1007.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\107\old\TRPER20141009A1007.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1007.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1007.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:53 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [9848], [0], [0], [9848], [2014-10-09], [16:57:05], [0], [0], [0], [0], [0], [30994], [4799], [13], [0118], []
+]Archivo:[TRPER20141009A1010.XML]
+Fecha: [2015-03-09]
+tienda: [118]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1010.XML' , '2015-03-09' ,118, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-30994-13-118' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:53 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1010.XML] 
+2015-03-09 22:26:53 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=107 and archivo_venpro='TRPER20141009A1008.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:53 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A443.XML]
+2015-03-09 22:26:53 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:53 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1008.XML]
+2015-03-09 22:26:53 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=103 and archivo_venpro='TRPER20141219A446.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:53 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1010.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\118\old\TRPER20141009A1010.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1010.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1010.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:53 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:53 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A446.XML]
+2015-03-09 22:26:53 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [3115], [0], [0], [3115], [2014-10-09], [16:59:26], [0], [0], [0], [0], [0], [6120], [9688], [21], [0118], []
+]Archivo:[TRPER20141009A1011.XML]
+Fecha: [2015-03-09]
+tienda: [118]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1011.XML' , '2015-03-09' ,118, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-6120-21-118' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:53 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1011.XML] 
+2015-03-09 22:26:54 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1011.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\118\old\TRPER20141009A1011.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1011.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1011.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:54 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=118 and archivo_venpro='TRPER20141009A1015.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:54 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:54 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1015.XML]
+2015-03-09 22:26:54 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [1099], [0], [0], [1099], [2014-12-19], [08:08:38], [0], [0], [0], [0], [0], [41406], [6547], [11], [0103], []
+]Archivo:[TRPER20141219A448.XML]
+Fecha: [2015-03-09]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A448.XML' , '2015-03-09' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-12-19-41406-11-103' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:54 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A448.XML] 
+2015-03-09 22:26:54 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A448.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\103\old\TRPER20141219A448.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A448.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A448.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:54 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=103 and archivo_venpro='TRPER20141219A456.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:54 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:54 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A456.XML]
+2015-03-09 22:26:54 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [0], [1], [0], [935], [0], [0], [935], [2014-10-09], [16:58:26], [0], [0], [0], [0], [0], [34461], [7493], [17], [0107], []
+]Archivo:[TRPER20141009A1009.XML]
+Fecha: [2015-03-09]
+tienda: [107]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1009.XML' , '2015-03-09' ,107, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-34461-17-107' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:54 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1009.XML] 
+2015-03-09 22:26:54 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [9852], [0], [0], [9852], [2014-10-09], [17:04:32], [0], [0], [0], [0], [0], [31377], [4799], [13], [0118], []
+]Archivo:[TRPER20141009A1017.XML]
+Fecha: [2015-03-09]
+tienda: [118]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1017.XML' , '2015-03-09' ,118, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-31377-13-118' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:54 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1017.XML] 
+2015-03-09 22:26:54 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1017.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\118\old\TRPER20141009A1017.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1017.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1017.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:54 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=118 and archivo_venpro='TRPER20141009A1018.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:54 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1009.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\107\old\TRPER20141009A1009.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1009.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1009.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:54 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:54 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1018.XML]
+2015-03-09 22:26:55 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [8964], [0], [0], [8964], [2014-10-09], [17:07:03], [0], [0], [0], [0], [0], [27809], [2164], [16], [0118], []
+]Archivo:[TRPER20141009A1019.XML]
+Fecha: [2015-03-09]
+tienda: [118]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1019.XML' , '2015-03-09' ,118, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-27809-16-118' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:55 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1019.XML] 
+2015-03-09 22:26:55 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [0], [1], [0], [1102], [0], [0], [1102], [2014-12-19], [08:17:44], [0], [0], [0], [0], [0], [41591], [6547], [11], [0103], []
+]Archivo:[TRPER20141219A457.XML]
+Fecha: [2015-03-09]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A457.XML' , '2015-03-09' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-12-19-41591-11-103' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:55 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A457.XML] 
+2015-03-09 22:26:55 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1019.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\118\old\TRPER20141009A1019.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1019.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1019.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:55 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=107 and archivo_venpro='TRPER20141009A1011.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:55 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A457.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\103\old\TRPER20141219A457.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A457.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A457.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:55 : Error.delete_archivoimport_mysql().[delete from _q_length where fecha_venpro='2015-03-09' and codtienda_venpro=103 and archivo_venpro='TRPER20141219A463.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:55 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=118 and archivo_venpro='TRPER20141009A1021.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:55 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:55 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:55 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:55 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1021.XML]
+2015-03-09 22:26:55 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1011.XML]
+2015-03-09 22:26:55 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A463.XML]
+2015-03-09 22:26:55 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [9853], [0], [0], [9853], [2014-10-09], [17:07:20], [0], [0], [0], [0], [0], [31472], [4799], [13], [0118], []
+]Archivo:[TRPER20141009A1022.XML]
+Fecha: [2015-03-09]
+tienda: [118]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1022.XML' , '2015-03-09' ,118, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-31472-13-118' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:55 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1022.XML] 
+2015-03-09 22:26:55 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1022.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\118\old\TRPER20141009A1022.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1022.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1022.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:55 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=118 and archivo_venpro='TRPER20141009A1024.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:55 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:55 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1024.XML]
+2015-03-09 22:26:55 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [2702], [0], [0], [2702], [2014-12-19], [08:33:58], [0], [0], [0], [0], [0], [25405], [2180], [13], [0103], []
+]Archivo:[TRPER20141219A474.XML]
+Fecha: [2015-03-09]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A474.XML' , '2015-03-09' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-12-19-25405-13-103' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:55 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A474.XML] 
+2015-03-09 22:26:56 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [7461], [0], [0], [7461], [2014-10-09], [17:01:35], [0], [0], [0], [0], [0], [58552], [6722], [4], [0107], []
+]Archivo:[TRPER20141009A1013.XML]
+Fecha: [2015-03-09]
+tienda: [107]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1013.XML' , '2015-03-09' ,107, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-58552-4-107' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:56 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1013.XML] 
+2015-03-09 22:26:56 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A474.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\103\old\TRPER20141219A474.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A474.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A474.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:56 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [9856], [0], [0], [9856], [2014-10-09], [17:16:26], [0], [0], [0], [0], [0], [31808], [4799], [13], [0118], []
+]Archivo:[TRPER20141009A1028.XML]
+Fecha: [2015-03-09]
+tienda: [118]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1028.XML' , '2015-03-09' ,118, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-31808-13-118' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:56 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1028.XML] 
+2015-03-09 22:26:56 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1013.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\107\old\TRPER20141009A1013.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1013.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1013.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:56 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1028.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\118\old\TRPER20141009A1028.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1028.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1028.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:56 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=103 and archivo_venpro='TRPER20141219A478.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:56 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=107 and archivo_venpro='TRPER20141009A1016.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:56 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=118 and archivo_venpro='TRPER20141009A1030.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:56 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:56 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:56 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:56 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A478.XML]
+2015-03-09 22:26:56 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1016.XML]
+2015-03-09 22:26:56 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1030.XML]
+2015-03-09 22:26:57 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [7463], [0], [0], [7463], [2014-10-09], [17:04:09], [0], [0], [0], [0], [0], [58682], [6722], [4], [0107], []
+]Archivo:[TRPER20141009A1017.XML]
+Fecha: [2015-03-09]
+tienda: [107]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1017.XML' , '2015-03-09' ,107, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-58682-4-107' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:57 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1017.XML] 
+2015-03-09 22:26:57 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [9857], [0], [0], [9857], [2014-10-09], [17:18:49], [0], [0], [0], [0], [0], [31847], [4799], [13], [0118], []
+]Archivo:[TRPER20141009A1032.XML]
+Fecha: [2015-03-09]
+tienda: [118]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1032.XML' , '2015-03-09' ,118, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-10-09-31847-13-118' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:57 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1032.XML] 
+2015-03-09 22:26:57 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [1111], [0], [0], [1111], [2014-12-19], [08:39:34], [0], [0], [0], [0], [0], [42212], [6547], [11], [0103], []
+]Archivo:[TRPER20141219A479.XML]
+Fecha: [2015-03-09]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A479.XML' , '2015-03-09' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-12-19-42212-11-103' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:57 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A479.XML] 
+2015-03-09 22:26:57 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1032.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\118\old\TRPER20141009A1032.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1032.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\118\tmp\TRPER20141009A1032.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:57 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1017.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\107\old\TRPER20141009A1017.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1017.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1017.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:58 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A479.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\103\old\TRPER20141219A479.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A479.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A479.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:58 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=118 and archivo_venpro='TRPER20141009A1034.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:58 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=107 and archivo_venpro='TRPER20141009A1018.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:58 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:58 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:58 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=103 and archivo_venpro='TRPER20141219A481.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:58 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:58 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A481.XML]
+2015-03-09 22:26:58 : Error.insert_RPE_archivoimport_mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [1112], [0], [0], [1112], [2014-12-19], [08:40:17], [0], [0], [0], [0], [0], [42252], [6547], [11], [0103], []
+]Archivo:[TRPER20141219A482.XML]
+Fecha: [2015-03-09]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A482.XML' , '2015-03-09' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . MySql.Data.MySqlClient.MySqlException (0x80004005): Duplicate entry '2014-12-19-42252-11-103' for key 'PRIMARY'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   en MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   en MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos.insert_archivoimport_Mysql(MySqlConnection cnMysql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos.cs:línea 5513
+2015-03-09 22:26:58 : procesarxml().Se elimino Archivo.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A482.XML] 
+2015-03-09 22:26:58 : Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A482.XML].DESTINO:[E:\VENPRO\VENPRO\bin\Debug\import\103\old\TRPER20141219A482.XML] System.IO.FileNotFoundException: No se pudo encontrar el archivo 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A482.XML'.
+Nombre de archivo: 'E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A482.XML'
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.Move(String sourceFileName, String destFileName)
+   en VENPRO.Form1.import_archivo(String fecha_venpro, Int64 codtienda, String ruta) en E:\VENPRO\VENPRO\Form1.cs:línea 1610
+2015-03-09 22:26:58 : Error.delete_archivoimport_mysql().[delete from frame where fecha_venpro='2015-03-09' and codtienda_venpro=103 and archivo_venpro='TRPER20141219A489.XML' ;]. System.InvalidOperationException: Nested transactions are not supported.
+   en MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   en MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(IsolationLevel iso)
+   en MySql.Data.MySqlClient.MySqlConnection.BeginTransaction()
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 4968
+2015-03-09 22:26:58 : Error.delete_archivoimport_mysql(). System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VENPRO.cldatos.delete_archivoimport_mysql(MySqlConnection cn, String tabla, String columfecha, String valfecha, String columcodtienda, Int64 codtienda, String columarchivo, String archivo) en E:\VENPRO\VENPRO\cldatos.cs:línea 5010
+2015-03-09 22:26:58 : Error. No se logro importar import_archivo(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A489.XML]

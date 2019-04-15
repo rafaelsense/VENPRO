@@ -1,0 +1,249 @@
+   LOG VENPRO 2018-02-16
+_________________________________________________________
+---------------------------------------------------------
+
+2018-02-16 15:34:46 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:35:0 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:37:46 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:38:7 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:38:15 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:38:23 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:38:45 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:39:0 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:39:51 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:40:1 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:40:46 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:41:2 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:42:1 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:42:20 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:43:24 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:43:25 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:43:46 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:44:2 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:44:58 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:45:13 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:45:48 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:46:23 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:46:48 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:47:1 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:47:49 : VENPRO Cerrado.
+2018-02-16 15:47:49 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:48:8 : VENPRO iniciado
+2018-02-16 15:49:12 : Error.insert_archivoimport_Mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [@Tr_Frame=33], [@StartofTicket=1], [@TenderPurchase=0], [@PostVoid=0], [@TicketNumber=2917], [@VoidTicketNumber=0], [@NoSale=0], [@Tail_NumTicketSL=2917], [@Tail_Fecha=2014-10-09], [@Tail_Hora=20:26:59], [@Tail_Devolucion=0], [@Tail_Training=0], [@Tail_Offline=0], [@Tail_TicketCancelado=0], [@Tail_BadRec=0], [@Sequence_ID=59170], [@Tail_NumCajero=8668], [@Tail_NumPOS=2], [@StoreNumber=0107], [@TailSeqHighByte=]
+]Archivo:[TRPER20141009A1219.XML]
+Fecha: [2018-02-16]
+tienda: [107]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, fechaprocesamiento_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1219.XML' , '2018-02-16' ,'2018-02-16 15:49:12',107, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . Duplicate entry '2014-10-09-59170-2-107' for key 'PRIMARY'
+2018-02-16 15:49:12 : Error procesarxml(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1219.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0107
+
+2018-02-16 15:49:12 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1219.XML] 
+2018-02-16 15:49:12 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:49:13 : Error.insert_archivoimport_Mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [@Tr_Frame=33], [@StartofTicket=1], [@TenderPurchase=0], [@PostVoid=0], [@TicketNumber=813], [@VoidTicketNumber=0], [@NoSale=0], [@Tail_NumTicketSL=813], [@Tail_Fecha=2014-10-09], [@Tail_Hora=20:28:08], [@Tail_Devolucion=0], [@Tail_Training=0], [@Tail_Offline=0], [@Tail_TicketCancelado=0], [@Tail_BadRec=0], [@Sequence_ID=24666], [@Tail_NumCajero=1377], [@Tail_NumPOS=7], [@StoreNumber=0107], [@TailSeqHighByte=]
+]Archivo:[TRPER20141009A1218.XML]
+Fecha: [2018-02-16]
+tienda: [107]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, fechaprocesamiento_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1218.XML' , '2018-02-16' ,'2018-02-16 15:49:12',107, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . Duplicate entry '2014-10-09-24666-7-107' for key 'PRIMARY'
+2018-02-16 15:49:13 : Error procesarxml(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1218.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0107
+
+2018-02-16 15:49:13 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1218.XML] 
+2018-02-16 15:49:13 : Error.insert_archivoimport_Mysql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [@Tr_Frame=33], [@StartofTicket=1], [@TenderPurchase=0], [@PostVoid=0], [@TicketNumber=7548], [@VoidTicketNumber=0], [@NoSale=0], [@Tail_NumTicketSL=7548], [@Tail_Fecha=2014-10-09], [@Tail_Hora=20:27:11], [@Tail_Devolucion=0], [@Tail_Training=0], [@Tail_Offline=0], [@Tail_TicketCancelado=0], [@Tail_BadRec=0], [@Sequence_ID=63624], [@Tail_NumCajero=9886], [@Tail_NumPOS=4], [@StoreNumber=0107], [@TailSeqHighByte=]
+]Archivo:[TRPER20141009A1217.XML]
+Fecha: [2018-02-16]
+tienda: [107]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, fechaprocesamiento_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141009A1217.XML' , '2018-02-16' ,'2018-02-16 15:49:12',107, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . Duplicate entry '2014-10-09-63624-4-107' for key 'PRIMARY'
+2018-02-16 15:49:13 : Error procesarxml(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1217.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0107
+
+2018-02-16 15:49:13 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1217.XML] 
+2018-02-16 15:49:23 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:50:10 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:50:18 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180216. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:51:26 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180216. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-16 15:51:31 : VENPRO Cerrado.

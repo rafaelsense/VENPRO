@@ -1,0 +1,34 @@
+   LOG VENPRO 2015-01-12
+_________________________________________________________
+---------------------------------------------------------
+
+2015-01-12 23:49:28 : VENPRO iniciado
+2015-01-12 23:50:56 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1001.XML ]
+2015-01-12 23:50:56 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1002.XML ]
+2015-01-12 23:50:57 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1003.XML ]
+2015-01-12 23:50:58 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1004.XML ]
+2015-01-12 23:50:58 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1014.XML ]
+2015-01-12 23:50:58 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1015.XML ]
+2015-01-12 23:50:58 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1016.XML ]
+2015-01-12 23:50:58 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1017.XML ]
+2015-01-12 23:50:59 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1018.XML ]
+2015-01-12 23:50:59 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1019.XML ]
+2015-01-12 23:50:59 : Observacion.import_archivo(). No se encontro el archivo [E:\VENPRO\VENPRO\bin\Debug\import\\123\TRPER20141110A1020.XML ]
+2015-01-12 23:51:39 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A1039.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 647
+2015-01-12 23:53:33 : Error al cargar XML procesarxml(). [E:\VENPRO\VENPRO\bin\Debug\import\123\tmp\TRPER20141110A687.XML]System.Xml.XmlException: Falta el elemento raíz.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   en System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   en System.Xml.XmlDocument.Load(XmlReader reader)
+   en System.Xml.XmlDocument.LoadXml(String xml)
+   en VENPRO.Form1.procesarxml(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 647

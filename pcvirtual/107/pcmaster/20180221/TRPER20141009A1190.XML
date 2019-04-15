@@ -1,0 +1,80 @@
+<Root><Events>
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="4230" Tail_Fecha="2014-10-09" Tail_Hora="20:00:34" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="57033" Tail_NumCajero="1092" Tail_NumPOS="1" StoreNumber="0107" />
+</Events>
+<Events>
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="2902" Tail_Fecha="2014-10-09" Tail_Hora="20:00:33" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="58364" Tail_NumCajero="8668" Tail_NumPOS="2" StoreNumber="0107" />
+</Events>
+<Events>
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="7540" Tail_Fecha="2014-10-09" Tail_Hora="20:00:35" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="63049" Tail_NumCajero="9886" Tail_NumPOS="4" StoreNumber="0107" />
+</Events>
+<Events>
+</Events>
+<Events>
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="1280" Tail_Fecha="2014-10-09" Tail_Hora="20:00:45" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="18328" Tail_NumCajero="5448" Tail_NumPOS="6" StoreNumber="0107" />
+</Events>
+<Events>
+</Events>
+<Events>
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="3018" Tail_Fecha="2014-10-09" Tail_Hora="20:00:18" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="26974" Tail_NumCajero="9542" Tail_NumPOS="20" StoreNumber="0107" />
+</Events>
+<Events>
+<Q-Length Info="96" Info_Q-Length="55" Q-Length="1" Tail_NumTicketSL="9552" Tail_Fecha="2014-10-09" Tail_Hora="20:00:21" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7576" Tail_NumCajero="1364" Tail_NumPOS="39" StoreNumber="0107" />
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="9552" Tail_Fecha="2014-10-09" Tail_Hora="20:01:04" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7577" Tail_NumCajero="1364" Tail_NumPOS="39" StoreNumber="0107" />
+</Events>
+<Events>
+<Q-Length Info="96" Info_Q-Length="55" Q-Length="1" Tail_NumTicketSL="6418" Tail_Fecha="2014-10-09" Tail_Hora="20:00:28" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="57336" Tail_NumCajero="7715" Tail_NumPOS="40" StoreNumber="0107" />
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="6418" Tail_Fecha="2014-10-09" Tail_Hora="20:01:06" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="57337" Tail_NumCajero="7715" Tail_NumPOS="40" StoreNumber="0107" />
+</Events>
+<Events>
+<Supervisor Tr_Info="96" Info_Supervisor="13" NumSupervisor="9073" Tail_NumTicketSL="9059" Tail_Fecha="2014-10-09" Tail_Hora="19:59:31" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54536" Tail_NumCajero="6863" Tail_NumPOS="41" StoreNumber="0107" />
+<Retiros Tr_Retiro="9" MontoRetiro="339760" TenderRetiro="1" Tail_NumTicketSL="9059" Tail_Fecha="2014-10-09" Tail_Hora="20:00:17" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54537" Tail_NumCajero="6863" Tail_NumPOS="41" StoreNumber="0107" />
+<Q-Length Info="96" Info_Q-Length="55" Q-Length="907" Tail_NumTicketSL="9060" Tail_Fecha="2014-10-09" Tail_Hora="20:00:23" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54549" Tail_NumCajero="6863" Tail_NumPOS="41" StoreNumber="0107" />
+<Supervisor Tr_Info="96" Info_Supervisor="13" NumSupervisor="9073" Tail_NumTicketSL="9060" Tail_Fecha="2014-10-09" Tail_Hora="20:00:31" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54553" Tail_NumCajero="6863" Tail_NumPOS="41" StoreNumber="0107" />
+<ReporteX Tr_Log="32" ReporteX="22" ClaveCajero="3115" Tail_NumTicketSL="9060" Tail_Fecha="2014-10-09" Tail_Hora="20:00:33" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54554" Tail_NumCajero="6863" Tail_NumPOS="41" StoreNumber="0107" />
+<Supervisor Tr_Info="96" Info_Supervisor="13" NumSupervisor="9073" Tail_NumTicketSL="9061" Tail_Fecha="2014-10-09" Tail_Hora="20:00:43" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54589" Tail_NumCajero="6863" Tail_NumPOS="41" StoreNumber="0107" />
+<SignOff Tr_Log="32" Log_SignOff="12" Tail_NumTicketSL="9061" Tail_Fecha="2014-10-09" Tail_Hora="20:00:45" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54591" Tail_NumCajero="6863" Tail_NumPOS="41" StoreNumber="0107" />
+<Supervisor Tr_Info="96" Info_Supervisor="13" NumSupervisor="9073" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:50" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54603" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+</Events>
+<Ticket>
+<Frame Tr_Frame="33" StartofTicket="1" TenderPurchase="0" PostVoid="0" TicketNumber="9062" VoidTicketNumber="0" NoSale="0" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:50" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54604" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+<Supervisor Tr_Info="96" Info_Supervisor="13" NumSupervisor="9073" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:50" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54606" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+<TotalesZVentas1 Tr_Info="112" ReporteZ="248" ZSales1="1" Ingresos="0" egresos="0" pago_cmr="545872" pago_supercash="0" trans_abortada="0" trans_anulada="0" recaudacion_bruta="682195" recaudacion_neta="682195" pickups="339760" loans="0" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:50" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54607" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+<TotalesZVentas2 Tr_Info="112" ReporteZ="248" ZSales2="2" RUC_tickets="0" NSRT_Total="199506665" Gross_Sales="136323" Canje_CMRPuntos="0" Rev.Canj_CMRPuntos="0" CMRPuntos="0" CMRPuntosSoles="0" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:51" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54608" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+<TotalesZTenders Tr_Info="112" ReporteZ="248" ZTenders="3" TenderID1="1" Tender1Total="20000" TenderID2="7" Tender2Total="25910" TenderID3="9" Tender3Total="0" TenderID4="10" Tender4Total="0" TenderID5="11" Tender5Total="0" TenderID6="12" Tender6Total="0" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:51" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54609" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+<TotalesZTenders Tr_Info="112" ReporteZ="248" ZTenders="3" TenderID1="13" Tender1Total="0" TenderID2="14" Tender2Total="0" TenderID3="15" Tender3Total="0" TenderID4="16" Tender4Total="0" TenderID5="19" Tender5Total="2" TenderID6="21" Tender6Total="0" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:51" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54610" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+<TotalesZTenders Tr_Info="112" ReporteZ="248" ZTenders="3" TenderID1="22" Tender1Total="0" TenderID2="23" Tender2Total="0" TenderID3="25" Tender3Total="3" TenderID4="2" Tender4Total="0" TenderID5="3" Tender5Total="0" TenderID6="5" Tender6Total="11856" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:51" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54611" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+<TotalesZTenders Tr_Info="112" ReporteZ="248" ZTenders="3" TenderID1="6" Tender1Total="9670" TenderID2="8" Tender2Total="0" TenderID3="17" Tender3Total="275000" TenderID4="20" Tender4Total="0" TenderID5="4" Tender5Total="0" TenderID6="18" Tender6Total="0" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:51" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54612" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="203163870" Tail_NumTicketSL="9062" Tail_Fecha="2014-10-09" Tail_Hora="20:00:51" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="54613" Tail_NumCajero="0" Tail_NumPOS="41" StoreNumber="0107" />
+</Ticket>
+<Events>
+</Events>
+<Events>
+</Events>
+<Events>
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="4546" Tail_Fecha="2014-10-09" Tail_Hora="20:00:24" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="8440" Tail_NumCajero="6137" Tail_NumPOS="47" StoreNumber="0107" />
+</Events>
+<Events>
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="1921" Tail_Fecha="2014-10-09" Tail_Hora="20:00:20" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="19222" Tail_NumCajero="8217" Tail_NumPOS="48" StoreNumber="0107" />
+</Events>
+<Events>
+<Enter_Secure Tr_Log="32" Log_Enter_Secure="13" Tail_NumTicketSL="4711" Tail_Fecha="2014-10-09" Tail_Hora="20:00:19" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="51434" Tail_NumCajero="7036" Tail_NumPOS="55" StoreNumber="0107" />
+</Events>
+<Ticket>
+<Frame Tr_Frame="33" StartofTicket="1" TenderPurchase="0" PostVoid="0" TicketNumber="7975" VoidTicketNumber="0" NoSale="0" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:09" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7817" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<PLU Tr_PLU="1" CodigoPLU="00000000005601" AnularItem="0" AnularUltimo="0" PriceOverride="0" ManualPrice="0" Pesable="0" Cant_es_Peso="0" Linked_Envase="0" Escaneado="0" BottleDeposit="0" BottleRefund="0" NumDepartamento="701" Cantidad="1" Precio="399" Monto_Recibido="399" TxFlg1="1" TxFlg2="0" TxFlg3="0" TxFlg4="0" TxFlg5="0" TxFlg6="0" TxFlg7="0" TxFlg8="0" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:09" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7819" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<Media Tr_Media="4" NumTender="1" Change="0" TenderSubtract="0" TenderCancel="2" TenderType="1" MontoTender="400" NumTarjeta="00000000000000000000" CCEscaneado="0" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:16" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7821" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<Hook_TenderTime Tr_Hook="98" Tender_Time="23" Tender_No="1" Start_Time="20141009200013" End_Time="20141009200016" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:16" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7822" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<Media Tr_Media="4" NumTender="25" Change="0" TenderSubtract="0" TenderCancel="0" TenderType="1" MontoTender="1" NumTarjeta="00000000000000000000" CCEscaneado="0" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:16" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7825" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<InfoEmployeeID Tr_Hook="98" EmployeeIDInfo="7" CashierID="8896714    " CashierName="ORTEGA ACEVEDO GRACI" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:17" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7826" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<Hook_TaxesItems Tr_Hook="98" Item_Taxes="22" PLU_Item_Code="00000000005601" MontoIgv="61" MontoIsc="0" MontoSrv="0" TasaIgv="1800" TasaIsc="0" TasaSrv="0" PLUSeqNo="7819" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:17" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7827" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<InfoFactura Tr_Hook="98" FacturaInfo="5" NumeroRUC="" TaxAmt1="000061" TaxAmt2="000000" TaxAmt3="000000" TotalTaxAmt="000061" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:17" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7828" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<Tax Tr_Tax="6" NumTax="1" MontoTaxable="0" MontoTax="0" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:18" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7829" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<FiscalInfo Tr_Info2="112" Info2_Fiscal="26" RUTCajero="8896714    " NumTicketFiscal="0" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:24" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7842" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<InfoSPF Tr_Hook="98" InfoSPF="1" CodigoPLU="00000000005601" Cantidad="1" Precio="399" MontoDesc="0" CodPromo="" CondBeneficio="" MontoPromo="0" SPF_ID="7819" NumSubDepartamento="" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:24" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7843" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+<Total Tr_Total="5" MontoTicket="399" NumItems="1" Saved_Tkt="0" Recalled_Tkt="0" GT="106227143" Tail_NumTicketSL="7975" Tail_Fecha="2014-10-09" Tail_Hora="20:00:25" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7844" Tail_NumCajero="6714" Tail_NumPOS="70" StoreNumber="0107" />
+</Ticket>
+<Events>
+</Events>
+<Events>
+</Events>
+</Root>

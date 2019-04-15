@@ -1,0 +1,6 @@
+<Root><Events>
+<Exit_Secure Tr_Log="32" Log_Exit_Secure="14" Tail_NumTicketSL="5523" Tail_Fecha="2014-11-10" Tail_Hora="15:54:40" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="60816" Tail_NumCajero="4016" Tail_NumPOS="17" StoreNumber="0123" TailSeqHighByte="8" />
+<CashierFunction Trans_Info3="128" Trans_Info3_cashier_Function="22" FunctionType="9" CashierID="08894016" Tail_NumTicketSL="5523" Tail_Fecha="2014-11-10" Tail_Hora="15:54:40" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="60817" Tail_NumCajero="4016" Tail_NumPOS="17" StoreNumber="0123" TailSeqHighByte="8" />
+<Q-Length Info="96" Info_Q-Length="55" Q-Length="5" Tail_NumTicketSL="5523" Tail_Fecha="2014-11-10" Tail_Hora="15:55:01" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="60819" Tail_NumCajero="4016" Tail_NumPOS="17" StoreNumber="0123" TailSeqHighByte="8" />
+</Events>
+</Root>

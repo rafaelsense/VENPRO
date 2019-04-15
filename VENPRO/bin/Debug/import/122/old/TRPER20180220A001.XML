@@ -1,0 +1,111 @@
+<Root><Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="1628" Tail_Fecha="2018-02-19" Tail_Hora="23:58:26" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="64297" Tail_NumCajero="0" Tail_NumPOS="1" StoreNumber="0122" TailSeqHighByte="22" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="59415340" Tail_NumTicketSL="1628" Tail_Fecha="2018-02-19" Tail_Hora="23:58:27" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="64300" Tail_NumCajero="0" Tail_NumPOS="1" StoreNumber="0122" TailSeqHighByte="22" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="7276" Tail_Fecha="2018-02-19" Tail_Hora="23:58:30" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="31021" Tail_NumCajero="0" Tail_NumPOS="2" StoreNumber="0122" TailSeqHighByte="225" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="155616094" Tail_NumTicketSL="7276" Tail_Fecha="2018-02-19" Tail_Hora="23:58:31" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="31024" Tail_NumCajero="0" Tail_NumPOS="2" StoreNumber="0122" TailSeqHighByte="225" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="1038" Tail_Fecha="2018-02-19" Tail_Hora="23:58:15" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="62900" Tail_NumCajero="0" Tail_NumPOS="3" StoreNumber="0122" TailSeqHighByte="227" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="1980977" Tail_NumTicketSL="1038" Tail_Fecha="2018-02-19" Tail_Hora="23:58:16" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="62903" Tail_NumCajero="0" Tail_NumPOS="3" StoreNumber="0122" TailSeqHighByte="227" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="2375" Tail_Fecha="2018-02-19" Tail_Hora="23:58:33" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="55844" Tail_NumCajero="0" Tail_NumPOS="4" StoreNumber="0122" TailSeqHighByte="19" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="263878282" Tail_NumTicketSL="2375" Tail_Fecha="2018-02-19" Tail_Hora="23:58:34" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="55847" Tail_NumCajero="0" Tail_NumPOS="4" StoreNumber="0122" TailSeqHighByte="19" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="9138" Tail_Fecha="2018-02-19" Tail_Hora="23:58:34" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="39530" Tail_NumCajero="0" Tail_NumPOS="5" StoreNumber="0122" TailSeqHighByte="5" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="411489791" Tail_NumTicketSL="9138" Tail_Fecha="2018-02-19" Tail_Hora="23:58:34" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="39533" Tail_NumCajero="0" Tail_NumPOS="5" StoreNumber="0122" TailSeqHighByte="5" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="9936" Tail_Fecha="2018-02-19" Tail_Hora="23:58:21" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="4438" Tail_NumCajero="0" Tail_NumPOS="6" StoreNumber="0122" TailSeqHighByte="104" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="54777157" Tail_NumTicketSL="9936" Tail_Fecha="2018-02-19" Tail_Hora="23:58:22" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="4441" Tail_NumCajero="0" Tail_NumPOS="6" StoreNumber="0122" TailSeqHighByte="104" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="676" Tail_Fecha="2018-02-19" Tail_Hora="23:58:16" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="11815" Tail_NumCajero="0" Tail_NumPOS="7" StoreNumber="0122" TailSeqHighByte="1" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="283173469" Tail_NumTicketSL="676" Tail_Fecha="2018-02-19" Tail_Hora="23:58:17" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="11818" Tail_NumCajero="0" Tail_NumPOS="7" StoreNumber="0122" TailSeqHighByte="1" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="8483" Tail_Fecha="2018-02-19" Tail_Hora="23:58:39" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="5444" Tail_NumCajero="0" Tail_NumPOS="8" StoreNumber="0122" TailSeqHighByte="20" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="67345733" Tail_NumTicketSL="8483" Tail_Fecha="2018-02-19" Tail_Hora="23:58:40" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="5447" Tail_NumCajero="0" Tail_NumPOS="8" StoreNumber="0122" TailSeqHighByte="20" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="1822" Tail_Fecha="2018-02-19" Tail_Hora="23:58:16" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="3990" Tail_NumCajero="0" Tail_NumPOS="9" StoreNumber="0122" TailSeqHighByte="70" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="12327928" Tail_NumTicketSL="1822" Tail_Fecha="2018-02-19" Tail_Hora="23:58:17" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="3993" Tail_NumCajero="0" Tail_NumPOS="9" StoreNumber="0122" TailSeqHighByte="70" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="316" Tail_Fecha="2018-02-19" Tail_Hora="23:58:32" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="4032" Tail_NumCajero="0" Tail_NumPOS="11" StoreNumber="0122" TailSeqHighByte="94" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="277124401" Tail_NumTicketSL="316" Tail_Fecha="2018-02-19" Tail_Hora="23:58:34" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="4035" Tail_NumCajero="0" Tail_NumPOS="11" StoreNumber="0122" TailSeqHighByte="94" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="2531" Tail_Fecha="2018-02-19" Tail_Hora="23:58:12" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="41274" Tail_NumCajero="0" Tail_NumPOS="12" StoreNumber="0122" TailSeqHighByte="37" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="25292603" Tail_NumTicketSL="2531" Tail_Fecha="2018-02-19" Tail_Hora="23:58:13" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="41277" Tail_NumCajero="0" Tail_NumPOS="12" StoreNumber="0122" TailSeqHighByte="37" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="4761" Tail_Fecha="2018-02-19" Tail_Hora="23:58:32" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="60715" Tail_NumCajero="0" Tail_NumPOS="13" StoreNumber="0122" TailSeqHighByte="110" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="225459128" Tail_NumTicketSL="4761" Tail_Fecha="2018-02-19" Tail_Hora="23:58:33" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="60718" Tail_NumCajero="0" Tail_NumPOS="13" StoreNumber="0122" TailSeqHighByte="110" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="4502" Tail_Fecha="2018-02-19" Tail_Hora="23:58:26" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="25534" Tail_NumCajero="0" Tail_NumPOS="14" StoreNumber="0122" TailSeqHighByte="208" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="43723235" Tail_NumTicketSL="4502" Tail_Fecha="2018-02-19" Tail_Hora="23:58:27" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="25537" Tail_NumCajero="0" Tail_NumPOS="14" StoreNumber="0122" TailSeqHighByte="208" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="7055" Tail_Fecha="2018-02-19" Tail_Hora="23:58:28" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="46867" Tail_NumCajero="0" Tail_NumPOS="15" StoreNumber="0122" TailSeqHighByte="40" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="157460760" Tail_NumTicketSL="7055" Tail_Fecha="2018-02-19" Tail_Hora="23:58:29" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="46870" Tail_NumCajero="0" Tail_NumPOS="15" StoreNumber="0122" TailSeqHighByte="40" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="5003" Tail_Fecha="2018-02-19" Tail_Hora="23:58:18" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="37394" Tail_NumCajero="0" Tail_NumPOS="16" StoreNumber="0122" TailSeqHighByte="37" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="384288873" Tail_NumTicketSL="5003" Tail_Fecha="2018-02-19" Tail_Hora="23:58:19" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="37397" Tail_NumCajero="0" Tail_NumPOS="16" StoreNumber="0122" TailSeqHighByte="37" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="2907" Tail_Fecha="2018-02-19" Tail_Hora="23:58:32" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="45297" Tail_NumCajero="0" Tail_NumPOS="17" StoreNumber="0122" TailSeqHighByte="243" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="441536157" Tail_NumTicketSL="2907" Tail_Fecha="2018-02-19" Tail_Hora="23:58:33" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="45300" Tail_NumCajero="0" Tail_NumPOS="17" StoreNumber="0122" TailSeqHighByte="243" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="1366" Tail_Fecha="2018-02-19" Tail_Hora="23:58:10" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="50767" Tail_NumCajero="0" Tail_NumPOS="18" StoreNumber="0122" TailSeqHighByte="32" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="100836503" Tail_NumTicketSL="1366" Tail_Fecha="2018-02-19" Tail_Hora="23:58:11" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="50770" Tail_NumCajero="0" Tail_NumPOS="18" StoreNumber="0122" TailSeqHighByte="32" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="2011" Tail_Fecha="2018-02-19" Tail_Hora="23:58:35" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7993" Tail_NumCajero="0" Tail_NumPOS="19" StoreNumber="0122" TailSeqHighByte="243" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="17118951" Tail_NumTicketSL="2011" Tail_Fecha="2018-02-19" Tail_Hora="23:58:36" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="7996" Tail_NumCajero="0" Tail_NumPOS="19" StoreNumber="0122" TailSeqHighByte="243" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="7969" Tail_Fecha="2018-02-19" Tail_Hora="23:58:10" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="10287" Tail_NumCajero="0" Tail_NumPOS="20" StoreNumber="0122" TailSeqHighByte="219" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="69157850" Tail_NumTicketSL="7969" Tail_Fecha="2018-02-19" Tail_Hora="23:58:11" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="10290" Tail_NumCajero="0" Tail_NumPOS="20" StoreNumber="0122" TailSeqHighByte="219" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="9578" Tail_Fecha="2018-02-19" Tail_Hora="23:58:29" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="56938" Tail_NumCajero="0" Tail_NumPOS="21" StoreNumber="0122" TailSeqHighByte="164" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="415967122" Tail_NumTicketSL="9578" Tail_Fecha="2018-02-19" Tail_Hora="23:58:30" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="56941" Tail_NumCajero="0" Tail_NumPOS="21" StoreNumber="0122" TailSeqHighByte="164" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="3087" Tail_Fecha="2018-02-19" Tail_Hora="23:58:09" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="163" Tail_NumCajero="0" Tail_NumPOS="22" StoreNumber="0122" TailSeqHighByte="142" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="108573915" Tail_NumTicketSL="3087" Tail_Fecha="2018-02-19" Tail_Hora="23:58:10" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="166" Tail_NumCajero="0" Tail_NumPOS="22" StoreNumber="0122" TailSeqHighByte="142" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="412" Tail_Fecha="2018-02-19" Tail_Hora="23:58:33" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="31292" Tail_NumCajero="0" Tail_NumPOS="23" StoreNumber="0122" TailSeqHighByte="79" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="249108639" Tail_NumTicketSL="412" Tail_Fecha="2018-02-19" Tail_Hora="23:58:34" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="31295" Tail_NumCajero="0" Tail_NumPOS="23" StoreNumber="0122" TailSeqHighByte="79" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="4941" Tail_Fecha="2018-02-19" Tail_Hora="23:58:28" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="48465" Tail_NumCajero="0" Tail_NumPOS="24" StoreNumber="0122" TailSeqHighByte="75" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="42884487" Tail_NumTicketSL="4941" Tail_Fecha="2018-02-19" Tail_Hora="23:58:29" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="48468" Tail_NumCajero="0" Tail_NumPOS="24" StoreNumber="0122" TailSeqHighByte="75" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="8755" Tail_Fecha="2018-02-19" Tail_Hora="23:58:28" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="5821" Tail_NumCajero="0" Tail_NumPOS="25" StoreNumber="0122" TailSeqHighByte="47" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="214004439" Tail_NumTicketSL="8755" Tail_Fecha="2018-02-19" Tail_Hora="23:58:28" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="5824" Tail_NumCajero="0" Tail_NumPOS="25" StoreNumber="0122" TailSeqHighByte="47" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="3556" Tail_Fecha="2018-02-19" Tail_Hora="23:58:14" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="33590" Tail_NumCajero="0" Tail_NumPOS="31" StoreNumber="0122" TailSeqHighByte="112" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="104863471" Tail_NumTicketSL="3556" Tail_Fecha="2018-02-19" Tail_Hora="23:58:14" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="33593" Tail_NumCajero="0" Tail_NumPOS="31" StoreNumber="0122" TailSeqHighByte="112" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="5126" Tail_Fecha="2018-02-19" Tail_Hora="23:58:41" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="42350" Tail_NumCajero="0" Tail_NumPOS="33" StoreNumber="0122" TailSeqHighByte="77" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="18598695" Tail_NumTicketSL="5126" Tail_Fecha="2018-02-19" Tail_Hora="23:58:42" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="42353" Tail_NumCajero="0" Tail_NumPOS="33" StoreNumber="0122" TailSeqHighByte="77" />
+</Events>
+<Events>
+<Alert_Version Tr_Alerta="99" VersionPOS="80" Version="8.9.1.7-" Tail_NumTicketSL="4776" Tail_Fecha="2018-02-19" Tail_Hora="23:58:31" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="10237" Tail_NumCajero="0" Tail_NumPOS="35" StoreNumber="0122" TailSeqHighByte="86" />
+<Total Tr_Total="5" MontoTicket="0" NumItems="0" Saved_Tkt="0" Recalled_Tkt="0" GT="404462477" Tail_NumTicketSL="4776" Tail_Fecha="2018-02-19" Tail_Hora="23:58:32" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="1" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="10240" Tail_NumCajero="0" Tail_NumPOS="35" StoreNumber="0122" TailSeqHighByte="86" />
+</Events>
+<Events>
+</Events>
+</Root>

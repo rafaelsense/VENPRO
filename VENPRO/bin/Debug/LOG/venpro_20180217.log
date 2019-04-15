@@ -1,0 +1,395 @@
+   LOG VENPRO 2018-02-17
+_________________________________________________________
+---------------------------------------------------------
+
+2018-02-17 23:49:49 : VENPRO iniciado
+2018-02-17 23:53:38 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180217. System.Net.WebException: Se excedió el tiempo de espera de la operación
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:53:57 : VENPRO iniciado
+2018-02-17 23:54:59 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180217. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:56:27 : Error.insert_archivoimport_sql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [2748], [0], [0], [2748], [2014-12-19], [10:37:25], [0], [0], [0], [0], [0], [29154], [2180], [13], [0103], []
+]Archivo:[TRPER20141219A598.XML]
+Fecha: [2018-02-17]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A598.XML' , '2018-02-17' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . System.Data.SqlClient.SqlException (0x80131904): Infracción de la restricción PRIMARY KEY 'PK_frame'. No se puede insertar una clave duplicada en el objeto 'dbo.frame'. El valor de clave duplicado es (2014-12-19, 29154, 13, 103).
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos_sql.insert_archivoimport_sql(SqlConnection cnSql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos_sql.cs:línea 3138
+ClientConnectionId:f9c610a9-357d-49a8-b824-06c23277d249
+Error Number:2627,State:1,Class:14
+2018-02-17 23:56:27 : Error procesarxml_sql(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A598.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0103
+
+2018-02-17 23:56:27 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A598.XML] 
+2018-02-17 23:56:27 : Error.insert_archivoimport_sql(). Error en la sentencia. [codtabla: {2} - nomtabla: {frame}
+ValorFILA: [33], [1], [0], [0], [7597], [0], [0], [7597], [2014-12-19], [10:42:33], [0], [0], [0], [0], [0], [21524], [8615], [3], [0103], []
+]Archivo:[TRPER20141219A603.XML]
+Fecha: [2018-02-17]
+tienda: [103]
+[INSERT INTO frame ( archivo_venpro,fecha_venpro, codtienda_venpro, Tr_Frame, StartofTicket, TenderPurchase, PostVoid, TicketNumber, VoidTicketNumber, NoSale, Tail_NumTicketSL, Tail_Fecha, Tail_Hora, Tail_Devolucion, Tail_Training, Tail_Offline, Tail_TicketCancelado, Tail_BadRec, Sequence_ID, Tail_NumCajero, Tail_NumPOS, StoreNumber, TailSeqHighByte ) 
+                                    values ( 'TRPER20141219A603.XML' , '2018-02-17' ,103, @Tr_Frame, @StartofTicket, @TenderPurchase, @PostVoid, @TicketNumber, @VoidTicketNumber, @NoSale, @Tail_NumTicketSL, @Tail_Fecha, @Tail_Hora, @Tail_Devolucion, @Tail_Training, @Tail_Offline, @Tail_TicketCancelado, @Tail_BadRec, @Sequence_ID, @Tail_NumCajero, @Tail_NumPOS, @StoreNumber, @TailSeqHighByte )] . System.Data.SqlClient.SqlException (0x80131904): Infracción de la restricción PRIMARY KEY 'PK_frame'. No se puede insertar una clave duplicada en el objeto 'dbo.frame'. El valor de clave duplicado es (2014-12-19, 21524, 3, 103).
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en VENPRO.cldatos_sql.insert_archivoimport_sql(SqlConnection cnSql_BD, String fecha_venpro, Int64 codtienda_venpro, String archivo_venpro, Int64 codtabla, String nomtabla, String modoactualizacion, Int32 colposicionupdate, Int32 colposicionupdate1, Int32 colposicionupdate2, Int32 colposicionupdate3, Int32 colposicionupdate4, Int32 colposicionupdate5, Int32 colposicionupdate6, Int32 colposicionupdate7, DataRow[] rwcolumnas, List`1 v_columnaxFila, List`1 v_valorxFila) en E:\VENPRO\VENPRO\cldatos_sql.cs:línea 3138
+ClientConnectionId:5e58ad74-b4c4-490b-a2f4-afc998fe1834
+Error Number:2627,State:1,Class:14
+2018-02-17 23:56:27 : Error procesarxml_sql(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A603.XML] [tag1: Root
+tag2: Ticket
+tag3_tabla: Frame
+tag4_columna: StoreNumber
+tag4_columna_valor: 0103
+
+2018-02-17 23:56:27 : procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A603.XML] 
+2018-02-17 23:56:28 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.75.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:56:30 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A611.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1698
+2018-02-17 23:56:30 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A611.XML] 
+2018-02-17 23:56:30 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.73.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:56:39 : Error GetFileList(). No se pudo listar archivos - ftp://nuevapc//107/pcmaster/20180217. System.Net.WebException: No se puede resolver el nombre remoto: 'nuevapc'
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:56:39 : Error GetFileList(). No se pudo listar archivos - ftp://192.168.52.141//104/pcmaster/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:56:39 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp][E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1051.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=163; handshake=74316;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   en System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   en System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   en System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable)
+   en System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   en System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   en System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   en System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   en System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   en System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1698
+ClientConnectionId:82c80aa9-0e83-47c7-bd67-9e6eaa40f477
+Error Number:-2,State:0,Class:11
+2018-02-17 23:56:39 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\107\tmp\TRPER20141009A1051.XML] 
+2018-02-17 23:57:2 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A615.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=163; handshake=74316;  ---> System.ComponentModel.Win32Exception (0x80004005): Tiempo de espera de la operación de espera agotado
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1698
+ClientConnectionId:82c80aa9-0e83-47c7-bd67-9e6eaa40f477
+Error Number:-2,State:0,Class:11
+2018-02-17 23:57:2 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A615.XML] 
+2018-02-17 23:57:3 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.25.61//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:57:27 : Error procesarxml_sql(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp][E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A624.XML] [tag1: 
+tag2: 
+tag3_tabla: 
+tag4_columna: 
+tag4_columna_valor: 
+System.InvalidOperationException: Valor de tiempo de espera caducado. El período de tiempo de espera expiró antes de obtener una conexión del grupo. Esto puede suceder porque todas las conexiones de la agrupación estaban en uso y se alcanzó el máximo tamaño del grupo.
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en VENPRO.Form1.procesarxml_sql(String fecha_venpro, Int64 codtienda, String ruta, String arch) en E:\VENPRO\VENPRO\Form1.cs:línea 1698
+2018-02-17 23:57:27 : Error. No se logro importar procesar_thread_XML(). [E:\VENPRO\VENPRO\bin\Debug\import\103\tmp\TRPER20141219A624.XML] 
+2018-02-17 23:57:34 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.85.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:57:34 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.89.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:57:34 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.219.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:57:47 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.101.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:57:54 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.97.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:12 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.93.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:18 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.105.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:18 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.113.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:28 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.109.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:28 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.83.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:28 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.79.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:28 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.71.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:28 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.99.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:29 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.114.147//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.47.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.217.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.223.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.215.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.225.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.211.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.123.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.67.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.103.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.115.145//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.51.52//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.87.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.95.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.119.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.121.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.81.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.77.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.55.52//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.27.201//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.23.201//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.181.70//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.41.52//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.239.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.154.75//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.153.80//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.221.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.213.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.111.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.107.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.116.146//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:36 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.209.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:43 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.203.60//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:43 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.29.52//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:43 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.33.52//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:43 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.31.52//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:47 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.35.201//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:48 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.39.52//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:58:48 : Error GetFileList(). No se pudo listar archivos - ftp://10.163.43.52//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:59:0 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.227.51//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:59:13 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.125.52//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:59:13 : Error GetFileList(). No se pudo listar archivos - ftp://localhost//103/pcmaster/20180217. System.Net.WebException: Error en el servidor remoto: (550) Archivo no disponible (ej. no se encuentra el archivo o no se tiene acceso).
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   en System.IO.Stream.Close()
+   en System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   en System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   en System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564
+2018-02-17 23:59:13 : Error GetFileList(). No se pudo listar archivos - ftp://172.23.39.58//discod/tlog/Backups/20180217. System.Net.WebException: No es posible conectar con el servidor remoto
+   en System.Net.FtpWebRequest.CheckError()
+   en System.Net.FtpWebRequest.GetResponse()
+   en VENPRO.globales.GetFileList(String rutaserver, String user, String pass) en E:\VENPRO\VENPRO\globales.cs:línea 564

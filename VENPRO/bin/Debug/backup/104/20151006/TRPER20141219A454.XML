@@ -1,0 +1,32 @@
+<Root><Events>
+</Events>
+<Events>
+<SignOn Tr_Log="32" Log_SignOn="11" ClaveCajero="1111" Tail_NumTicketSL="111" Tail_Fecha="2014-12-19" Tail_Hora="08:05:16" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="26364" Tail_NumCajero="1225" Tail_NumPOS="186" StoreNumber="0104" />
+</Events>
+<Events>
+</Events>
+<Ticket>
+<Frame Tr_Frame="33" StartofTicket="1" TenderPurchase="0" PostVoid="0" TicketNumber="5531" VoidTicketNumber="0" NoSale="0" Tail_NumTicketSL="5531" Tail_Fecha="2014-12-19" Tail_Hora="08:05:25" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="1" Tail_BadRec="0" Sequence_ID="4743" Tail_NumCajero="4875" Tail_NumPOS="199" StoreNumber="0104" />
+<PLU Tr_PLU="1" CodigoPLU="09999999999994" AnularItem="0" AnularUltimo="0" PriceOverride="0" ManualPrice="0" Pesable="0" Cant_es_Peso="0" Linked_Envase="0" Escaneado="0" BottleDeposit="0" BottleRefund="0" NumDepartamento="9901" Cantidad="1" Precio="141219" Monto_Recibido="141219" TxFlg1="0" TxFlg2="0" TxFlg3="0" TxFlg4="0" TxFlg5="0" TxFlg6="0" TxFlg7="0" TxFlg8="0" Tail_NumTicketSL="5531" Tail_Fecha="2014-12-19" Tail_Hora="08:05:25" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="1" Tail_BadRec="0" Sequence_ID="4745" Tail_NumCajero="4875" Tail_NumPOS="199" StoreNumber="0104" />
+<Total Tr_Total="5" MontoTicket="141219" NumItems="1" Saved_Tkt="0" Recalled_Tkt="0" GT="187520902" Tail_NumTicketSL="5531" Tail_Fecha="2014-12-19" Tail_Hora="08:05:30" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="1" Tail_BadRec="0" Sequence_ID="4753" Tail_NumCajero="4875" Tail_NumPOS="199" StoreNumber="0104" />
+</Ticket>
+<Events>
+</Events>
+<Events>
+</Events>
+<Ticket>
+<Frame Tr_Frame="33" StartofTicket="1" TenderPurchase="0" PostVoid="0" TicketNumber="1342" VoidTicketNumber="0" NoSale="0" Tail_NumTicketSL="1342" Tail_Fecha="2014-12-19" Tail_Hora="08:04:38" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="1" Tail_BadRec="0" Sequence_ID="1757" Tail_NumCajero="1019" Tail_NumPOS="201" StoreNumber="0104" />
+<PLU Tr_PLU="1" CodigoPLU="09999999999994" AnularItem="0" AnularUltimo="0" PriceOverride="0" ManualPrice="0" Pesable="0" Cant_es_Peso="0" Linked_Envase="0" Escaneado="0" BottleDeposit="0" BottleRefund="0" NumDepartamento="9901" Cantidad="1" Precio="141219" Monto_Recibido="141219" TxFlg1="0" TxFlg2="0" TxFlg3="0" TxFlg4="0" TxFlg5="0" TxFlg6="0" TxFlg7="0" TxFlg8="0" Tail_NumTicketSL="1342" Tail_Fecha="2014-12-19" Tail_Hora="08:04:38" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="1" Tail_BadRec="0" Sequence_ID="1759" Tail_NumCajero="1019" Tail_NumPOS="201" StoreNumber="0104" />
+<Total Tr_Total="5" MontoTicket="141219" NumItems="1" Saved_Tkt="0" Recalled_Tkt="0" GT="217088593" Tail_NumTicketSL="1342" Tail_Fecha="2014-12-19" Tail_Hora="08:04:41" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="1" Tail_BadRec="0" Sequence_ID="1767" Tail_NumCajero="1019" Tail_NumPOS="201" StoreNumber="0104" />
+</Ticket>
+<Events>
+</Events>
+<Events>
+</Events>
+<Events>
+</Events>
+<Events>
+</Events>
+<Events>
+</Events>
+</Root>
