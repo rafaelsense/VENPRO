@@ -1,6 +1,0 @@
-<Root><Events>
-</Events>
-<Events>
-<CashierFunction Trans_Info3="128" Trans_Info3_cashier_Function="22" FunctionType="14" CashierID="08721375" Tail_NumTicketSL="3933" Tail_Fecha="2014-11-10" Tail_Hora="17:04:48" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="31698" Tail_NumCajero="8683" Tail_NumPOS="7" StoreNumber="0123" TailSeqHighByte="7" />
-</Events>
-</Root>

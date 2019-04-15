@@ -1,8 +1,0 @@
-<Root><Events>
-<Q-Length Info="96" Info_Q-Length="55" Q-Length="1" Tail_NumTicketSL="3072" Tail_Fecha="2014-10-09" Tail_Hora="22:54:09" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="32817" Tail_NumCajero="9542" Tail_NumPOS="20" StoreNumber="0107" />
-<Supervisor Tr_Info="96" Info_Supervisor="13" NumSupervisor="9073" Tail_NumTicketSL="3072" Tail_Fecha="2014-10-09" Tail_Hora="22:54:12" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="32818" Tail_NumCajero="9542" Tail_NumPOS="20" StoreNumber="0107" />
-<ReporteX Tr_Log="32" ReporteX="22" ClaveCajero="2011" Tail_NumTicketSL="3072" Tail_Fecha="2014-10-09" Tail_Hora="22:54:13" Tail_Devolucion="0" Tail_Training="0" Tail_Offline="0" Tail_TicketCancelado="0" Tail_BadRec="0" Sequence_ID="32819" Tail_NumCajero="9542" Tail_NumPOS="20" StoreNumber="0107" />
-</Events>
-<Events>
-</Events>
-</Root>
