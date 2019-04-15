@@ -3,7 +3,7 @@
 *.log
 
 #Ignore Folders
-"Venpro capa/"
+"venpro capa/"
 pcvirtual/
 VENPRO/bin/debug/import/
 VENPRO/bin/debug/backup/
