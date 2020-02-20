@@ -66,6 +66,13 @@ namespace VENPRO
                     System.IO.Directory.CreateDirectory(System.Environment.CurrentDirectory + "\\import\\");
 
                 }
+
+                if (System.IO.Directory.Exists(System.Environment.CurrentDirectory + "\\load\\") == false)
+                {
+                    System.IO.Directory.CreateDirectory(System.Environment.CurrentDirectory + "\\load\\");
+
+                }
+
                 globales.Grutadescarga = System.Environment.CurrentDirectory + "\\import\\";
                 globales.Grutareproceso = System.Environment.CurrentDirectory + "\\reproceso\\";
                 //..............................                
@@ -665,7 +672,7 @@ namespace VENPRO
                             globales.Grextensionpermitido = nodo.ChildNodes[i].Attributes[11].InnerText;
                             globales.Gsolodescarga = Convert.ToBoolean(nodo.ChildNodes[i].Attributes[12].InnerText);
                             globales.Gsoloproceso = Convert.ToBoolean(nodo.ChildNodes[i].Attributes[13].InnerText);
-                            globales.Gcantarchivoprocesadoparalelo = Int32.Parse(nodo.ChildNodes[i].Attributes[14].InnerText);
+                            globales.Gcantarchivoprocesaporminuto = Int32.Parse(nodo.ChildNodes[i].Attributes[14].InnerText);
 
                         }
 
@@ -2442,7 +2449,515 @@ namespace VENPRO
             return result;
 
         }
-        
+
+        private string procesarxml_csv(string fecha_venpro, Int64 codtienda, string ruta, string rutatienda, string arch, string fechahoraload)
+        {
+
+            string result = "1";
+            //DataSet dscolumnas;
+            string tmp_fecharegistro = fecha_venpro;
+            Int64 tmp_codtienda_venpro = codtienda;
+            string delimiter = ";";
+            string extension = ".csv";
+            HashSet<string> list_archivosload = new HashSet<string>(); //Guarda lista No repetida.
+            Dictionary<string, string> tablasList = new Dictionary<string, string>();
+
+            VENPRO.cldatos_mysql cldatos_tmp = new VENPRO.cldatos_mysql();
+            int cont_err = 0;
+
+            //....................
+
+            //'..........................................................
+            //    Dim m_xmld As New XmlDocument
+            //    Dim m_nodelist As XmlNodeList
+            //    Dim m_node As XmlNode
+
+            string tmp_arch = ruta + "\\" + arch;
+            //string tmp_arch = @"E:\VENPRO\VENPRO\bin\Debug\import" + "\\" + "TRPER20140717A1361.XML";
+            //"TRPER20140717A1066.XML";
+
+            XmlDocument arbol;
+            arbol = new XmlDocument();
+            StreamReader leer_archivo;
+            DataRow[] rwcolumnas;
+            //string tmp_fecharegistro = globales.Grtimeserv.ToString("yyyy-MM-dd");
+            leer_archivo = null;
+
+            try
+            {
+                leer_archivo = File.OpenText(tmp_arch);
+                String readfile = leer_archivo.ReadToEnd();
+                arbol.LoadXml("<?xml version='1.0' encoding='ISO-8859-1'?>" + readfile);
+                leer_archivo.Close();
+                leer_archivo.Dispose();
+                //arbol.Load(tmp_arch);
+            }
+            catch (Exception exx)
+            {
+                //Escribiendo Log.......
+                globales.escribirLOG("Error al cargar XML procesarxml_csv(). " + "[" + ruta + "\\" + arch + "]" + exx.ToString());
+                //fin Log...............
+
+                try
+                {
+                    leer_archivo.Close();
+                    leer_archivo.Dispose();
+                }
+                catch
+                {
+
+                }
+
+                return result;
+
+            }
+
+
+            XmlNodeList nodolist;
+            //int tot;
+
+            //cllog.escribirLOG(arbol.ChildNodes.Count.ToString() + " ." + ruta + " " + arch);
+            //if (arbol.ChildNodes.Count > 0) { 
+
+            //}
+
+            nodolist = arbol.SelectNodes("/Root");
+
+
+            String tmp_tag1 = "";
+            String tmp_tag2 = "";
+            String tmp_tabla = "";
+            String tmp_columna = "";
+            String tmp_columna_valor = "";
+
+            Int64 t_codtabla = -1;
+            string t_nomtabla = "";
+            Boolean t_estadoactivo = false;
+            //Int64 t_codconexionbd = -1;
+            //string t_nomconexion = "";
+            //string t_conexion = "";
+            //string t_nomtipoconexion = "";
+            //Int64 t_codtipoconexion = -1;
+            string t_modoactualizacion = "";
+            int t_columnaupdate = 0;
+            int t_columnaupdate1 = 0;
+            int t_columnaupdate2 = 0;
+            int t_columnaupdate3 = 0;
+            int t_columnaupdate4 = 0;
+            int t_columnaupdate5 = 0;
+            int t_columnaupdate6 = 0;
+            int t_columnaupdate7 = 0;
+
+
+            try
+            {
+
+                try
+                {
+                    globales.Gcontprocesadosxml = globales.Gcontprocesadosxml + 1;
+                }
+                catch { }
+
+
+
+
+
+
+                if (nodolist[0].ChildNodes.Count > 0)
+                {
+                    
+
+
+                    bool tmp_elim_archiv_err = false;
+                    //INSERTAR------
+                    for (int i = 0; i < nodolist[0].ChildNodes.Count; i++)
+                    {
+                        //PUEDE SER: /Root/Ticket
+                        //PUEDE SER: /Root/Events
+
+                        //XmlNode nodo = nodolist[i];
+                        //MessageBox.Show("Nodo:" + nodolist[0].ChildNodes[i].Name );
+
+                        tmp_tag1 = "";
+                        tmp_tag2 = "";
+                        tmp_tabla = "";
+                        tmp_columna = "";
+                        tmp_columna_valor = "";
+
+                        tmp_tag1 = nodolist[0].Name;
+                        tmp_tag2 = nodolist[0].ChildNodes[i].Name;
+
+                        for (int k = 0; k < nodolist[0].ChildNodes[i].ChildNodes.Count; k++)
+                        {
+                            //SON TABLAS......
+                            //PUEDE SER: /Root/Ticket/Frame
+                            //PUEDE SER: /Root/Ticket/PLU
+                            //PUEDE SER: /Root/Ticket/Discount
+                            //PUEDE SER: /Root/Ticket/InfoSPF
+                            //PUEDE SER: /Root/Ticket/Total
+                            //PUEDE SER: /Root/Events/Q-Length
+                            //PUEDE SER: /Root/Events/Enter_Secure
+
+
+
+                            //CARGAR COLUMNAS DE LA TABLA-----------------------------------
+                            tmp_tag1 = "";
+                            tmp_tag2 = "";
+                            tmp_tabla = "";
+                            tmp_columna = "";
+                            tmp_columna_valor = "";
+
+                            tmp_tag1 = nodolist[0].Name;
+                            tmp_tag2 = nodolist[0].ChildNodes[i].Name;
+                            tmp_tabla = nodolist[0].ChildNodes[i].ChildNodes[k].Name;
+
+
+                            //VERIFICAR SI EXISTE TABLA-----------------
+                            bool tmp_existe_tabla = false;
+                            for (int x = 0; x < globales.Gedsejecutartabladel.Tables[0].Rows.Count; x++)
+                            {
+                                string v_codtabla = globales.Gedsejecutartabladel.Tables[0].Rows[x]["codtabla"].ToString();
+                                string v_tabla = globales.Gedsejecutartabladel.Tables[0].Rows[x]["nomtabla"].ToString();
+                                string v_tablaxml = globales.Gedsejecutartabladel.Tables[0].Rows[x]["nomtablaxml"].ToString(); // compara valor tablaxml
+
+                                //cllog.escribirLOG("Error procesarxml(). No se encontro la tabla: " + "[bd:{" + v_tabla + "} - XML:{"+ tmp_tabla + "} ] Archivo: [" + tmp_arch + "]");
+
+                                if (v_tablaxml.ToUpper() == tmp_tabla.ToUpper())
+                                {
+                                    tmp_existe_tabla = true;
+                                }
+
+                            }
+
+                            if (!tmp_existe_tabla)
+                            {
+
+                                if (globales.Gractbusqtag)
+                                {
+                                    cllog.escribirLOG("Error procesarxml_csv(). No se encontro la tabla: " + "[" + tmp_tabla + "] Archivo: [" + tmp_arch + "]");
+
+                                    cldatos_tmp.insert_validacionxml_mysql(cnmysql_venpro, tmp_fecharegistro, ruta, arch, tmp_tag1, tmp_tag2, tmp_tabla, "");
+                                }
+                                continue;
+                            }
+                            //-------------------------------------------
+
+                            List<String> v_columnaxFila = new List<String>();
+                            List<String> v_valorxFila = new List<String>();
+                            //string tmp_valorFila = "";
+                            //dscolumnas = new DataSet();
+                            rwcolumnas = null;
+                            rwcolumnas = globales.Gedsejecutartablaimport.Tables[0].Select("nomtablaxml='" + tmp_tabla + "'");
+
+                            //MessageBox.Show("Tabla:" + tmp_tabla + " colum" + rwcolumnas.Length.ToString() +
+                            //    " Primer:" + rwcolumnas[0]["nomcolumna"].ToString() + " Primer posi:" + rwcolumnas[0]["posicioncolum"].ToString());
+                            ////continue;
+                            //rowregla[i]["PRMCODUSR"].ToString();
+                            if (rwcolumnas.Length <= 0)
+                            {
+
+                                continue;
+                            }
+                            else
+                            {
+
+
+                                //valorxFila = new string[nodolist[0].ChildNodes[i].ChildNodes[k].Attributes.Count];
+                                //columnaxFila = new string[nodolist[0].ChildNodes[i].ChildNodes[k].Attributes.Count];
+
+                                t_codtabla = -1;
+                                t_estadoactivo = false;
+                                t_modoactualizacion = "";
+                                t_columnaupdate = 0;
+                                t_columnaupdate1 = 0;
+                                t_columnaupdate2 = 0;
+                                t_columnaupdate3 = 0;
+                                t_columnaupdate4 = 0;
+                                t_columnaupdate5 = 0;
+                                t_columnaupdate6 = 0;
+                                t_columnaupdate7 = 0;
+
+                                t_estadoactivo = Convert.ToBoolean(Convert.ToInt32(rwcolumnas[0]["estadoactivo"]));
+
+                                if (t_estadoactivo == false)
+                                {
+                                    continue;
+                                }
+
+                                t_codtabla = Convert.ToInt64(rwcolumnas[0]["codtabla"].ToString());
+                                t_nomtabla = rwcolumnas[0]["nomtabla"].ToString(); //Carga nombre tabla BD
+                                t_modoactualizacion = rwcolumnas[0]["modoactualizacion"].ToString();
+
+                                if (rwcolumnas[0]["col_posicion_update"].ToString() == "")
+                                {
+                                    t_columnaupdate = 0;
+                                }
+                                else
+                                {
+                                    t_columnaupdate = Convert.ToInt32(rwcolumnas[0]["col_posicion_update"].ToString());
+                                }
+
+                                if (rwcolumnas[0]["col_posicion_update1"].ToString() == "")
+                                {
+                                    t_columnaupdate1 = 0;
+                                }
+                                else
+                                {
+                                    t_columnaupdate1 = Convert.ToInt32(rwcolumnas[0]["col_posicion_update1"].ToString());
+                                }
+
+                                if (rwcolumnas[0]["col_posicion_update2"].ToString() == "")
+                                {
+                                    t_columnaupdate2 = 0;
+                                }
+                                else
+                                {
+                                    t_columnaupdate2 = Convert.ToInt32(rwcolumnas[0]["col_posicion_update2"].ToString());
+                                }
+
+                                if (rwcolumnas[0]["col_posicion_update3"].ToString() == "")
+                                {
+                                    t_columnaupdate3 = 0;
+                                }
+                                else
+                                {
+                                    t_columnaupdate3 = Convert.ToInt32(rwcolumnas[0]["col_posicion_update3"].ToString());
+                                }
+
+                                if (rwcolumnas[0]["col_posicion_update4"].ToString() == "")
+                                {
+                                    t_columnaupdate4 = 0;
+                                }
+                                else
+                                {
+                                    t_columnaupdate4 = Convert.ToInt32(rwcolumnas[0]["col_posicion_update4"].ToString());
+                                }
+
+                                if (rwcolumnas[0]["col_posicion_update5"].ToString() == "")
+                                {
+                                    t_columnaupdate5 = 0;
+                                }
+                                else
+                                {
+                                    t_columnaupdate5 = Convert.ToInt32(rwcolumnas[0]["col_posicion_update5"].ToString());
+                                }
+
+                                if (rwcolumnas[0]["col_posicion_update6"].ToString() == "")
+                                {
+                                    t_columnaupdate6 = 0;
+                                }
+                                else
+                                {
+                                    t_columnaupdate6 = Convert.ToInt32(rwcolumnas[0]["col_posicion_update6"].ToString());
+                                }
+
+                                if (rwcolumnas[0]["col_posicion_update7"].ToString() == "")
+                                {
+                                    t_columnaupdate7 = 0;
+                                }
+                                else
+                                {
+                                    t_columnaupdate7 = Convert.ToInt32(rwcolumnas[0]["col_posicion_update7"].ToString());
+                                }
+
+
+
+
+                            }
+                            //----------------------------------
+
+                            //COLUMNAS....
+
+                            for (int m = 0; m < rwcolumnas.Length; m++)
+                            {
+                                string col_nomcolumnaxml = rwcolumnas[m]["nomcolumnaxml"].ToString(); // se compara columnaxml
+
+                                int col_posicion = col_posicion = Convert.ToInt32(rwcolumnas[m]["posicioncolum"].ToString());
+                                string col_tipocolumna = rwcolumnas[m]["tipocolumna"].ToString();
+                                string col_formato = rwcolumnas[m]["formato"].ToString();
+                                string t_columnaFila = rwcolumnas[m]["nomcolumna"].ToString(); //nombre bd
+                                string t_valorFila = "";
+
+                                bool c_validacion_colum = false;
+                                for (int p = 0; p < nodolist[0].ChildNodes[i].ChildNodes[k].Attributes.Count; p++)
+                                {
+                                    //SON COLUMNAS......
+                                    //PUEDE SER: /Root/Ticket/Frame.Tr_Frame
+                                    //PUEDE SER: /Root/Ticket/Frame.Tail_Fecha 
+                                    //PUEDE SER: /Root/Ticket/Frame.Tail_NumPOS
+
+                                    //nodolist[i].ParentNode.Value;
+                                    //----------------------------------
+                                    tmp_tag1 = "";
+                                    tmp_tag2 = "";
+                                    tmp_tabla = "";
+                                    tmp_columna = "";
+                                    tmp_columna_valor = "";
+
+                                    tmp_tag1 = nodolist[0].Name;
+                                    tmp_tag2 = nodolist[0].ChildNodes[i].Name;
+                                    tmp_tabla = nodolist[0].ChildNodes[i].ChildNodes[k].Name;
+                                    tmp_columna = nodolist[0].ChildNodes[i].ChildNodes[k].Attributes[p].Name;
+
+                                    if (col_nomcolumnaxml.ToUpper() != tmp_columna.ToUpper())
+                                    {
+                                        continue;
+                                    }
+
+                                    tmp_columna_valor = nodolist[0].ChildNodes[i].ChildNodes[k].Attributes[p].Value.Trim();
+                                    t_valorFila = tmp_columna_valor;
+                                    c_validacion_colum = true;
+                                    break;
+                                }
+
+                                //VALIDACION--------
+                                if (c_validacion_colum)
+                                {
+                                    //Agregar columna y valor......
+                                    v_columnaxFila.Add(t_columnaFila); //Se agrega la el nombre de la columna de la BD, no el del xml.
+                                    v_valorxFila.Add(t_valorFila);
+                                    //......................
+
+                                }
+                                else
+                                {
+                                    //Agregar columna y valor......
+                                    v_columnaxFila.Add(t_columnaFila); //Se agrega la el nombre de la columna de la BD, no el del xml.
+                                    v_valorxFila.Add("");
+                                    //......................
+
+                                    ////Registrar solo una vez si no encuentra, no una por cada registro.
+                                    //if (globales.Gractbusqtag)
+                                    //{
+                                    //    cllog.escribirLOG("Inf procesarxml_csv(). No se encontro datos de columna en la tabla: " + "[" + tmp_tabla + "]" + " Columna: [" + t_columnaFila + "]" + "Archivo: [" + tmp_arch + "]");
+                                    //    //cldatos_tmp.insert_validacionxml_mysql(cnmysql_venpro, tmp_fecharegistro, ruta, arch, tmp_tag1, tmp_tag2, tmp_tabla, t_columnaFila);
+                                    //}
+
+
+                                }
+                                //------------------
+
+                            }
+
+                            //INSERTAR------------
+
+
+
+                            //string tmp_insert = "";
+                            //tmp_insert = cldatos_tmp.insert_archivoimport_Mysql(cnMysql_BD, tmp_fecharegistro, tmp_codtienda_venpro, arch, t_codtabla, t_nomtabla, t_modoactualizacion, t_columnaupdate, t_columnaupdate1, t_columnaupdate2,
+                            //      t_columnaupdate3, t_columnaupdate4, t_columnaupdate5, t_columnaupdate6, t_columnaupdate7, rwcolumnas,
+                            //      v_columnaxFila, v_valorxFila);
+
+                            //string t_col = "archivo_venpro" + delimiter + "fecha_venpro" + delimiter + "fechaprocesamiento_venpro" + delimiter + "codtienda_venpro" + delimiter  + string.Join(delimiter, v_columnaxFila.ToArray());
+                            string t_col_val = arch + delimiter + fecha_venpro + delimiter + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + delimiter + codtienda.ToString() + delimiter + string.Join(delimiter, v_valorxFila.ToArray()) + "\r\n";
+                            // tmp_insert = cllog.escribirscv(rutatienda + "\\load\\", "tmp_"+ codtienda.ToString() + "_" + arch.Replace(".", "") + "_" + t_nomtabla + extension, t_col_val);
+
+                            if (!tablasList.ContainsKey(t_nomtabla))
+                            {
+                                tablasList[t_nomtabla] = t_col_val;
+                            }
+                            else
+                            {
+                                tablasList[t_nomtabla] += t_col_val;
+                            }
+
+                            //if (tmp_insert == "1") {
+                            //    list_archivosload.Add(codtienda.ToString() + "_" + arch.Replace(".", "") + "_" + t_nomtabla + extension);
+                            //}else{
+                            //    result = result + "[" + tmp_insert + "]";
+
+                            //    cont_err = cont_err + 1;
+
+                            //    if (cont_err >= 1)
+                            //    {
+                            //        result = result + "[procesarxml_csv(). Se interrumpio la lectura del archivo XML " + arch + " por mas de 1 errores consecutivos.]";
+
+                            //        cllog.escribirLOG("Error procesarxml_csv(). Se interrumpio la lectura del archivo XML por mas de 1 errores consecutivos. [" + ruta + "]" + "[" + tmp_arch + "] [" +
+                            //          "tag1: " + tmp_tag1 + "\r\n" +
+                            //          "tag2: " + tmp_tag2 + "\r\n" +
+                            //          "tag3_tabla: " + tmp_tabla + "\r\n" +
+                            //          "tag4_columna: " + tmp_columna + "\r\n" +
+                            //          "tag4_columna_valor: " + tmp_columna_valor + "\r\n");
+
+                            //        break;
+                            //    }
+
+
+                            //}
+
+                            //--------------------
+
+
+                        }
+
+                        //if (cont_err >= 1)
+                        //{
+                        //    break;
+                        //}
+                    }
+
+                    //if (cont_err == 0) {
+                    //}
+                    foreach (var tablalist in tablasList)
+                    {
+                        //string file_origen = rutatienda + "\\load\\" + "tmp_" + codtienda.ToString() + "_" + arch.Replace(".", "") + "_" + tablalist.Key + extension;
+                        string file_origen = rutatienda + "\\load\\" + "tmp_" + codtienda.ToString() + "_" + fechahoraload + "_" + tablalist.Key + extension;
+                        string file_destino = rutatienda + "\\load\\" + codtienda.ToString() + "_" + fechahoraload + "_" + tablalist.Key + extension;
+                        //cllog.escribirLOG("ORIGEN:" + file_origen);
+                        //cllog.escribirLOG("DESTINO:" + file_destino);
+                        //File.WriteAllText(file_origen, tablalist.Value);
+
+                        //Write File...
+                        //System.IO.StreamWriter sw = new StreamWriter(file_origen, true);
+                        //sw.WriteLine(tablalist.Value);
+                        //sw.Close();
+                        File.AppendAllText(file_origen, tablalist.Value);
+                        //...
+                        //cllog.escribirLOG("CREANDO ARCHIVO.. " + file_origen);
+                        //if (File.Exists(file_destino))
+                        //    File.Delete(file_destino);
+                        //File.Move(file_origen, file_destino);
+                    }
+
+                    
+
+                    //else{
+                    //    File.Delete(rutatienda + "\\load\\" + "tmp_"+ codtienda.ToString() + "_" + arch.Replace(".", "") + "_" + t_nomtabla + extension);
+                    //}
+
+
+                }
+
+
+                
+               
+            }
+            catch (Exception ex)
+            {
+                //Escribiendo Log.......
+                cllog.escribirLOG("Error procesarxml_csv(). [" + ruta + "]" + "[" + tmp_arch + "] [" +
+                      "tag1: " + tmp_tag1 + "\r\n" +
+                      "tag2: " + tmp_tag2 + "\r\n" +
+                      "tag3_tabla: " + tmp_tabla + "\r\n" +
+                      "tag4_columna: " + tmp_columna + "\r\n" +
+                      "tag4_columna_valor: " + tmp_columna_valor + "\r\n" +
+                     ex.ToString());
+                //fin Log...............
+
+                result = "Error procesarxml_csv(). [" + ruta + "]" + "[" + tmp_arch + "] [" +
+                      "tag1: " + tmp_tag1 + "\r\n" +
+                      "tag2: " + tmp_tag2 + "\r\n" +
+                      "tag3_tabla: " + tmp_tabla + "\r\n" +
+                      "tag4_columna: " + tmp_columna + "\r\n" +
+                      "tag4_columna_valor: " + tmp_columna_valor + "\r\n" +
+                     ex.ToString();
+
+            }
+            //cllog.escribirLOG("procesarxml(). Procesado. [" + ruta + "][" + arch +"]" );
+            return result;
+
+        }
+
         private void import_archivo( Object param)
         {
 
@@ -2455,26 +2970,29 @@ namespace VENPRO
             string fecha_venpro = param_obj[0];
             Int64 codtienda = Convert.ToInt64(param_obj[1]);
             string ruta = param_obj[2];
+            string fechahoraload = param_obj[3];
 
 
             //bool result = true;
             globales.Gedarchivo_ejecucion.Add(ruta);
             globales.Gmensajeperiodicoerr = "";
             //....
+            
             string rutaImport = ruta;
             string[] Rutatmp;
             string filetemp = "";
             string rutafile = "";
             string pathfile = "";
             string[] extensionpermitido = { ".xml", ".XML" };
-            int tmp_cantarchivoprocesado = 0;
+            string archivopermitido = globales.Grarchivopermitido;
+            int tmp_cantarchivoprocesaporminuto = globales.Gcantarchivoprocesaporminuto;
             int tmp_cantarchivoporprocesar = 0;
 
             //-----------------
-            int contador_joinarchivos = 0;
-            int cant_importarchivosparalelo = globales.Gcantarchivoprocesadoparalelo;
-            Thread[] ejecutarthread_importarchivo;
-            ejecutarthread_importarchivo = new Thread[cant_importarchivosparalelo];
+            //int contador_joinarchivos = 0;
+            //int cant_importarchivosparalelo = globales.Gcantarchivoprocesadoparalelo;
+            //Thread[] ejecutarthread_importarchivo;
+            //ejecutarthread_importarchivo = new Thread[cant_importarchivosparalelo];
             //-----------------
 
             
@@ -2495,7 +3013,22 @@ namespace VENPRO
                 //    extensionpermitido = new string[1];
                 //    extensionpermitido[0] = tipoarchivo_soportado;
                 //}
+                //Valida y crea carpeta si no existe por tienda.
+                //if (!Directory.Exists(path_tienda + "\\load\\old\\"))
+                //    Directory.CreateDirectory(path_tienda + "\\load\\old\\");
+                //....
                 ////......................
+                if (System.IO.Directory.Exists(rutaImport + "\\old\\") == false)
+                {
+                    System.IO.Directory.CreateDirectory(rutaImport + "\\old\\");
+
+                }
+                if (System.IO.Directory.Exists(rutaImport + "\\load\\old\\") == false)
+                {
+                    System.IO.Directory.CreateDirectory(rutaImport + "\\load\\old\\");
+
+                }
+                //.........
                 Application.DoEvents();
                 if (!Directory.Exists(rutaImport + "\\tmp\\"))
                     Directory.CreateDirectory(rutaImport + "\\tmp\\");
@@ -2527,15 +3060,37 @@ namespace VENPRO
                     }
                 }
 
+                // ELIMINAR ARCHIVO SI EXISTE EN LOAD PARA NO AGREGAR DATOS y repetir-----
+                if (Directory.GetFiles(rutaImport + "\\load\\", "tmp_" + codtienda.ToString() + "_*").Length > 0)
+                {
+                    string[] TRutatmp = Directory.GetFiles(rutaImport + "\\load\\", "tmp_" + codtienda.ToString() + "_*");
+
+                    for (int x = 0; x < TRutatmp.Length; x++)
+                    {
+                        string Tpathfile = TRutatmp[x];
+                        string Tfiletemp = Path.GetFileName(TRutatmp[x]);//Nombre archivo                        
+                        string Trutafile = Path.GetDirectoryName(TRutatmp[x]);// Ruta del Archivo.
+
+                        if (System.IO.File.Exists(Tpathfile) == true)
+                        {
+                            System.IO.File.Delete(Tpathfile);
+                        }
+                    }
+
+                }
+
+                //--------------------------
+
                 Rutatmp = new string[1];
                 pathfile = "";
                 filetemp = "";
                 rutafile = "";
 
-                if (Directory.GetFiles(rutaImport, "*.*",SearchOption.TopDirectoryOnly).Length > 0)
+                if (Directory.GetFiles(rutaImport, archivopermitido + "*.*",SearchOption.TopDirectoryOnly).Length > 0)
                 {
-                    Rutatmp = Directory.GetFiles(rutaImport, "*.*", SearchOption.TopDirectoryOnly);
-                    
+                    Rutatmp = Directory.GetFiles(rutaImport, archivopermitido + "*.*", SearchOption.TopDirectoryOnly);
+
+                    List<String> archivos_procesar = new List<String>();  
                     for (int i = 0; i < Rutatmp.Length; i++)
                     {
                         pathfile = Rutatmp[i];
@@ -2564,11 +3119,23 @@ namespace VENPRO
                         if (!File.Exists(pathfile))
                         {
                             //Escribiendo Log.......
-                            cllog.escribirLOG("Observacion.descargar_archivos. No se encontro el archivo [Thread: " + Thread.CurrentThread.Name + "][tienda: " + codtienda + "][" + pathfile + " ]");
+                            cllog.escribirLOG("Observacion.import_archivo. No se encontro el archivo [Thread: " + Thread.CurrentThread.Name + "][tienda: " + codtienda + "][" + pathfile + " ]");
                             //fin Log...............
                             continue;
                         }
                         //............
+
+                        // ENVIANDO PARA PROCESAR ................
+
+                        //Moviendo archivos a carpeta tmp...............
+                        tmp_cantarchivoporprocesar = tmp_cantarchivoporprocesar + 1;
+                        //Moviendo a la carpeta IMPORTANDO... 
+                        // string pathfile_tmp = "";
+                        File.Move(pathfile, rutafile + "\\tmp\\" + filetemp);
+                        //pathfile_tmp = rutafile + "\\tmp\\" + filetemp;
+                        //...........................
+                        archivos_procesar.Add(filetemp);
+                        //................................
 
                         //Escribiendo Log.......
                         //cllog.escribirLOG("Importando Import_tablaimport_RPE_bd. [" + pathfile + " ]...");
@@ -2578,310 +3145,31 @@ namespace VENPRO
                         //rutafile = Path.GetDirectoryName(pathfile);
                         //.......
 
-                        //..........
 
 
 
-
-                        //string tmp_result = "1";
-                        ////tmp_result = procesarxml(cnMysql_BD, fecha_venpro, codtienda, Path.GetDirectoryName(pathfile), filetemp);
-                        //tmp_result = procesarxml( fecha_venpro, codtienda, Path.GetDirectoryName(pathfile), filetemp);
-                        ////Thread.Sleep(1000);
-
-                        
-                        //-----------------------------
-                        //if (!(tmp_cantarchivoprocesado < cant_importarchivosparalelo)) //inicio procesa 2archivos tread igual2.
-                        //{
-                        //    break;
-                        //}
-
-                        
-
-                       
-
-                        //ejecutarthread_importarchivo[tmp_cantarchivoprocesado] = new Thread(delegate()
-                        //{
-                        //   // procesar_thread_XML(fecha_venpro, codtienda, Path.GetDirectoryName(pathfile_tmp), filetemp, rutafile);
-
-                        //    procesar_thread_XML(fecha_venpro, codtienda, Path.GetDirectoryName(pathfile_tmp), filetemp, rutafile);
-                        //});
-                        //ejecutarthread_importarchivo[tmp_cantarchivoprocesado].Name = "[" + tmp_cantarchivoprocesado.ToString() + "]" + filetemp;
-                        //ejecutarthread_importarchivo[tmp_cantarchivoprocesado].IsBackground = true;
-                        //ejecutarthread_importarchivo[tmp_cantarchivoprocesado].Start("p");
-
-
-                        
-
-                        //---------------------------------                       
-                        bool existe_import_ejecucion = false;
-                        for (int p = 0; p < ejecutarthread_importarchivo.Length; p++)
-                        {
-                            existe_import_ejecucion = false;
-                            if (ejecutarthread_importarchivo[p] != null) //ni nunca se ejecuto.
-                            {
-                                existe_import_ejecucion = ejecutarthread_importarchivo[p].IsAlive;
-                            }
-
-                            if (!existe_import_ejecucion)
-                            {
-                                //Moviendo archivos a carpeta tmp...............
-                                tmp_cantarchivoporprocesar = tmp_cantarchivoporprocesar + 1;
-                                //Moviendo a la carpeta IMPORTANDO... 
-                                string pathfile_tmp = "";
-                                File.Move(pathfile, rutafile + "\\tmp\\" + filetemp);
-                                pathfile_tmp = rutafile + "\\tmp\\" + filetemp;
-                                //...........................
-
-                                List<String> parametro = new List<String>();
-                                parametro.Add(fecha_venpro);
-                                parametro.Add(codtienda.ToString());
-                                parametro.Add(Path.GetDirectoryName(pathfile_tmp));//ruta_archivo
-                                parametro.Add(filetemp);//archivo
-                                parametro.Add(rutafile); //ruta_tienda
-
-                                ejecutarthread_importarchivo[p] = new Thread(procesar_thread_XML);
-                                ejecutarthread_importarchivo[p].Name = "[" + codtienda.ToString() + "]" + filetemp;
-                                ejecutarthread_importarchivo[p].IsBackground = true;
-                                ejecutarthread_importarchivo[p].Start(parametro);
-                                tmp_cantarchivoprocesado = tmp_cantarchivoprocesado + 1;
-                                contador_joinarchivos = contador_joinarchivos + 1;
-                                break;
-                            }
-                            
-
-
+                        if (tmp_cantarchivoporprocesar >= tmp_cantarchivoprocesaporminuto)
+                        {//tmp_cantarchivoprocesaporminuto= procesa 20 XML por minuto (ejemplo)
+                            break;
                         }
-
-                        //Si todos estan ocupados Cancela el for de la lista de archivos..........
-                        //if (existe_import_ejecucion) {
-                        //    break;
-                        //}
-                        //.............
-
-                        ////Escribiendo Log.......
-                       // cllog.escribirLOG("import_archivo().archovs paara procesar [" + contador_joinarchivos + ":" + cant_importarchivosparalelo +
-                         //   "]procesados:[" + tmp_cantarchivoprocesado + "]. ult IsAlive:"
-                          // + existe_import_ejecucion.ToString() + " - " + pathfile + ". Arch[" + filetemp + "]");
-                        ////fin Log...............
-                        
-                        //-----
-                        if (contador_joinarchivos  >= cant_importarchivosparalelo)
-                        {
-                            //bool termino_ejecucion = false;
-                            ////Esperar a que termine los treads ejecutados para terminar import_archivo() de la tienda--------------
-                            //for (int m = 0; m < ejecutarthread_importarchivo.Length; m++)
-                            //{
-                            //    if (ejecutarthread_importarchivo[m] != null) //ni nunca se ejecuto.
-                            //    {
-                            //        ejecutarthread_importarchivo[m].Join(); //bloquea hasta que finalize el thread.
-                            //        termino_ejecucion = true;
-                            //        break;
-                            //    }
-                                
-                            //}
-                            ////---------------------------------------------------------
-
-                            //----------------------------------------------------
-                            bool ejecutabucle = true;
-                            bool termino_ejecucion = false;
-                            while (ejecutabucle)
-                            {
-                                for (int h = 0; h < ejecutarthread_importarchivo.Length; h++)
-                                {
-                                    existe_import_ejecucion = false;
-                                    if (ejecutarthread_importarchivo[h] != null) //ni nunca se ejecuto.
-                                    {
-                                        existe_import_ejecucion = ejecutarthread_importarchivo[h].IsAlive;
-                                        if (!existe_import_ejecucion)
-                                        {
-                                            termino_ejecucion = true;
-                                            ejecutabucle = false;
-                                        }
-                                        
-                                    }
-                                    else
-                                    {
-                                        ejecutabucle = false;
-                                    }
-                                }
-
-                                Thread.Sleep(2000);
-                            }
-                            //-----------------------------------------------------
-
-
-                            int contar_vacios_thread = 0;
-                            for (int h = 0; h < ejecutarthread_importarchivo.Length; h++)
-                            {
-                                existe_import_ejecucion = false;
-                                if (ejecutarthread_importarchivo[h] != null) //ni nunca se ejecuto.
-                                {
-                                    existe_import_ejecucion = ejecutarthread_importarchivo[h].IsAlive;
-                                    if (!existe_import_ejecucion)
-                                    {
-                                        contar_vacios_thread = contar_vacios_thread + 1;
-                                    }
-                                }
-                                else {
-                                    contar_vacios_thread = contar_vacios_thread + 1;
-                                }
-                                
-                            }
-
-                            if (termino_ejecucion) {
-                                contador_joinarchivos = contador_joinarchivos - contar_vacios_thread;
-                            }
-                            
-                        }
-                        //----
-
-                        
-                                            
-
-                        
-                        //----------------------
-                        
-
-                        //if (tmp_result == "1")
-                        //{
-                        //    if (!Directory.Exists(rutafile + "\\old\\"))
-                        //        Directory.CreateDirectory(rutafile + "\\old\\");
-
-                        //    //File.Copy(pathfile, rutafile + "\\old\\" + filetemp, true);
-                        //    try
-                        //    {
-                        //        File.Move(pathfile, rutafile + "\\old\\" + filetemp);
-                        //    }
-                        //    catch (Exception ex)
-                        //    {
-                        //        result = false;
-                        //        //Escribiendo Log.......
-                        //        cllog.escribirLOG("Error import_archivo.MoveOld(). No se pudo mover  ORIGEN:[" + pathfile + "].DESTINO:[" + rutafile + "\\old\\" + filetemp + "] " + ex.ToString());
-                        //        //fin Log...............
-
-                        //        try
-                        //        {
-                        //            File.Delete(pathfile);
-                        //        }
-                        //        catch (Exception exx)
-                        //        {
-                        //            result = false;
-                        //            //Escribiendo Log.......
-                        //            cllog.escribirLOG("Error import_archivo.MoveOld.ERR(). No se pudo Eliminar.[" + pathfile + "] " + exx.ToString());
-                        //            //fin Log...............
-
-
-                        //        }
-                        //    }
-                        //    //Eliminar..
-                        //    //if (File.Exists(pathfile))
-                        //    //    File.Delete(pathfile);
-                        //    //Escribiendo Log.......
-                        //    //cllog.escribirLOG("import_archivo OK. [" + rutafile + "\\old\\" + filetemp + @"]");
-                        //    //fin Log...............
-                        //    tmp_cantarchivoprocesado = tmp_cantarchivoprocesado + 1;
-
-
-                        //}
-                        //else
-                        //{
-
-                        //    if (tmp_result.ToUpper().Contains("PRIMARY"))
-                        //    {//Se indentifico que la informacion PRYMARY existe pero esta en otra fecha_venpro.
-
-                        //        try
-                        //        {
-                        //            if (!Directory.Exists(rutafile + "\\old\\"))
-                        //                Directory.CreateDirectory(rutafile + "\\old\\");
-
-                        //            //File.Delete(pathfile);
-                        //            File.Move(pathfile, rutafile + "\\old\\" + filetemp);
-
-                        //            cllog.escribirLOG("import_archivo().se movió a carpeta OLD el Archivo por PRIMARY.[" + pathfile + "] ");
-                        //            //tmp_elim_archiv_err = true;
-                        //            //break;
-
-                        //        }
-                        //        catch (Exception exx)
-                        //        {
-                        //            //result = false;
-                        //            //Escribiendo Log.......
-                        //            cllog.escribirLOG("Error import_archivo.moverArchivo_OLD(). No se pudo Mover.[" + pathfile + "] " + exx.ToString());
-                        //            //fin Log...............
-
-                        //            try
-                        //            {
-                        //                File.Delete(pathfile);
-                        //                cllog.escribirLOG("import_archivo().se eliminó el Archivo por PRIMARY.[" + pathfile + "] ");
-                        //                //tmp_elim_archiv_err = true;
-                        //                //break;
-                        //            }
-                        //            catch (Exception exxx)
-                        //            {
-                        //                //result = false;
-                        //                //Escribiendo Log.......
-                        //                cllog.escribirLOG("Error import_archivo.eliminarArchivo(). No se pudo Mover.[" + pathfile + "] " + exxx.ToString());
-                        //                //fin Log...............
-                        //            }
-                        //        }
-                        //    }
-                        //    else
-                        //    {
-                        //        //Escribiendo Log.......
-                        //        cllog.escribirLOG("Error. No se logro importar import_archivo(). [" + pathfile + @"] ");
-                        //        //fin Log...............
-                        //        globales.Gmensajeperiodicoerr = "Error. No se logro importar import_archivo(). [" + pathfile + @"]"+ "\r\n" + tmp_result;
-
-                        //        //if (globales.GcActivarAlerta)
-                        //        //{
-                        //        //    string tmp_contenidoMail = globales.Gccontenido + "<BR>" + "Error. No se logro importar tablaimport_RPE_bd. [" + pathfile +
-                        //        //@"] [EVENTO:" + codevento + " - " + nomevento + "] [TABLA:" + tabla + @"] [" + nomconexion + "]"
-                        //        //            + "<BR><BR><BR>" + "Por favor no responder este mensaje, puesto que es originado de forma automatica."
-                        //        //            + "<BR>" + "Atte. SoporteRPE";
-                        //        //    globales.NewMail(globales.GcNomMostrar, globales.GcDe, globales.GcTo, globales.GcCC, globales.GcCCO,
-                        //        //     globales.Gcasunto, tmp_contenidoMail, globales.GcAdjunto);
-                        //        //}
-
-                        //        try
-                        //        {
-                        //            File.Move(pathfile, rutafile + "\\" + filetemp);
-                        //        }
-                        //        catch (Exception ex)
-                        //        {
-                        //            result = false;
-                        //            //Escribiendo Log.......
-                        //            cllog.escribirLOG("Error import_archivo.Move(). No se pudo mover  ORIGEN:[" + pathfile + "].DESTINO:[" + rutafile + "\\" + filetemp + "] " + ex.ToString());
-                        //            //fin Log...............
-                        //        }
-
-
-                        //    }
-
-                        //  //  Modesribirmensajeform("Error import_archivo.Resultado(). " + tmp_result);
-                            
-                        //    result = false;
-
-                            
-
-                        //}
-
                         
 
 
                     }
 
 
-                    //Esperar a que termine los treads ejecutados para terminar import_archivo() de la tienda--------------
-                    for (int j = 0; j < ejecutarthread_importarchivo.Length; j++)
-                    {
-                        if (ejecutarthread_importarchivo[j] != null) //ni nunca se ejecuto.
-                        {
-                            ejecutarthread_importarchivo[j].Join(); //bloquea hasta que finalize el thread.
-                        }
-                    }
+                    List<String> parametro = new List<String>();
+                    parametro.Add(fecha_venpro);
+                    parametro.Add(codtienda.ToString());
+                    parametro.Add(rutaImport + "\\tmp\\");//ruta_archivo
+                    parametro.Add(String.Join(",",archivos_procesar.ToArray()));//archivos
+                    parametro.Add(rutaImport); //ruta_tienda
+                    parametro.Add(fechahoraload);
+
+                    procesar_thread_XML(parametro);
+
                     //---------------------------------------------------------
-
-                    
+    
                 }
 
             }
@@ -2965,10 +3253,18 @@ namespace VENPRO
             string fecha_venpro=param_obj[0];
             Int64 codtienda=Convert.ToInt64(param_obj[1]);
             string ruta=param_obj[2];
-            string arch=param_obj[3];
-            string path_tienda = param_obj[4];
 
-            string tmp_archivo = ruta + "\\" + arch;
+            string[] t_archivos = param_obj[3].Split(','); // Call Split method
+            List<string> list_archivos = new List<string>(t_archivos); //            
+
+            //string arch=param_obj[3];
+            string path_tienda = param_obj[4];
+            string fechahoraload = param_obj[5];
+
+            List<string> list_archivos_procesados = new List<string>();
+            List<string> list_archivos_noprocesados = new List<string>();
+
+           // string tmp_archivo = ruta + "\\" + arch;
 
             ////Escribiendo Log.......
             //cllog.escribirLOG("procesar_thread_XML().procesando [" + Thread.CurrentThread.Name.ToString() + "][" + ruta + "]. " + arch);
@@ -2978,145 +3274,246 @@ namespace VENPRO
             //tmp_result = procesarxml(cnMysql_BD, fecha_venpro, codtienda, Path.GetDirectoryName(pathfile), filetemp);
             
 
-            switch (globales.Gcxconexiontipovenpro)
-            {
-                case "SQL":
-                    tmp_result = procesarxml_sql(fecha_venpro, codtienda, ruta, arch);
-                    break;
+            //switch (globales.Gcxconexiontipovenpro)
+            //{
+            //    case "SQL":
+            //        tmp_result = procesarxml_sql(fecha_venpro, codtienda, ruta, arch);
+            //        break;
 
-                case "Mysql":
-                    tmp_result = procesarxml_Mysql(fecha_venpro, codtienda, ruta, arch);
-                    break;
-            }
+            //    case "Mysql":
+            //        tmp_result = procesarxml_Mysql(fecha_venpro, codtienda, ruta, arch);
+            //        break;
+            //}
                     
 
             
             try
             {
+               
 
-
-                if (tmp_result == "1")
+                for (int i = 0; i < list_archivos.Count; i++)
                 {
-                    if (!Directory.Exists(path_tienda + "\\old\\"))
-                        Directory.CreateDirectory(path_tienda + "\\old\\");
+                    String t_archivo = list_archivos[i];
+                    tmp_result = procesarxml_csv(fecha_venpro, codtienda, ruta, path_tienda, t_archivo, fechahoraload);
+                    if (tmp_result == "1")
+                    {
+                        list_archivos_procesados.Add(t_archivo);
+                        ////Escribiendo Log.......
+                        //cllog.escribirLOG("procesar_thread_XML(). Procesado Ok:[" + t_archivo + "]");
+                        ////fin Log...............
+                    }
+                    else
+                    {
+                        list_archivos_noprocesados.Add(t_archivo);
+                    }
+                }
 
-                    //File.Copy(pathfile, rutafile + "\\old\\" + filetemp, true);
+                  
+
+                //Finalizando archivo procesado tmp*.csv ............
+                for (int x = 0; x < globales.Gedsejecutartabladel.Tables[0].Rows.Count; x++)
+                {
+                    string v_codtabla = globales.Gedsejecutartabladel.Tables[0].Rows[x]["codtabla"].ToString();
+                    string v_tabla = globales.Gedsejecutartabladel.Tables[0].Rows[x]["nomtabla"].ToString();
+                    //string v_tablaxml = globales.Gedsejecutartabladel.Tables[0].Rows[x]["nomtablaxml"].ToString(); // compara valor tablaxml
+                    string file_origen = path_tienda + "\\load\\" + "tmp_" + codtienda.ToString() + "_" + fechahoraload + "_" + v_tabla + ".csv";
+                    string file_destino = path_tienda + "\\load\\" + codtienda.ToString() + "_" + fechahoraload + "_" + v_tabla + ".csv";
+                    
+                    if (File.Exists(file_origen)) {
+                        if (File.Exists(file_destino))
+                            File.Delete(file_destino);
+                        File.Move(file_origen, file_destino);
+                    }                    
+
+                }
+
+                //MOVER LOS ARCHIVOS PROCESADOS............
+                for (int i = 0; i < list_archivos_procesados.Count; i++)
+                {
+                    String t_archivo = list_archivos_procesados[i];
+
+
                     try
                     {
-                        File.Move(tmp_archivo, path_tienda + "\\old\\" + arch);
+                        File.Move(ruta + "\\" + t_archivo, path_tienda + "\\old\\" + t_archivo);
                     }
                     catch (Exception ex)
                     {
                         //result = false;
                         //Escribiendo Log.......
-                        cllog.escribirLOG("Error procesar_thread_XML.MoveOld(). No se pudo mover  ORIGEN:[" + tmp_archivo + "].DESTINO:[" + ruta + "\\old\\" + arch + "] " + ex.ToString());
+                        cllog.escribirLOG("Error procesar_thread_XML.MoveOld(). No se pudo mover  ORIGEN:[" + ruta + "\\" + t_archivo + "].DESTINO:[" + ruta + "\\old\\" + t_archivo + "] " + ex.ToString());
                         //fin Log...............
 
                         try
                         {
-                            File.Delete(tmp_archivo);
+                            File.Delete(ruta + "\\" + t_archivo);
                         }
                         catch (Exception exx)
                         {
                             //result = false;
                             //Escribiendo Log.......
-                            cllog.escribirLOG("Error procesar_thread_XML.MoveOld.ERR(). No se pudo Eliminar.[" + tmp_archivo + "] " + exx.ToString());
+                            cllog.escribirLOG("Error procesar_thread_XML.MoveOld.ERR(). No se pudo Eliminar.[" + ruta + "\\" + t_archivo + "] " + exx.ToString());
                             //fin Log...............
 
 
                         }
                     }
-                    //Eliminar..
-                    //if (File.Exists(pathfile))
-                    //    File.Delete(pathfile);
-                    //Escribiendo Log.......
-                    //cllog.escribirLOG("import_archivo OK. [" + rutafile + "\\old\\" + filetemp + @"]");
-                    //fin Log...............
-                    //tmp_cantarchivoprocesado = tmp_cantarchivoprocesado + 1;
-
-
                 }
-                else
+
+                //MOVER LOS ARCHIVOS NO PROCESADOS A SU RAIZ TIENDA ............
+                for (int i = 0; i < list_archivos_noprocesados.Count; i++)
                 {
+                    String t_archivo = list_archivos_noprocesados[i];
 
-                    if (tmp_result.ToUpper().Contains("PRIMARY"))
-                    {//Se indentifico que la informacion PRYMARY existe pero esta en otra fecha_venpro.
+                    try
+                    {
+                        File.Move(ruta + "\\" + t_archivo, path_tienda + "\\" + t_archivo);
+                    }
+                    catch (Exception ex)
+                    {
+                        //result = false;
+                        //Escribiendo Log.......
+                        cllog.escribirLOG("Error procesar_thread_XML.(). ERROR AL MOVER ARCHIVO NO PROCESADO A SU RAIZ:[" + ruta + "\\" + t_archivo + "].DESTINO:[" + ruta + "\\" + t_archivo + "] " + ex.ToString());
+                        //fin Log...............
 
                         try
                         {
-                            if (!Directory.Exists(path_tienda + "\\old\\"))
-                                Directory.CreateDirectory(path_tienda + "\\old\\");
-
-                            //File.Delete(pathfile);
-                            File.Move(tmp_archivo, path_tienda + "\\old\\" + arch);
-
-                            cllog.escribirLOG("procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[" + tmp_archivo + "] ");
-                            //tmp_elim_archiv_err = true;
-                            //break;
-
+                            File.Delete(ruta + "\\" + t_archivo);
                         }
                         catch (Exception exx)
                         {
                             //result = false;
                             //Escribiendo Log.......
-                            cllog.escribirLOG("Error procesar_thread_XML.moverArchivo_OLD(). No se pudo Mover.[" + tmp_archivo + "] " + exx.ToString());
+                            cllog.escribirLOG("Error procesar_thread_XML.MoveOld.ERR(). No se pudo Eliminar ARCHIVO NO PROCESADO.[" + ruta + "\\" + t_archivo + "] " + exx.ToString());
                             //fin Log...............
 
-                            try
-                            {
-                                File.Delete(tmp_archivo);
-                                cllog.escribirLOG("procesar_thread_XML().se eliminó el Archivo por PRIMARY.[" + tmp_archivo + "] ");
-                                //tmp_elim_archiv_err = true;
-                                //break;
-                            }
-                            catch (Exception exxx)
-                            {
-                                //result = false;
-                                //Escribiendo Log.......
-                                cllog.escribirLOG("Error procesar_thread_XML.eliminarArchivo(). No se pudo Mover.[" + tmp_archivo + "] " + exxx.ToString());
-                                //fin Log...............
-                            }
+
                         }
                     }
-                    else
-                    {
-                        //Escribiendo Log.......
-                        cllog.escribirLOG("Error. No se logro importar procesar_thread_XML(). [" + tmp_archivo + @"] ");
-                        //fin Log...............
-                        globales.Gmensajeperiodicoerr = "Error. No se logro importar procesar_thread_XML(). [" + tmp_archivo + @"]" + "\r\n" + tmp_result;
-
-                        //if (globales.GcActivarAlerta)
-                        //{
-                        //    string tmp_contenidoMail = globales.Gccontenido + "<BR>" + "Error. No se logro importar tablaimport_RPE_bd. [" + pathfile +
-                        //@"] [EVENTO:" + codevento + " - " + nomevento + "] [TABLA:" + tabla + @"] [" + nomconexion + "]"
-                        //            + "<BR><BR><BR>" + "Por favor no responder este mensaje, puesto que es originado de forma automatica."
-                        //            + "<BR>" + "Atte. SoporteRPE";
-                        //    globales.NewMail(globales.GcNomMostrar, globales.GcDe, globales.GcTo, globales.GcCC, globales.GcCCO,
-                        //     globales.Gcasunto, tmp_contenidoMail, globales.GcAdjunto);
-                        //}
-
-                        try
-                        {
-                            File.Move(tmp_archivo, path_tienda + "\\" + arch);
-                        }
-                        catch (Exception ex)
-                        {
-                            //result = false;
-                            //Escribiendo Log.......
-                            cllog.escribirLOG("Error procesar_thread_XML.Move(). No se pudo mover  ORIGEN:[" + tmp_archivo + "].DESTINO:[" + path_tienda + "\\" + arch + "] " + ex.ToString());
-                            //fin Log...............
-                        }
-
-
-                    }
-
-                    //  Modesribirmensajeform("Error import_archivo.Resultado(). " + tmp_result);
-
-                    //result = false;
-
-
-
                 }
+
+                //if (tmp_result == "1")
+                //{
+                //    if (!Directory.Exists(path_tienda + "\\old\\"))
+                //        Directory.CreateDirectory(path_tienda + "\\old\\");
+
+                //    //File.Copy(pathfile, rutafile + "\\old\\" + filetemp, true);
+                //    try
+                //    {
+                //        File.Move(tmp_archivo, path_tienda + "\\old\\" + arch);
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        //result = false;
+                //        //Escribiendo Log.......
+                //        cllog.escribirLOG("Error procesar_thread_XML.MoveOld(). No se pudo mover  ORIGEN:[" + tmp_archivo + "].DESTINO:[" + ruta + "\\old\\" + arch + "] " + ex.ToString());
+                //        //fin Log...............
+
+                //        try
+                //        {
+                //            File.Delete(tmp_archivo);
+                //        }
+                //        catch (Exception exx)
+                //        {
+                //            //result = false;
+                //            //Escribiendo Log.......
+                //            cllog.escribirLOG("Error procesar_thread_XML.MoveOld.ERR(). No se pudo Eliminar.[" + tmp_archivo + "] " + exx.ToString());
+                //            //fin Log...............
+
+
+                //        }
+                //    }
+                //    //Eliminar..
+                //    //if (File.Exists(pathfile))
+                //    //    File.Delete(pathfile);
+                //    //Escribiendo Log.......
+                //    //cllog.escribirLOG("import_archivo OK. [" + rutafile + "\\old\\" + filetemp + @"]");
+                //    //fin Log...............
+                //    //tmp_cantarchivoprocesado = tmp_cantarchivoprocesado + 1;
+
+
+                //}
+                //else
+                //{
+
+                //    if (tmp_result.ToUpper().Contains("PRIMARY"))
+                //    {//Se indentifico que la informacion PRYMARY existe pero esta en otra fecha_venpro.
+
+                //        try
+                //        {
+                //            if (!Directory.Exists(path_tienda + "\\old\\"))
+                //                Directory.CreateDirectory(path_tienda + "\\old\\");
+
+                //            //File.Delete(pathfile);
+                //            File.Move(tmp_archivo, path_tienda + "\\old\\" + arch);
+
+                //            cllog.escribirLOG("procesar_thread_XML().se movió a carpeta OLD el Archivo por PRIMARY.[" + tmp_archivo + "] ");
+                //            //tmp_elim_archiv_err = true;
+                //            //break;
+
+                //        }
+                //        catch (Exception exx)
+                //        {
+                //            //result = false;
+                //            //Escribiendo Log.......
+                //            cllog.escribirLOG("Error procesar_thread_XML.moverArchivo_OLD(). No se pudo Mover.[" + tmp_archivo + "] " + exx.ToString());
+                //            //fin Log...............
+
+                //            try
+                //            {
+                //                File.Delete(tmp_archivo);
+                //                cllog.escribirLOG("procesar_thread_XML().se eliminó el Archivo por PRIMARY.[" + tmp_archivo + "] ");
+                //                //tmp_elim_archiv_err = true;
+                //                //break;
+                //            }
+                //            catch (Exception exxx)
+                //            {
+                //                //result = false;
+                //                //Escribiendo Log.......
+                //                cllog.escribirLOG("Error procesar_thread_XML.eliminarArchivo(). No se pudo Mover.[" + tmp_archivo + "] " + exxx.ToString());
+                //                //fin Log...............
+                //            }
+                //        }
+                //    }
+                //    else
+                //    {
+                //        //Escribiendo Log.......
+                //        cllog.escribirLOG("Error. No se logro importar procesar_thread_XML(). [" + tmp_archivo + @"] ");
+                //        //fin Log...............
+                //        globales.Gmensajeperiodicoerr = "Error. No se logro importar procesar_thread_XML(). [" + tmp_archivo + @"]" + "\r\n" + tmp_result;
+
+                //        //if (globales.GcActivarAlerta)
+                //        //{
+                //        //    string tmp_contenidoMail = globales.Gccontenido + "<BR>" + "Error. No se logro importar tablaimport_RPE_bd. [" + pathfile +
+                //        //@"] [EVENTO:" + codevento + " - " + nomevento + "] [TABLA:" + tabla + @"] [" + nomconexion + "]"
+                //        //            + "<BR><BR><BR>" + "Por favor no responder este mensaje, puesto que es originado de forma automatica."
+                //        //            + "<BR>" + "Atte. SoporteRPE";
+                //        //    globales.NewMail(globales.GcNomMostrar, globales.GcDe, globales.GcTo, globales.GcCC, globales.GcCCO,
+                //        //     globales.Gcasunto, tmp_contenidoMail, globales.GcAdjunto);
+                //        //}
+
+                //        try
+                //        {
+                //            File.Move(tmp_archivo, path_tienda + "\\" + arch);
+                //        }
+                //        catch (Exception ex)
+                //        {
+                //            //result = false;
+                //            //Escribiendo Log.......
+                //            cllog.escribirLOG("Error procesar_thread_XML.Move(). No se pudo mover  ORIGEN:[" + tmp_archivo + "].DESTINO:[" + path_tienda + "\\" + arch + "] " + ex.ToString());
+                //            //fin Log...............
+                //        }
+
+
+                //    }
+
+                //    //  Modesribirmensajeform("Error import_archivo.Resultado(). " + tmp_result);
+
+                //    //result = false;
+
+
+
+                //}
 
 
             }
@@ -3124,7 +3521,7 @@ namespace VENPRO
             {
 
                 //Escribiendo Log.......
-                cllog.escribirLOG("Error procesar_thread_XML(). [" + tmp_archivo + "]. " + ex.ToString());
+                cllog.escribirLOG("Error procesar_thread_XML(). [" + path_tienda + "]. " + ex.ToString());
                 //fin Log...............
 
             }
@@ -3141,7 +3538,295 @@ namespace VENPRO
 
 
         }
+        
+        private void loadarchivos()
+        {
 
+            //            private bool import_archivo( string fecha_venpro, Int64 codtienda, string ruta)
+            //{
+
+
+            List<String> lista_archivos_input_leeidos =  new List<String>();
+            List<String> lista_archivos_input_paraold = new List<String>();
+            string fechahoraload = DateTime.Now.ToString("yyyyMMddHHmmss");
+            List<String> lista_tablas_out = new List<String>();
+            //Int64 codtienda = Convert.ToInt64(param_obj[1]);
+            //string ruta = param_obj[2];
+           
+
+            string[] Rutatmp;
+            string pathfile = "";
+
+            string extension = ".csv";
+            string delimiter =";";
+
+            //bool result = true;
+            //globales.Gedarchivo_ejecucion.Add(ruta);
+            //globales.Gmensajeperiodicoerr = "";
+            //....
+
+            //string rutaImport = ruta;
+            
+            string filetemp = "";
+            string rutafile = "";
+            
+            //string[] extensionpermitido = { ".xml", ".XML" };
+            //int tmp_cantarchivoprocesado = 0;
+            //int tmp_cantarchivoporprocesar = 0;
+
+            ////-----------------
+            //int contador_joinarchivos = 0;
+            //int cant_importarchivosparalelo = globales.Gcantarchivoprocesadoparalelo;
+            //Thread[] ejecutarthread_importarchivo;
+            //ejecutarthread_importarchivo = new Thread[cant_importarchivosparalelo];
+            ////-----------------
+
+
+
+            try
+            {
+                if (globales.Gsolodescarga)
+                {
+                    return;
+                }
+                //......................
+
+                DataSet dstiendasload = globales.Gedsejecutatiendas;
+                Dictionary<string, string> tablasList = new Dictionary<string, string>();
+
+                //..LIMPIAR ARCHIVOS NO PROCESADOS LOAD GENERAL...
+                if (Directory.GetFiles(globales.GrutaAplicacion + "\\load\\", "*.*").Length > 0)
+                {
+                    string[] tRutatmp = Directory.GetFiles(globales.GrutaAplicacion + "\\load\\", "*.*");
+                    for (int i = 0; i < tRutatmp.Length; i++)
+                    {
+                        string tpathfile = tRutatmp[i];
+
+                        if (File.Exists(tpathfile))
+                            File.Delete(tpathfile);
+
+                    }
+                }
+                //...................
+
+                for (int p = 0; p < dstiendasload.Tables[0].Rows.Count; p++)
+                {
+                    string t_codtienda = dstiendasload.Tables[0].Rows[p]["codtienda"].ToString();
+                    string t_rutalocal = globales.Grutadescarga + "\\" + t_codtienda + "\\";
+                    string t_rutalocalload = globales.Grutadescarga + "\\" + t_codtienda + "\\load\\";
+
+                    string t_rutalocalload_old = globales.Grutadescarga + "\\" + t_codtienda + "\\load\\old\\";
+                    if (System.IO.Directory.Exists(t_rutalocalload_old) == false)
+                    {
+                        System.IO.Directory.CreateDirectory(t_rutalocalload_old);
+                    }
+
+                    for (int x = 0; x < globales.Gedsejecutartabladel.Tables[0].Rows.Count; x++)
+                    {
+                        string v_codtabla = globales.Gedsejecutartabladel.Tables[0].Rows[x]["codtabla"].ToString();
+                        string v_tabla = globales.Gedsejecutartabladel.Tables[0].Rows[x]["nomtabla"].ToString();
+                        //string v_tablaxml = globales.Gedsejecutartabladel.Tables[0].Rows[x]["nomtablaxml"].ToString(); // compara valor tablaxml
+
+                        //  codtienda.ToString() + "_" + arch.Replace(".", "") + "_" + t_nomtabla + extension 
+                        if (Directory.GetFiles(t_rutalocalload, t_codtienda + "_*" + v_tabla + extension).Length > 0)
+                        {
+                            Rutatmp = Directory.GetFiles(t_rutalocalload, t_codtienda + "_*" + v_tabla + extension);
+                            for (int i = 0; i < Rutatmp.Length; i++)
+                            {
+                                pathfile = Rutatmp[i];
+                                filetemp = Path.GetFileName(Rutatmp[i]);//Nombre archivo                        
+                                rutafile = Path.GetDirectoryName(Rutatmp[i]);// Ruta del Archivo.
+
+                                string textoarchivo = File.ReadAllText(pathfile);//cada archivo tiene un enter: "\r\n"
+
+                                if (!tablasList.ContainsKey(v_tabla))
+                                {
+                                    tablasList[v_tabla] = textoarchivo;
+                                }
+                                else {
+                                    tablasList[v_tabla] += textoarchivo;
+                                }                                
+                                lista_archivos_input_leeidos.Add(pathfile);
+                                lista_archivos_input_paraold.Add(rutafile + "\\old\\" + filetemp);
+
+                            }
+                        }
+
+                    }
+
+                    // Fin carga archivo tienda....
+                    cllog.escribirLOG("loadarchivos(). Tienda: [" + t_codtienda + "]. Cargado." );
+                    //..............  
+
+
+                }
+
+                //CREAR ARCHIVO CONCATENADO ............
+                bool si_error_concat = false;
+                for (int x = 0; x < globales.Gedsejecutartabladel.Tables[0].Rows.Count; x++)
+                {
+                    string v_codtabla = globales.Gedsejecutartabladel.Tables[0].Rows[x]["codtabla"].ToString();
+                    string v_tabla = globales.Gedsejecutartabladel.Tables[0].Rows[x]["nomtabla"].ToString();
+                    //string v_tablaxml = globales.Gedsejecutartabladel.Tables[0].Rows[x]["nomtablaxml"].ToString(); // compara valor tablaxml
+
+                     string t_rutaload = globales.GrutaAplicacion +  "\\load\\";
+                    string t_archivo = "tmp_" + v_tabla + "_" + fechahoraload + extension;
+                    
+                     try
+                     {
+                         if (tablasList.ContainsKey(v_tabla)) {
+                             //remplaza dos enter por archivo.
+                             File.WriteAllText(t_rutaload + "\\" + t_archivo, tablasList[v_tabla]);
+                             lista_tablas_out.Add(v_tabla);
+                         }
+                         
+                     }
+                     catch (Exception e)
+                     {
+                         si_error_concat = true;
+                         cllog.escribirLOG("Error loadarchivos(). Error grabar archivo concatenado: [" + t_rutaload + "\\" + v_tabla + extension + "]." + e.Message);
+                        // break;
+                     }                     
+
+                }
+
+                //// Fin carga archivo general....
+                //cllog.escribirLOG("loadarchivos(). Ruta CSV: [" + globales.GrutaAplicacion + "\\load\\" + "]. Archivos .csv creados.");
+                ////.............. 
+
+                //.....................
+
+
+                // MOVER OLD ARCHIVOS LEIDOS....
+                if (!si_error_concat)
+                {
+                    bool error_carga = false;
+                    foreach (string tablaload in lista_tablas_out)
+                    {
+                        string file_origen = globales.GrutaAplicacion + "\\load\\" + "tmp_" + tablaload + "_" + fechahoraload + extension;
+                        string file_destino = globales.GrutaAplicacion + "\\load\\" + tablaload + "_" + fechahoraload + extension;
+                        string file_old_destino = globales.GrutaAplicacion + "\\load\\old\\" + tablaload + "_" + fechahoraload + extension;
+                        //cllog.escribirLOG("ORIGEN:" + file_origen);
+                        //cllog.escribirLOG("DESTINO:" + file_destino);
+                       
+
+
+                        //INSERTAR A BD.............
+                        for (int p = 0; p < globales.Gedsejecutartabladel.Tables[0].Rows.Count; p++)
+                        {
+                            string v_codtabla = globales.Gedsejecutartabladel.Tables[0].Rows[p]["codtabla"].ToString();
+                            string v_tabla = globales.Gedsejecutartabladel.Tables[0].Rows[p]["nomtabla"].ToString();
+                            string v_tablaxml = globales.Gedsejecutartabladel.Tables[0].Rows[p]["nomtablaxml"].ToString(); // compara valor tablaxml
+
+                            //Valida si existe la archivo(tabla) para cargar en la tabla.
+                            if (v_tabla != tablaload)
+                            {
+                                //cllog.escribirLOG("loadarchivos()." + v_tabla);
+                                continue;
+                            }
+
+                            DataRow[] rwcolumnas;
+                            rwcolumnas = null;
+                            rwcolumnas = globales.Gedsejecutartablaimport.Tables[0].Select("nomtablaxml='" + v_tablaxml + "'");
+
+                            List<string> columnas = new List<string>();
+                            columnas.Add("archivo_venpro");
+                            columnas.Add("fecha_venpro");
+                            columnas.Add("fechaprocesamiento_venpro");
+                            columnas.Add("codtienda_venpro");
+                            //"archivo_venpro" + delimiter + "fecha_venpro" + delimiter + "fechaprocesamiento_venpro" + delimiter + "codtienda_venpro"
+                            for (int m = 0; m < rwcolumnas.Length; m++)
+                            {
+                                string col_nomcolumnaxml = rwcolumnas[m]["nomcolumnaxml"].ToString(); // se compara columnaxml
+
+                                //if (col_nomcolumnaxml.ToUpper() != tmp_columna.ToUpper())
+                                //{
+                                //    continue;
+                                //}
+
+                                int col_posicion = col_posicion = Convert.ToInt32(rwcolumnas[m]["posicioncolum"].ToString());
+                                string col_tipocolumna = rwcolumnas[m]["tipocolumna"].ToString();
+                                string col_formato = rwcolumnas[m]["formato"].ToString();
+                                string t_columnaFila = rwcolumnas[m]["nomcolumna"].ToString(); //nombre bd
+                                columnas.Add(t_columnaFila);
+                            }
+
+                            string rs = "";
+                           rs= cldatos.loadfile_Mysql(file_origen, v_tabla, columnas, delimiter);
+                           if (rs != "1") {
+                               error_carga = true;
+                           }
+
+                        }                      
+
+                        //.........................
+
+                        if (!error_carga)
+                        {
+                            if (File.Exists(file_destino))
+                                File.Delete(file_destino);
+                            File.Move(file_origen, file_destino);
+
+
+                        }
+                        
+
+                    }
+
+                    //.....................................
+                    //MOVER A OLD SI NO HAY ERRORES...
+                    if (!error_carga)
+                    {
+                        for (int y = 0; y < lista_archivos_input_leeidos.Count; y++)
+                        {
+                            if (File.Exists(lista_archivos_input_paraold[y]))
+                                File.Delete(lista_archivos_input_paraold[y]);
+
+                            if (File.Exists(lista_archivos_input_leeidos[y]))
+                                File.Move(lista_archivos_input_leeidos[y], lista_archivos_input_paraold[y]);
+                        }
+
+                        foreach (string tablaload in lista_tablas_out)
+                        {
+                            string tfile_destino = globales.GrutaAplicacion + "\\load\\" + tablaload + "_" + fechahoraload + extension;
+                            string tfile_old_destino = globales.GrutaAplicacion + "\\load\\old\\" + tablaload + "_" + fechahoraload + extension;
+
+                            if (!Directory.Exists(globales.GrutaAplicacion + "\\load\\old\\"))
+                            {
+                                Directory.CreateDirectory(globales.GrutaAplicacion + "\\load\\old\\");
+                            }
+                            if (File.Exists(tfile_old_destino))
+                                File.Delete(tfile_old_destino);
+                            File.Move(tfile_destino, tfile_old_destino);
+
+                        }
+
+                    }
+
+                    
+                    
+                }
+                //...............................
+                // Fin carga archivo general....
+                cllog.escribirLOG("loadarchivos(). CSV PROCESADOS: [" + globales.GrutaAplicacion + "\\load\\old\\" + "]. Archivos .csv procesados");
+                //.............. 
+             
+
+            }
+            catch (Exception ex)
+            {
+                //result = false;
+                //Escribiendo Log.......
+                cllog.escribirLOG("Error loadarchivos(). [" + pathfile + "]. " + ex.ToString());
+                //fin Log...............
+                Modesribirmensajeform("Error loadarchivos(). [" + pathfile + "]. " + ex.Message);
+
+
+            }
+           
+
+        }
+        
         private void descargar_archivos(Object param)
         {
 
@@ -3322,10 +4007,10 @@ namespace VENPRO
                             }
 
                             Application.DoEvents();
-                            string tmp_archivolocal = rutalocal + "\\" + listarchivosvr[i].ToString();
+                            string tmp_archivolocal = listarchivosvr[i].ToString();
 
                             bool result_download = false;
-                            result_download = globales.download(rutaservidor, usuario, pass, tmp_archivolocal, listarchivosvr[i]);
+                            result_download = globales.download(rutaservidor, usuario, pass,rutalocal, tmp_archivolocal, listarchivosvr[i]);
 
                             if (!result_download)
                             {
@@ -3410,72 +4095,7 @@ namespace VENPRO
                     }
 
                 }
-                ////Procesar Tiendas.........
-                ////System.Threading.Thread.Sleep(1500);
-                //bool tmp_existe_archivo_ejecucion = false;
-                //for (int m = 0; m < globales.Gedarchivo_ejecucion.Count; m++)
-                //{
-                //    //cllog.escribirLOG("Gedimport_ejecucion: m" + m.ToString() + ":" + globales.Gedarchivo_ejecucion[m]);
-                //    if (globales.Gedarchivo_ejecucion[m] == rutalocal.ToString())
-                //    {
-                //        tmp_existe_archivo_ejecucion = true;
-                //        break;
-                //    }
-                //}
-                ////--------
-                ////cllog.escribirLOG("EXExiste: " + tmp_existe_archivo_ejecucion.ToString() + " . rut: " + rutalocal.ToString());
-
-                //Procesar Tiendas.........
-                bool tmp_existe_tienda_ejecucion1 = false;
-                for (int k = 0; k < globales.Gedejecutarthread_archivo.Length; k++)
-                {
-                    if (globales.Gedejecutarthread_archivo[k].Name == codtienda)
-                    {
-                        //cllog.escribirLOG("pru." + codtienda + ". " + globales.Gedejecutarthread_archivo[k].IsAlive.ToString());
-                        tmp_existe_tienda_ejecucion1 = globales.Gedejecutarthread_archivo[k].IsAlive;
-
-                        if (!tmp_existe_tienda_ejecucion1)
-                        {
-                            try
-                            {
-                                //---------------------------------
-                                List<String> parametro = new List<String>();
-                                parametro.Add(fecha_venpro);
-                                parametro.Add(tmp_codtienda.ToString());
-                                parametro.Add(rutalocal);
-
-                                //globales.Gedejecutarthread_archivo[k] = new Thread(delegate()
-                                //{
-                                //    //import_archivo(t_cnmysql_bd, fecha_venpro, tmp_codtienda, rutalocal);
-                                //    import_archivo(fecha_venpro, tmp_codtienda, rutalocal);
-
-                                //});
-                                globales.Gedejecutarthread_archivo[k] = new Thread(import_archivo);
-                                globales.Gedejecutarthread_archivo[k].Name = codtienda.ToString();
-                                globales.Gedejecutarthread_archivo[k].IsBackground = true;
-                                globales.Gedejecutarthread_archivo[k].Start(parametro);
-
-
-                            }
-                            catch (Exception ex)
-                            {
-                                //Escribiendo Log.......
-                                cllog.escribirLOG("Error descargar_archivo.import_archivo().Thread.[" + codtienda + "]" + "[" + nomtienda + "] [" +
-                                      "servidor: " + servidor + "\r\n" +
-                                      "rutasvr: " + rutasvr + "\r\n" +
-                                      "rutalocal: " + rutalocal + "\r\n" +
-                                     ex.ToString());
-                                //fin Log...............
-                            }
-                        }
-
-                        break;
-                    }
-
-
-
-
-                }                
+                             
                 //............................
 
 
@@ -3663,7 +4283,7 @@ namespace VENPRO
                     string t_estado = dstiendas.Tables[0].Rows[i]["estado"].ToString();
 
                     string t_rutalocal = globales.Grutadescarga + "\\" + t_codtienda;
-
+                    string t_fechahoraload = DateTime.Now.ToString("yyyyMMddHHmmss");
                     ////Procesar Tiendas.........
                     //bool existe_archivo_ejecucion = false;
                     //for (int m = 0; m < globales.Gedarchivo_ejecucion.Count; m++)
@@ -3692,54 +4312,65 @@ namespace VENPRO
 
                     if (!existe_archivo_ejecucion)
                     {
-                        ////CONEXION BD VENTAS------------------------
-
-                        //SqlConnection t_cnsql_bd = new SqlConnection();
-                        //MySqlConnection t_cnmysql_bd = new MySqlConnection();
-                        //switch (globales.Gcxconexiontipo)
-                        //{
-                        //    case "SQL":
-                        //        //............                        
-                        //        t_cnsql_bd = new SqlConnection(clconexion.conexion);
-                        //        if (t_cnsql_bd.State != ConnectionState.Open)
-                        //            t_cnsql_bd.Open();
-                        //        //...........
-                        //        break;
-
-                        //    case "Mysql":
-                        //        //............                        
-                        //        t_cnmysql_bd = new MySqlConnection(clconexion.conexion);
-                        //        if (t_cnmysql_bd.State != ConnectionState.Open)
-                        //            t_cnmysql_bd.Open();
-                        //        //...........
-                        //        break;
-                        //}
-                        ////---------------------------------------
-
-                        //globales.Gedejecutarthread_archivo[i] = new Thread(delegate()
-                        //{
-                        //    //import_archivo(t_cnmysql_bd, tmp_fecha_venpro, Convert.ToInt64(t_codtienda), t_rutalocal);
-                        //    import_archivo(tmp_fecha_venpro, Convert.ToInt64(t_codtienda), t_rutalocal);
-
-                        //});
-
+                       
                         //---------------------------------
                         List<String> parametro = new List<String>();
                         parametro.Add(tmp_fecha_venpro);
                         parametro.Add(t_codtienda);
                         parametro.Add(t_rutalocal);
+                        parametro.Add(t_fechahoraload);
 
-                        globales.Gedejecutarthread_archivo[i] = new Thread(import_archivo);
-                        globales.Gedejecutarthread_archivo[i].Name = t_codtienda.ToString();
-                        globales.Gedejecutarthread_archivo[i].IsBackground = true;
-                        globales.Gedejecutarthread_archivo[i].Start(parametro);
+                        //globales.Gedejecutarthread_archivo[i] = new Thread(import_archivo);
+                        //globales.Gedejecutarthread_archivo[i].Name = t_codtienda.ToString();
+                        //globales.Gedejecutarthread_archivo[i].IsBackground = true;
+                        //globales.Gedejecutarthread_archivo[i].Start(parametro);
+
+                        if (globales.Gedejecutarthread_concatload != null)
+                        {
+                            //cllog.escribirLOG("LOADGENERAL." + globales.Gedejecutarthread_concatload.IsAlive.ToString());
+                            if (!globales.Gedejecutarthread_concatload.IsAlive)
+                            {
+                                globales.Gedejecutarthread_archivo[i] = new Thread(import_archivo);
+                                globales.Gedejecutarthread_archivo[i].Name = t_codtienda.ToString();
+                                globales.Gedejecutarthread_archivo[i].IsBackground = true;
+                                globales.Gedejecutarthread_archivo[i].Start(parametro);
+                            }
+                        }
+                        else
+                        {
+                            globales.Gedejecutarthread_archivo[i] = new Thread(import_archivo);
+                            globales.Gedejecutarthread_archivo[i].Name = t_codtienda.ToString();
+                            globales.Gedejecutarthread_archivo[i].IsBackground = true;
+                            globales.Gedejecutarthread_archivo[i].Start(parametro);
+                        }
 
                     }
                     //............................
                 }
                 
 
+                //CONCAT LOAD........
+                if (globales.Gedejecutarthread_concatload != null)
+                {
+                    cllog.escribirLOG("LOADGENERAL."  + globales.Gedejecutarthread_concatload.IsAlive.ToString());
+                    if (!globales.Gedejecutarthread_concatload.IsAlive)
+                    {
+                        globales.Gedejecutarthread_concatload = new Thread(loadarchivos);
+                        globales.Gedejecutarthread_concatload.Name = "load";
+                        globales.Gedejecutarthread_concatload.IsBackground = true;
+                        globales.Gedejecutarthread_concatload.Start();
+                    }
+                }
+                else {
+                    globales.Gedejecutarthread_concatload = new Thread(loadarchivos);
+                    globales.Gedejecutarthread_concatload.Name = "load";
+                    globales.Gedejecutarthread_concatload.IsBackground = true;
+                    globales.Gedejecutarthread_concatload.Start();
+                }
+                //....................
 
+
+                
 
 
 
@@ -3761,7 +4392,7 @@ namespace VENPRO
         }
 
         private string trataarchivo() {
-           globales.Gedtrataarchivo_activo = false;
+           globales.Gedtrataarchivo_activo = true;
             string result = "1";
 
             try
@@ -3783,19 +4414,21 @@ namespace VENPRO
                         string t_estado = dstiendas.Tables[0].Rows[i]["estado"].ToString();
 
                         string t_rutalocal = globales.Grutadescarga + "\\" + t_codtienda + "\\old";
-
+                        string t_rutalocal_load = globales.Grutadescarga + "\\" + t_codtienda + "\\load\\old";
                         if (!Directory.Exists(t_rutalocal))
                         {
                             continue;
                         }
 
-                        string[] Rutatmp;
-                        string filetemp = "";
-                        string rutafile = "";
-                        string pathfile = "";
+                        
 
+                        //Delete OLD....
                         if (Directory.GetFiles(t_rutalocal, "*.*").Length > 0)
                         {
+                            string[] Rutatmp;
+                            string filetemp = "";
+                            string rutafile = "";
+                            string pathfile = "";
                             Rutatmp = Directory.GetFiles(t_rutalocal, "*.*");
 
                             for (int k = 0; k < Rutatmp.Length; k++)
@@ -3804,12 +4437,59 @@ namespace VENPRO
                                 filetemp = Path.GetFileName(Rutatmp[k]);//Nombre archivo                        
                                 rutafile = Path.GetDirectoryName(Rutatmp[k]);// Ruta del Archivo.
 
-                                File.Delete(pathfile);
+                                try {
+                                    File.Delete(pathfile);
+                                }
+                                catch (Exception ex) {
+                                    //Escribiendo Log.......
+                                    cllog.escribirLOG("Error trataarchivo(). Error al eliminar XML. " + ex.ToString());
+                                    //fin Log...............
+                                }
+                                
                             }
                         }
+                        cllog.escribirLOG("trataarchivo(). XML Eliminado Terminado. [" + t_rutalocal + "]");
+
+                        //........................
+
+                        if (!Directory.Exists(t_rutalocal_load))
+                        {
+                            continue;
+                        }
+                        //Delete LOAD/OLD .csv....
+                        if (Directory.GetFiles(t_rutalocal_load, "*.*").Length > 0)
+                        {
+                            string[] Rutatmp;
+                            string filetemp = "";
+                            string rutafile = "";
+                            string pathfile = "";
+                            Rutatmp = Directory.GetFiles(t_rutalocal_load, "*.*");
+
+                            for (int k = 0; k < Rutatmp.Length; k++)
+                            {
+                                pathfile = Rutatmp[k];
+                                filetemp = Path.GetFileName(Rutatmp[k]);//Nombre archivo                        
+                                rutafile = Path.GetDirectoryName(Rutatmp[k]);// Ruta del Archivo.
+
+                                try
+                                {
+                                    File.Delete(pathfile);
+                                }
+                                catch (Exception ex)
+                                {
+                                    //Escribiendo Log.......
+                                    cllog.escribirLOG("Error trataarchivo(). Error al eliminar csv de tienda. " + ex.ToString());
+                                    //fin Log...............
+                                }
+
+                            }
+                        }
+                        cllog.escribirLOG("trataarchivo(). CSV Eliminado Terminado.[" + t_rutalocal_load + "]");
+
 
 
                     }
+
 
                 }
                 else
@@ -3827,6 +4507,7 @@ namespace VENPRO
                         string t_estado = dstiendas.Tables[0].Rows[i]["estado"].ToString();
 
                         string t_rutalocal = globales.Grutadescarga + "\\" + t_codtienda + "\\old";
+                        string t_rutalocal_load = globales.Grutadescarga + "\\" + t_codtienda + "\\load\\old";
                         string t_rutabackup = globales.GrutaAplicacion + "\\backup\\" + t_codtienda + "\\" + fechabackup ;
 
                         if (!Directory.Exists(t_rutalocal))
@@ -3835,19 +4516,28 @@ namespace VENPRO
                         }
 
                         //Backup----
-                        if (!Directory.Exists(t_rutabackup))
+                        if (!Directory.Exists(t_rutabackup + "\\XML\\"))
                         {
-                            Directory.CreateDirectory(t_rutabackup);
+                            Directory.CreateDirectory(t_rutabackup + "\\XML\\");
                         }
                         //--
 
-                        string[] Rutatmp;
-                        string filetemp = "";
-                        string rutafile = "";
-                        string pathfile = "";
+                        //Backup----
+                        if (!Directory.Exists(t_rutabackup + "\\LOAD\\"))
+                        {
+                            Directory.CreateDirectory(t_rutabackup + "\\LOAD\\");
+                        }
+                        //--
+
+                        
 
                         if (Directory.GetFiles(t_rutalocal, "*.*").Length > 0)
                         {
+                            string[] Rutatmp;
+                            string filetemp = "";
+                            string rutafile = "";
+                            string pathfile = "";
+
                             Rutatmp = Directory.GetFiles(t_rutalocal, "*.*");
 
                             for (int k = 0; k < Rutatmp.Length; k++)
@@ -3857,21 +4547,85 @@ namespace VENPRO
                                 rutafile = Path.GetDirectoryName(Rutatmp[k]);// Ruta del Archivo.
 
                                 //Mover a la rutabackup----
-                                if (File.Exists(t_rutabackup + "\\" + filetemp))
+                                if (File.Exists(t_rutabackup + "\\XML\\" + filetemp))
                                 {
-                                    File.Delete(t_rutabackup + "\\" + filetemp);
+                                    File.Delete(t_rutabackup + "\\XML\\" + filetemp);
                                 }
-                                File.Move(pathfile, t_rutabackup + "\\" + filetemp);
+                                File.Move(pathfile, t_rutabackup + "\\XML\\" + filetemp);
                                 //------------
 
                             }
                         }
+
+                        //Delete LOAD/OLD .csv....
+                        if (Directory.GetFiles(t_rutalocal_load, "*.*").Length > 0)
+                        {
+                            string[] Rutatmp;
+                            string filetemp = "";
+                            string rutafile = "";
+                            string pathfile = "";
+                            Rutatmp = Directory.GetFiles(t_rutalocal_load, "*.*");
+
+                            for (int k = 0; k < Rutatmp.Length; k++)
+                            {
+                                pathfile = Rutatmp[k];
+                                filetemp = Path.GetFileName(Rutatmp[k]);//Nombre archivo                        
+                                rutafile = Path.GetDirectoryName(Rutatmp[k]);// Ruta del Archivo.
+
+                                try
+                                {
+                                    File.Delete(pathfile);
+                                }
+                                catch (Exception ex)
+                                {
+                                    //Escribiendo Log.......
+                                    cllog.escribirLOG("Error trataarchivo(). Error al eliminar csv de tienda. " + ex.ToString());
+                                    //fin Log...............
+                                }
+
+                            }
+                        }
+                        cllog.escribirLOG("trataarchivo(). CSV Eliminado Terminado BACKUPS .[" + t_rutalocal_load + "]");
 
 
                     }
 
                 }
 
+
+
+                //Delete GENERAL LOAD/OLD .csv....
+                if (Directory.GetFiles(globales.GrutaAplicacion + "\\load\\old", "*.*").Length > 0)
+                {
+                    string[] Rutatmp;
+                    string filetemp = "";
+                    string rutafile = "";
+                    string pathfile = "";
+                    Rutatmp = Directory.GetFiles(globales.GrutaAplicacion + "\\load\\old", "*.*");
+
+                    for (int k = 0; k < Rutatmp.Length; k++)
+                    {
+                        pathfile = Rutatmp[k];
+                        filetemp = Path.GetFileName(Rutatmp[k]);//Nombre archivo                        
+                        rutafile = Path.GetDirectoryName(Rutatmp[k]);// Ruta del Archivo.
+
+                        try
+                        {
+                            File.Delete(pathfile);
+                        }
+                        catch (Exception ex)
+                        {
+                            //Escribiendo Log.......
+                            cllog.escribirLOG("Error trataarchivo(). Error al eliminar csv general. " + ex.ToString());
+                            //fin Log...............
+                        }
+
+                    }
+                }
+                cllog.escribirLOG("trataarchivo(). CSV GENERAL Eliminado Terminado.[" + globales.GrutaAplicacion + "\\load\\old" + "]");
+
+
+                cllog.escribirLOG("trataarchivo(). [" + globales.Grtrataarchivo.ToLower()  + "]. Terminado");
             }
             catch (Exception ex)
             {
@@ -3887,7 +4641,7 @@ namespace VENPRO
                 Modesribirmensajeform(result);
             }
             
-            globales.Gedtrataarchivo_activo = true;
+            globales.Gedtrataarchivo_activo = false;
 
             return result;
         }
@@ -4031,6 +4785,7 @@ namespace VENPRO
                      string t_estado = dstiendas.Tables[0].Rows[i]["estado"].ToString();
 
                      string t_rutalocal = globales.Grutadescarga + "\\" + t_codtienda;
+                     string t_fechahoraload = DateTime.Now.ToString("yyyyMMddHHmmss");
 
                      ////Procesar Tiendas.........
                      //bool existe_archivo_ejecucion = false;
@@ -4060,42 +4815,13 @@ namespace VENPRO
 
                      if (!existe_archivo_ejecucion)
                      {
-                         ////CONEXION BD VENTAS------------------------
-
-                         //SqlConnection t_cnsql_bd = new SqlConnection();
-                         //MySqlConnection t_cnmysql_bd = new MySqlConnection();
-                         //switch (globales.Gcxconexiontipo)
-                         //{
-                         //    case "SQL":
-                         //        //............                        
-                         //        t_cnsql_bd = new SqlConnection(clconexion.conexion);
-                         //        if (t_cnsql_bd.State != ConnectionState.Open)
-                         //            t_cnsql_bd.Open();
-                         //        //...........
-                         //        break;
-
-                         //    case "Mysql":
-                         //        //............                        
-                         //        t_cnmysql_bd = new MySqlConnection(clconexion.conexion);
-                         //        if (t_cnmysql_bd.State != ConnectionState.Open)
-                         //            t_cnmysql_bd.Open();
-                         //        //...........
-                         //        break;
-                         //}
-                         ////---------------------------------------
-
-                         //globales.Gedejecutarthread_archivo[i] = new Thread(delegate()
-                         //{
-                         //    //import_archivo(t_cnmysql_bd, tmp_fecha_venpro, Convert.ToInt64(t_codtienda), t_rutalocal);
-                         //    import_archivo(tmp_fecha_venpro, Convert.ToInt64(t_codtienda), t_rutalocal);
-
-                         //});
 
                          //---------------------------------
                          List<String> parametro = new List<String>();
                          parametro.Add(tmp_fecha_venpro);
                          parametro.Add(t_codtienda);
                          parametro.Add(t_rutalocal);
+                         parametro.Add(t_fechahoraload);
 
                          globales.Gedejecutarthread_archivo[i] = new Thread(import_archivo);
                          globales.Gedejecutarthread_archivo[i].Name = t_codtienda.ToString();
@@ -4105,6 +4831,27 @@ namespace VENPRO
                      }
                      //............................
                  }
+
+                 //CONCAT LOAD........
+                 if (globales.Gedejecutarthread_concatload != null)
+                 {
+                     cllog.escribirLOG("LOADGENERAL." + globales.Gedejecutarthread_concatload.IsAlive.ToString());
+                     if (!globales.Gedejecutarthread_concatload.IsAlive)
+                     {
+                         globales.Gedejecutarthread_concatload = new Thread(loadarchivos);
+                         globales.Gedejecutarthread_concatload.Name = "load";
+                         globales.Gedejecutarthread_concatload.IsBackground = true;
+                         globales.Gedejecutarthread_concatload.Start();
+                     }
+                 }
+                 else
+                 {
+                     globales.Gedejecutarthread_concatload = new Thread(loadarchivos);
+                     globales.Gedejecutarthread_concatload.Name = "load";
+                     globales.Gedejecutarthread_concatload.IsBackground = true;
+                     globales.Gedejecutarthread_concatload.Start();
+                 }
+                 //....................
 
              }
              catch (Exception ex)
@@ -4582,6 +5329,7 @@ namespace VENPRO
             }
             
         }
+
 
 
 

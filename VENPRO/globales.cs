@@ -37,7 +37,7 @@ namespace VENPRO
         public static Boolean Gractreproceso = false;
         public static DateTime Grfechareproceso = Convert.ToDateTime(DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd"));
         public static string Grutareproceso;
-        public static int Gcantarchivoprocesadoparalelo = 1;
+        public static int Gcantarchivoprocesaporminuto = 1;
 
         public static string Gmensajeperiodicoerr = "";
         public static DataTable gdtatable = new DataTable();
@@ -94,6 +94,8 @@ namespace VENPRO
 
         public static Thread[] Gedejecutarthread_archivo;
         public static List<string> Gedarchivo_ejecucion = new List<string>();
+
+        public static Thread Gedejecutarthread_concatload;
 
         public static Boolean Gedtrataarchivo_activo = false;
         //......
@@ -456,7 +458,7 @@ namespace VENPRO
 
         }
 
-        public static bool download(string rutaserver, string user, string pass, string destino, string nombrearchivoserv)
+        public static bool download(string rutaserver, string user, string pass, string rutalocal, string archivolocal, string nombrearchivoserv)
         {
             bool rs = false;
 
@@ -466,6 +468,8 @@ namespace VENPRO
             Stream stream = null;
             StreamReader reader = null;
             StreamWriter writer = null;
+            string file_origen = rutalocal + "\\" + "tmp_" + archivolocal;
+            string file_destino = rutalocal + "\\" + archivolocal;
             try
             {
 
@@ -491,16 +495,18 @@ namespace VENPRO
                 {
                     stream = ftpResponse.GetResponseStream();
                     reader = new StreamReader(stream, Encoding.UTF8);
-                    writer = new StreamWriter(destino, false);
+                    writer = new StreamWriter(file_origen, false);
                     writer.Write(reader.ReadToEnd());
+
                     rs = true;
+
                 }
                 catch (Exception ex)
                 {
 
                     rs = false;
                     //Escribiendo Log.......
-                    globales.escribirLOG("Error descarga. " + ex.Message);
+                    globales.escribirLOG("Error download().Error Write. " + ex.Message);
                     //fin Log...............
 
                 }
@@ -509,6 +515,19 @@ namespace VENPRO
                     stream.Close();
                     reader.Close();
                     writer.Close();
+                }
+
+                if (rs)
+                {
+                    if (File.Exists(file_destino))
+                        File.Delete(file_destino);
+                    File.Move(file_origen, file_destino);
+                }
+                else
+                {
+                    //Si hay error al descargar eliminar temporal.
+                    if (File.Exists(file_origen))
+                        File.Delete(file_origen);
                 }
 
             }
@@ -970,6 +989,7 @@ namespace VENPRO
 
             return rs;
         }
+
 
 
 

@@ -5716,6 +5716,113 @@ namespace VENPRO
             return result;
         }
 
+        public string loadfile_Mysql(string filename, string tablename, List<string> columns, string delimiter) {
+
+            string result = "1";
+            //string connStr = "server=localhost;user=root;database=test;port=3306;password=******";
+            //MySqlConnection conn = new MySqlConnection(connStr);
+
+
+            //cn = new MySqlConnection(clconexion.conexion);
+            //if (cn.State != ConnectionState.Open)
+            //    cn.Open();
+
+            //MySqlBulkLoader bl = new MySqlBulkLoader(conn);
+            //bl.Local = true;
+            //bl.TableName = "Career";
+            //bl.FieldTerminator = "\t";
+            //bl.LineTerminator = "\n";
+            //bl.FileName = "c:/career_data.txt";
+            //bl.NumberOfLinesToSkip = 3;
+
+            try
+            {
+
+
+
+                using (MySqlConnection conn = new MySqlConnection(clconexion.conexion))
+                {
+                    
+                    MySqlBulkLoader bl = new MySqlBulkLoader(conn);
+                    bl.Local = true;
+                    bl.TableName = tablename;
+                    bl.FieldTerminator = delimiter;
+                    bl.LineTerminator = "\r\n";
+                    bl.FileName =  filename;
+                    foreach (string column in columns) {
+                        bl.Columns.Add(column);
+                    }                    
+                    //bl.NumberOfLinesToSkip = 1;
+
+                    //using (MySqlBulkLoader bl = new MySqlBulkLoader(conn))
+                    //{
+
+                    //    bl.Local = true;
+                    //    bl.TableName = "Career";
+                    //    bl.FieldTerminator = "\t";
+                    //    bl.LineTerminator = "\n";
+                    //    bl.FileName = "c:/career_data.txt";
+                    //    bl.NumberOfLinesToSkip = 3;
+                    //}
+
+                   
+
+                    try
+                    {
+                        //Console.WriteLine("Connecting to MySQL...");
+                        //conn.Open();
+                        if (conn.State != ConnectionState.Open)
+                            conn.Open();
+
+                        // Upload data from file
+                        int count = bl.Load();
+                        //Console.WriteLine(count + " lines uploaded.");
+                        //log.escribirLOG("loadfile_Mysql().COLUMNA: \r\n" + String.Join(",", columns.ToArray()) );
+                        log.escribirLOG("loadfile_Mysql()." + count + " lines uploaded." + " nomtabla: {" + tablename + "} " +
+                          "Archivo:[" + filename + "]. "
+                          );
+
+                        //string sql = "SELECT Name, Age, Profession FROM Career";
+                        //MySqlCommand cmd = new MySqlCommand(sql, conn);
+                        //MySqlDataReader rdr = cmd.ExecuteReader();
+
+                        //while (rdr.Read())
+                        //{
+                        //    Console.WriteLine(rdr[0] + " -- " + rdr[1] + " -- " + rdr[2]);
+                        //}
+
+                        //rdr.Close();
+
+                        //conn.Close();
+                        result = "1";
+                    }
+                    catch (Exception exx)
+                    {
+                        log.escribirLOG("Error.loadfile_Mysql(). " +  "nomtabla: {" + tablename + "} " +
+                          "Archivo:["  + filename + "]. " + exx.Message
+                          );
+                        result = "Error.loadfile_Mysql(). " + "nomtabla: {" + tablename + "} " +
+                          "Archivo:[" + filename + "]. " + exx.Message;
+                    }
+
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                log.escribirLOG("Error.loadfile_Mysql(). Error general. " +  "nomtabla: {" + tablename + "} " +
+                          "Archivo:[" + filename + "]. " + ex.Message
+                          );
+                result = "Error.loadfile_Mysql(). Error general. " + " nomtabla: {" + tablename + "} " +
+                          "Archivo:[" + filename + "]. " + ex.Message;
+            }
+
+
+            return result;
+        }
         //.............
         public DataSet cargar_tabla_colum_delete_mysql(MySqlConnection cn)
         {

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--  trataarchivo:eliminar/backup  ::(Se elimina Archivo)/(Se backup Archivos) SQL / Mysql -->
+<!--  trataarchivo:eliminar/backup  ::(Se elimina Archivo)/(Se backup Archivos)  -->
 <objeto>
-  <CORREO ActivarAlerta="false" servidor="PCV" EnableSsl="false" puerto="25" EstCredencial="false" Usuario="" pass="" NomMostrar="ALERTA VENPRO TOTTUS" De="soporterpe@tottus.com.pe" To="rafael@pc.com" CC="" CCO="" asunto="ALERTA Error al procesar." contenido="ALERTA!. Procesamiento" Adjunto="" />
+  <CORREO ActivarAlerta="false" servidor="PCV" EnableSsl="false" puerto="25" EstCredencial="false" Usuario="" pass="" NomMostrar="ALERTA RPE TOTTUS" De="soporterpe@tottus.com.pe" To="rafael@pc.com" CC="" CCO="" asunto="ALERTA Error al procesar." contenido="ALERTA!. Procesamiento" Adjunto="" />
   <tiempo tiempoMin="1" numreintento="3" />
-  <conexion conexionstring="Data Source=PCV;Initial Catalog=ventaspro;Integrated Security=True;" conexiontipo="SQL" />
-  <conexionvenpro conexionstringvenpro="Data Source=PCV;Initial Catalog=VENPRO;Integrated Security=True;multipleactiveresultsets=True;application name=EntityFramework;Max Pool Size=10024;" conexiontipovenpro="SQL" />
-  <configuracion rutadescarga="E:\VENPRO\VENPRO\bin\Debug\import\" trataarchivo="backup" horatrata="00:17:20" diaserv="0" horaserv="0" minserv="-1" activarbusquedatag="true" alertabusquedatag="true" horaalertadiariatag="00:50:00" periodominalerta="3" archivopermitido="TRPER" extensionpermitido=".xml" solodescarga="false" soloproceso="false" cantidadarchivoprocesaparalelo="3"/>
+  <conexion conexionstring="Server=192.168.1.101;Database=ventaspro;User id=adminer;Password=Passw0rd;Allow User Variables=True;persist security info=true;default command timeout=30000;" conexiontipo="Mysql" />
+  <conexionvenpro conexionstringvenpro="Server=192.168.1.101;Database=venpro;User id=adminer;Password=Passw0rd;Allow User Variables=True;persist security info=true;default command timeout=30000;" conexiontipovenpro="Mysql" />
+  <configuracion rutadescarga="C:\proyectos\VisualStudio\VENPRO\VENPRO\bin\Debug\import\" trataarchivo="eliminar" horatrata="00:09:00" diaserv="0" horaserv="0" minserv="-1" activarbusquedatag="true" alertabusquedatag="true" horaalertadiariatag="00:50:00" periodominalerta="3" archivopermitido="TRPER" extensionpermitido=".xml" solodescarga="false" soloproceso="false" cantidadarchivoprocesaporminuto="20"/>
   <reproceso activarreproceso="False" fechareproceso="2014-12-27" rutareproceso="E:\VENPRO\VENPRO\bin\Debug\reproceso\" />
 </objeto>

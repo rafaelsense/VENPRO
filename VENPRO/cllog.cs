@@ -52,5 +52,45 @@ namespace VENPRO
 
         }
 
+        public string escribirscv(string ruta, string arch,  string datos)
+        {
+            string result = "0";
+            //string fic = System.Environment.CurrentDirectory + "\\LOG\\convertvelocidad_" + DateTime.Now.ToString("yyyyMMdd") + ".log";
+            string fic = ruta + "\\" + arch;
+
+            try
+            {
+                string strDir;
+                //Crear directorio de configuracion.............
+                strDir = ruta;
+                if (System.IO.Directory.Exists(strDir) == false)
+                {
+                    System.IO.Directory.CreateDirectory(strDir);
+                }
+
+                if (System.IO.File.Exists(fic) == true)
+                {
+                    System.IO.StreamWriter sw = new StreamWriter(fic, true);
+                    sw.WriteLine(datos);
+                    sw.Close();
+                }
+                else
+                {
+                    System.IO.StreamWriter sw = new StreamWriter(fic, true);
+                    sw.WriteLine(datos);
+                    sw.Close();
+                }
+                result = "1";
+            }
+            catch(Exception ex)
+            {
+                result = ex.Message;
+            }
+
+            return result;
+
+        }
+
+
     }
 }
