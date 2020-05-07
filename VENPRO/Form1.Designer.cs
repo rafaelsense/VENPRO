@@ -543,7 +543,7 @@
             this.Controls.Add(this.txtmensaje);
             this.Controls.Add(this.Label9);
             this.Name = "Form1";
-            this.Text = "**VENPRO x64** V1.42";
+            this.Text = "**VENPRO x64** V1.43";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grbdatos.ResumeLayout(false);

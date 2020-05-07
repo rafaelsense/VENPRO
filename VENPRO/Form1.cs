@@ -3955,6 +3955,12 @@ namespace VENPRO
                             //Validar Extensiones permitidas.......
                             bool existe_extensionpermitido = false;
 
+                            if(listarchivosvr[i].LastIndexOf('.')==-1){
+                                //Omitir carpeta y archivos sin extension.
+                                continue;
+                            }
+                            
+
                             string extensionsvr = listarchivosvr[i].Substring(listarchivosvr[i].LastIndexOf('.')).ToUpper();
                             for (int m = 0; m < extensionpermitido.Length; m++)
                             {
